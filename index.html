@@ -1,0 +1,2989 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="description" content="Youssef Said, art director based in Toronto. Campaigns for Xbox PC Game Pass, GelaSkins, Corona Sunbrew, H&R Block and One & Only Musicals, plus logo redesigns for Saint-Nicolas school and Grace & Family Church." />
+<link rel="icon" type="image/png" href="assets/e308d70c8498.png" />
+<link rel="shortcut icon" type="image/png" href="assets/e308d70c8498.png" />
+<link rel="apple-touch-icon" href="assets/e308d70c8498.png" />
+<title>Youssef Said Art Direction Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    color-scheme:dark;
+    /* dark ground restored : the page lives on near-black ink, with
+       ivory text. The door (hero) and the top bar keep their cream
+       panels (--ivoire ground, --encre ink) — the dark world fades
+       in over the cream door as the fish dissolves. */
+    --fond:#111110; --creme:#F2F0EA; --texte:var(--creme); --encre:#111110; --ivoire:var(--creme);
+    --trait:rgba(242,240,234,.16); --trait-encre:rgba(17,17,16,.16);
+    --gris:#A09D96; --doux:var(--creme); --cote:#A09D96;
+    --accent:#ED3237;
+    --ease:cubic-bezier(.16,1,.3,1);
+    --barre:62px;
+  }
+  @media (min-width:768px){ :root{ --barre:64px; } }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  html,body{ background:var(--fond); }
+  body{
+    margin:0; color:var(--texte);
+    font-family:'Archivo',Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+  ::selection{ background:var(--texte); color:var(--fond); }
+  img{ user-select:none; -webkit-user-drag:none; }
+  a:focus-visible, button:focus-visible, [tabindex]:focus-visible{ outline:1px solid currentColor; outline-offset:6px; }
+
+  /* ---------- type system (after neuv.fr) ---------- */
+  .titre{
+    font-family:'Anton','Archivo',sans-serif;
+    font-weight:400; text-transform:uppercase; letter-spacing:.005em; line-height:.92; margin:0;
+  }
+  .serif{ font-family:'Instrument Serif',Georgia,serif; font-weight:400; letter-spacing:-.01em; }
+  .meta{
+    font-family:'JetBrains Mono',ui-monospace,monospace; font-size:12px; line-height:1.6;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--gris); margin:0;
+  }
+  .meta--texte{ color:var(--texte); }
+  .meta--encre{ color:var(--encre); }
+
+  /* word-mask reveal */
+  .masque{ display:block; overflow:hidden; padding-block:.07em .03em; margin-block:-.07em -.03em; }
+  .mot{ display:inline-block; white-space:pre; transform:translate3d(0,112%,0); }
+  .vu .mot{ animation:mot .9s var(--ease) both; animation-delay:calc(var(--i) * 70ms + 80ms); }
+  @keyframes mot{ to{ transform:none; } }
+  /* soft reveal, opacity/transform only, no clip-path (clip edges flickered on scroll) */
+  .revele{ opacity:0; transform:translate3d(0,26px,0);
+    transition:opacity .8s var(--ease), transform .8s var(--ease); transition-delay:calc(var(--i,0) * 70ms); }
+  .revele.vu{ opacity:1; transform:none; }
+
+  /* ---------- custom cursor : dot + ring, difference ---------- */
+  .c-point,.c-anneau{ position:fixed; left:0; top:0; pointer-events:none; z-index:90; border-radius:50%;
+    mix-blend-mode:difference; opacity:0; will-change:transform; }
+  .c-point{ width:2px; height:2px; margin:-1px 0 0 -1px; background:#fff; }
+  .c-anneau{ width:40px; height:40px; margin:-20px 0 0 -20px; border:1px solid #fff;
+    display:flex; align-items:center; justify-content:center;
+    transition:width .25s var(--ease), height .25s var(--ease), margin .25s var(--ease), opacity .25s; }
+  .c-libelle{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--creme); opacity:0; transition:opacity .2s; }
+  body.curseur-vu .c-point{ opacity:1; }
+  body.curseur-vu .c-anneau{ opacity:.5; }
+  body.curseur-vu.curseur-view .c-anneau{ width:76px; height:76px; margin:-38px 0 0 -38px; opacity:1; background:rgba(255,255,255,.08); }
+  body.curseur-vu.curseur-lien .c-anneau{ width:58px; height:58px; margin:-29px 0 0 -29px; opacity:.85; }
+  body.curseur-vu.curseur-view .c-libelle{ opacity:1; }
+  body.curseur-zone, body.curseur-zone a, body.curseur-zone button{ cursor:none !important; }
+  @media (hover:none), (pointer:coarse){ .c-point,.c-anneau{ display:none; } }
+
+  /* ---------- top bar ---------- */
+  .acces{ position:fixed; top:0; left:0; right:0; z-index:45; height:var(--barre);
+    display:flex; align-items:center; justify-content:space-between; padding:0 20px;
+    background:var(--ivoire); border-bottom:1px solid var(--trait-encre); color:var(--encre);
+    transform:translateZ(0); -webkit-transform:translateZ(0); backface-visibility:hidden; will-change:transform; }
+  .acces .logo{ color:var(--encre); text-decoration:none; line-height:1; white-space:nowrap;
+    display:inline-flex; gap:12px; min-height:44px; align-items:center; }
+  .acces .logo__img{ height:52px; width:auto; object-fit:contain; display:block; }
+  .acces .logo small{ font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.18em;
+    font-weight:400; text-transform:uppercase; }
+  .acces nav{ display:flex; gap:22px; }
+  .acces nav a{ color:var(--encre); display:inline-flex; align-items:center; min-height:44px; text-decoration:none;
+    font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; }
+  .acces nav a:hover{ text-decoration:underline; text-underline-offset:6px; text-decoration-thickness:1px; }
+  @media (min-width:768px){ .acces{ padding:0 32px; } .acces nav{ gap:40px; } }
+  #work,#services,#about,#contact{ scroll-margin-top:var(--barre); }
+
+  /* ---------- 1. the door : the fish logo dissolves into smoke ----------
+     The transition code (this CSS and the majPorte script below)
+     is extracted from the version Youssef downloaded
+     (Portfolio_Neuv_Style_Concept__1__0_xb8n.html) — the original
+     fish transition, not a reconstruction. No panel ever slides
+     over the mark. The dark world only *fades* in (--p, set from
+     JS) while the logo itself blurs, swells slightly and is
+     sampled into particles on #porte-fumee that lift, drift and
+     disperse, paling from fish red to smoke, with soft puffs
+     anchored to the silhouette. Fully reversible. Kept from
+     later, separate requests : no top-left Scroll line, the
+     lowered red "Youssef Said · Portfolio" line, and the bigger
+     hero fish (the transition is measured from the logo's own
+     rect, so it is size-independent). */
+  .porte{ position:relative; height:206vh; background:var(--ivoire); }
+  .porte__ecran{ position:sticky; top:0; height:100vh; height:100dvh; overflow:hidden; background:var(--ivoire);
+    transform:translateZ(0); -webkit-transform:translateZ(0); backface-visibility:hidden; }
+  .monde{ position:absolute; inset:0; background:var(--fond); overflow:hidden; opacity:var(--p,0); will-change:opacity; }
+  /* No DOM words sit over the dissipated dots any more. The sentence
+     that appears in the cloud is drawn on #porte-fumee itself, as red
+     dots (sampled from the fish's own red) that gather into letterforms
+     in the middle of the white dissipated dots — see dessineTexte in
+     the porte script. */
+  /* no z-index here : a stacking context on this wrapper would isolate the
+     logo's mix-blend-mode and strand it on a white square */
+  .porte__nom{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; pointer-events:none; }
+  .porte__logo{ width:min(80vh,94vw); height:auto; display:block; mix-blend-mode:multiply;
+    will-change:transform,filter,opacity; }
+  #porte-fumee{ position:absolute; inset:0; width:100%; height:100%; display:block; z-index:3; pointer-events:none; filter:blur(.55px); }
+  .porte__bas{ position:absolute; left:0; right:0; bottom:0; display:flex; justify-content:space-between; align-items:flex-end;
+    gap:16px; padding:24px; color:var(--encre); z-index:4; opacity:calc(1 - var(--p,0) * 2.4); }
+  .porte__bas .meta{ color:var(--encre); }
+  .porte__bas .droite{ text-align:right; }
+  .defile-fleche{ display:inline-block; animation:bob 2.2s var(--ease) infinite; }
+  @keyframes bob{ 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(4px);} }
+  @media (min-width:768px){ .porte__bas{ padding:32px; } }
+
+  /* ---------- 1b. hero : pond panel, a red fish under the headline ---------- */
+  .hero-sec{ position:relative; height:125vh; background:transparent; }
+  .hero__ecran{ position:sticky; top:0; height:100vh; height:100dvh; overflow:hidden; background:transparent;
+    transform:translateZ(0); -webkit-transform:translateZ(0); backface-visibility:hidden; }
+  /* the pond is a fixed, page-wide companion layer in the very back :
+     it sits behind every word, picture, project and section surface,
+     so the fish is hidden wherever content overlaps it and only peeks
+     out from behind in the open gaps. It never intercepts the pointer,
+     and fades out entirely over the door (hero) and while a case
+     study is open. Sections that used to paint an opaque dark panel
+     over it are transparent now, so the dark page background (on the
+     body, behind the canvas) still reads the same while the fish can
+     show through the empty space. */
+  #fluide{ position:fixed; inset:0; width:100%; height:100%; display:block; background:transparent;
+    z-index:0; pointer-events:none; opacity:0; will-change:opacity; }
+  .porte,.hero-sec,.site{ position:relative; z-index:1; }
+  .hero__phrase{ position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    padding:0 5vw; text-align:center; pointer-events:none; z-index:3; }
+  /* lockup : the headline and the line under it share one shrink-wrapped
+     box whose width is set by the widest headline line ("Direction"),
+     so the sentence below can be stretched to exactly that width */
+  .hero__lockup{ display:flex; flex-direction:column; align-items:center; width:fit-content; max-width:100%; margin:0 auto; }
+  .hero__phrase .titre{ font-size:clamp(58px,11.5vw,190px); color:var(--texte); }
+  /* the door's bottom-left line stays on one line */
+  .porte__bas .ligne-une{ white-space:nowrap; }
+  @media (max-width:767px){ .porte__bas .ligne-une{ font-size:10px; letter-spacing:.09em; } }
+  @media (max-width:767px){ .hero__phrase .titre{ font-size:13.2vw; } }
+  /* "Ideas that stir the water." sits at its own natural width again,
+     centred under the headline — no longer stretched to line up with
+     the width of the word "Direction" */
+  .hero__phrase .soustitre{ margin-top:4.5vh; font-size:clamp(17px,3.4vw,50px); color:var(--doux);
+    width:auto; text-align:center; white-space:nowrap; }
+  .hero__phrase .meta{ margin-top:2.4vh; color:var(--cote); }
+  .hero__coin{ position:absolute; bottom:24px; z-index:3; pointer-events:none; }
+  .hero__coin--g{ left:24px; } .hero__coin--d{ right:24px; text-align:right; }
+  @media (max-width:640px){ .hero__coin--d{ display:none; } }
+  @media (min-width:768px){ .hero__coin{ bottom:32px; } .hero__coin--g{ left:32px; } .hero__coin--d{ right:32px; } }
+
+  /* ---------- 2. selected work : drag gallery ---------- */
+  .work-sec{ position:relative; background:transparent; padding:calc(var(--barre) + 28px) 0 40px; overflow:hidden; }
+  .gv-entete{ position:relative; display:flex; justify-content:space-between; align-items:baseline; padding:0 20px; }
+  /* "Selected work" reads a touch larger than the other meta labels */
+  .gv-titre{ font-size:15px; }
+  @media (min-width:768px){ .gv-entete{ padding:0 32px; } }
+  .glisseur{ position:relative; overflow-x:auto; overflow-y:hidden; scrollbar-width:none; -ms-overflow-style:none;
+    cursor:grab; padding:6vh 0 2vh; outline-offset:-6px; touch-action:pan-x pan-y; -webkit-overflow-scrolling:touch;
+    overscroll-behavior-x:contain; }
+  .glisseur::-webkit-scrollbar{ display:none; }
+  .glisseur.glisse{ cursor:grabbing; }
+  /* note : no pointer-events:none on children while dragging, it retargets
+     the release click to the container and the cards stop opening */
+  .piste{ list-style:none; margin:0; padding:0 20px; display:flex; gap:5vw; align-items:flex-start; width:max-content; }
+  @media (min-width:768px){ .piste{ padding:0 32px; gap:4vw; } }
+  .item{ flex:0 0 auto; width:min(72vw,340px); }
+  .item[data-ancre="B"]{ margin-top:9vh; } .item[data-ancre="M"]{ margin-top:4.5vh; }
+  @media (min-width:768px){ .item{ width:360px; } .item[data-ancre="B"]{ margin-top:11vh; } .item[data-ancre="M"]{ margin-top:5.5vh; } }
+  .item__lien{ display:block; text-decoration:none; color:var(--texte); background:none; border:0; padding:0; width:100%; text-align:left; font:inherit; }
+  .item__cadre{ position:relative; display:block; overflow:hidden; background:#232320; aspect-ratio:3/4; }
+  /* black gradient wash on hover, strong enough to clearly read as a
+     hover state without blacking out the artwork.
+     Pointer devices only, so it can never stick on touch screens or
+     interfere with swiping or tapping a card open. */
+  .item__cadre::after{ content:""; position:absolute; inset:0; pointer-events:none;
+    background:linear-gradient(155deg, rgba(0,0,0,.58) 0%, rgba(0,0,0,.20) 46%, rgba(0,0,0,.52) 100%);
+    opacity:0; transition:opacity .45s var(--ease); }
+  @media (hover:hover) and (pointer:fine){
+    .item__lien:hover .item__cadre::after, .item__lien:focus-visible .item__cadre::after{ opacity:1; }
+  }
+  /* every card is full-bleed : the H&R Block and Corona cards use
+     AI-extended tall versions of their photos (surroundings outpainted
+     above and below the artwork). The GelaSkins tall card is the
+     inmate billboard (orange sweatpants, pink My Little Pony phone),
+     AI-outpainted tall with the background expanded MUCH further :
+     the wide billboard keeps its original, correct proportions,
+     complete and unsqueezed, sitting smaller in the middle third
+     of the tall frame, with generous ivy foliage above it and a
+     generous brick wall below it — never squeezed horizontally to
+     fill the tall frame. The H&R Block tall card is reframed with
+     the billboard raised higher in the frame (less sky above it,
+     more pole and sky below it). Both tall files are exactly
+     1344x1792 (the cards' 3:4 frame) and are shown with
+     object-fit:cover, so the same undistorted image serves
+     desktop and phone alike. The Logo Redesign tall card is
+     solely the new Roc & Basic rB mark over its photograph of
+     children looking up, cropped tall from that same photograph.
+     No card needs padding. */
+  .item__cadre img{ width:100%; height:100%; object-fit:cover; display:block;
+    transition:transform .8s var(--ease); will-change:transform; }
+  .item__lien:hover .item__cadre img, .item__lien:focus-visible .item__cadre img{ transform:scale(1.045); }
+  /* GelaSkins card only : zoomed in just a touch on every screen
+     (desktop and phone share this one rule, no media query split).
+     A uniform scale, so the billboard keeps its correct proportions
+     and is never squeezed — the frame simply crops a little of the
+     ivy above and the brick below, so the billboard itself reads
+     slightly larger. Hover keeps the same +0.045 lift on top. */
+  .item__lien[data-case="1"] .item__cadre img{ transform:scale(1.12); }
+  .item__lien[data-case="1"]:hover .item__cadre img, .item__lien[data-case="1"]:focus-visible .item__cadre img{ transform:scale(1.165); }
+  .item__legende{ display:grid; grid-template-columns:minmax(0,1fr) auto; column-gap:16px; row-gap:10px; margin-top:14px; }
+  .item__nom{ color:var(--texte); }
+  .item__fl{ color:var(--texte); transition:transform .35s var(--ease); }
+  .item__lien:hover .item__fl{ transform:translateX(6px); }
+  .item__disc{ grid-column:1; color:var(--gris); }
+  .item__tag{ grid-column:1 / -1; color:var(--doux); font-family:'Instrument Serif',Georgia,serif; font-size:16px;
+    letter-spacing:0; text-transform:none; margin-top:0; }
+  .gv-commandes{ position:relative; display:flex; align-items:center; gap:10px; padding:10px 20px 0; }
+  @media (min-width:768px){ .gv-commandes{ padding:10px 32px 0; } }
+  .gv-btn{ width:48px; height:48px; border:1px solid var(--trait); background:transparent; color:var(--texte);
+    font-size:18px; cursor:pointer; transition:border-color .3s, background .3s; border-radius:0; }
+  .gv-btn:hover{ border-color:var(--texte); background:rgba(242,240,234,.08); }
+  .gv-commandes .indice{ margin-left:14px; color:var(--cote); }
+  .gv-commandes .tactile{ display:none; }
+  @media (hover:none){ .gv-commandes .souris{ display:none; } .gv-commandes .tactile{ display:inline; } }
+  /* the hint under the thumbnails reads as an instruction :
+     "Press · ← → · Swipe [hand] · Drag —○—" — press the arrow
+     buttons, swipe with a finger, or drag the progress bar.
+     "Swipe" and its hand symbol (a hand with one finger raised,
+     drawn in the same muted colour at the same size as the other
+     symbols) sit in the middle, between the arrows and "Drag".
+     The miniature progress bar sits to the RIGHT of "Drag",
+     exactly as the arrows sit to the right of "Press". Every
+     part of the hint — all three words, the arrows, the hand
+     and the mini bar — uses the same muted colour
+     (var(--gris), inherited from .indice). */
+  .gv-commandes .hint-line{ display:inline-flex; align-items:center; gap:8px; }
+  .gv-commandes .tactile.hint-line{ display:none; }
+  @media (hover:none){ .gv-commandes .souris.hint-line{ display:none; } .gv-commandes .tactile.hint-line{ display:inline-flex; } }
+  .hint-arrows{ letter-spacing:.12em; }
+  .hint-swipe{ display:inline-flex; flex-direction:row; align-items:center; gap:6px; }
+  .hint-hand{ width:15px; height:15px; flex:0 0 15px; display:block; color:inherit; }
+  .hint-drag{ display:inline-flex; flex-direction:row; align-items:center; gap:8px; }
+  .hint-mini{ position:relative; display:block; flex:0 0 26px; width:26px; height:2px; background:rgba(160,157,150,.45); }
+  .hint-mini i{ position:absolute; left:0; top:0; height:2px; width:38%; background:var(--gris); display:block; }
+  .hint-mini b{ position:absolute; left:38%; top:50%; width:7px; height:7px; border-radius:50%;
+    border:1.5px solid var(--gris); background:var(--fond); transform:translate(-50%,-50%); display:block; }
+  /* the progress track is a working timeline, not just an indicator :
+     grab the circle (or anywhere on the track) and scrub through the
+     work, YouTube-style. The visible line stays 2px; an invisible
+     ::before widens the grab area so the circle is easy to catch. */
+  .gv-progres{ position:relative; height:2px; background:var(--trait); margin:30px 20px 6px;
+    cursor:pointer; touch-action:none; }
+  .gv-progres::before{ content:""; position:absolute; left:0; right:0; top:-13px; bottom:-13px; }
+  @media (min-width:768px){ .gv-progres{ margin:30px 32px 6px; } }
+  .gv-progres i{ position:absolute; left:0; top:0; height:2px; background:var(--texte); width:0%; display:block; will-change:width; }
+  /* small circle riding the leading end of the fill : hollow at the
+     start, it fills with the text colour as the fill advances, and it
+     swells while hovered or dragged so it reads as a handle */
+  .gv-progres__dot{ position:absolute; top:50%; left:0%; width:11px; height:11px; border-radius:50%;
+    border:1.5px solid var(--texte); background:var(--fond); transform:translate(-50%,-50%);
+    transition:transform .25s var(--ease); will-change:left; overflow:hidden; }
+  .gv-progres:hover .gv-progres__dot, .gv-progres.cherche .gv-progres__dot{ transform:translate(-50%,-50%) scale(1.45); }
+  .gv-progres__dot::after{ content:""; position:absolute; inset:1.5px; border-radius:50%;
+    background:var(--texte); transform:scale(var(--f,0)); transition:transform .12s linear; }
+
+  /* ---------- 3. about / services ---------- */
+  .site{ position:relative; background:transparent; }
+  .hero{ display:grid; grid-template-columns:repeat(12,1fr); gap:0 24px; padding:84px 20px 72px; border-top:1px solid var(--trait); }
+  @media (min-width:768px){ .hero{ padding:112px 32px 104px; } }
+  /* "About me" matches "Selected work" exactly : same meta size */
+  .hero__qui{ grid-column:1 / -1; margin:0 0 22px; color:var(--doux); font-size:15px; text-align:center; }
+  .hero__qui b{ color:var(--texte); font-weight:500; }
+  /* the whole About block is centred now, not flush left : the title,
+     the See the work / Email me / LinkedIn row and both paragraphs
+     all sit in the middle of the page */
+  .hero__promesse{ grid-column:1 / -1; margin:0 auto; max-width:30ch; font-weight:550; font-variation-settings:'wdth' 100;
+    font-size:clamp(26px,3.1vw,47px); line-height:1.06; letter-spacing:-.014em; text-wrap:balance; text-align:center; }
+  .hero__promesse .serif{ font-size:1.04em; }
+  .hero__actions{ grid-column:1 / -1; margin:30px auto 0; display:flex; flex-wrap:wrap; justify-content:center; gap:2px 34px; padding:0; list-style:none; }
+  .hero__actions a{ display:inline-flex; align-items:center; min-height:44px; color:var(--texte); text-decoration:none;
+    font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; }
+  .hero__cta{ border-bottom:1px solid var(--texte); }
+  .hero__actions a:hover{ color:var(--gris); }
+  .hero__parcours{ grid-column:1 / -1; margin:28px auto 0; max-width:64ch; font-size:clamp(18px,1.55vw,21px); line-height:1.62; color:var(--texte); text-wrap:pretty; text-align:center; }
+  .hero__perso{ grid-column:1 / -1; margin:16px auto 0; max-width:64ch; font-size:clamp(18px,1.55vw,21px); line-height:1.62; color:var(--texte); text-wrap:pretty; text-align:center; }
+  @media (min-width:900px){
+    .hero__qui{ grid-column:1 / -1; margin:0 0 22px; padding-top:0; }
+    .hero__promesse,.hero__actions,.hero__parcours,.hero__perso{ grid-column:1 / -1; }
+  }
+  .disciplines{ padding:0 20px 8px; }
+  @media (min-width:768px){ .disciplines{ padding:0 32px 8px; } }
+  /* credibility : monochrome logo marquee, endless left-to-right loop */
+  .cred{ margin-top:64px; border-top:1px solid var(--trait); border-bottom:1px solid var(--trait);
+    padding:26px 0 30px; overflow:hidden; }
+  @media (min-width:768px){ .cred{ margin-top:72px; } }
+  .cred__piste{ display:flex; width:max-content; animation:cred-defile 48s linear infinite; will-change:transform; }
+  .cred:hover .cred__piste{ animation-play-state:paused; }
+  .cred__groupe{ display:flex; align-items:center; gap:96px; padding-right:96px; }
+  /* the marquee marks are white artwork, shown as-is on the dark
+     ground so every logo reads at the same light weight */
+  .cred__logo{ width:auto; display:block; opacity:.88; }
+  .cred__mot{ font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--doux); white-space:nowrap; border:1px dashed rgba(242,240,234,.35); padding:11px 15px; }
+  @keyframes cred-defile{ from{ transform:translateX(-50%); } to{ transform:translateX(0); } }
+
+  .honneurs{ padding:72px 20px 96px; }
+  @media (min-width:768px){ .honneurs{ padding:88px 32px 120px; } }
+  .honneurs h2{ font-size:clamp(38px,3.6vw,58px); margin-bottom:34px; }
+  /* a hair more air between the two lines of "Awards and
+     achievements", and room at the right of the first line's mask
+     so its last letters are never clipped */
+  .honneurs h2 .masque{ padding-right:.14em; }
+  .honneurs h2 .masque + .masque{ margin-top:.05em; }
+  .honneurs__liste{ list-style:none; margin:0; padding:0; border-bottom:1px solid var(--trait); }
+  .honneur{ display:grid; grid-template-columns:1fr; gap:4px; padding:20px 0 22px; border-top:1px solid var(--trait); }
+  @media (min-width:768px){ .honneur{ grid-template-columns:110px 1fr auto; align-items:baseline; gap:24px; } }
+  .honneur__quoi{ font-size:19px; font-weight:600; font-variation-settings:'wdth' 100; letter-spacing:-.01em; }
+  .honneur__detail{ color:var(--doux); font-size:15px; }
+
+  /* ---------- 4. contact ---------- */
+  #contact{ border-top:1px solid var(--trait); padding:88px 20px 24px; }
+  @media (min-width:768px){ #contact{ padding:118px 32px 30px; } }
+  .titre-fin{ font-size:clamp(58px,11vw,176px); margin-left:-.04em; text-wrap:balance; }
+  @media (max-width:767px){ .titre-fin{ font-size:14.5vw; } }
+  .titre-fin .serif{ text-transform:none; font-weight:400; }
+  /* room at the right of the headline masks so the "?" right after
+     "mind" is never clipped by the mask's hidden overflow (italic
+     overhang plus the question mark used to sit on the mask edge) */
+  .titre-fin .masque{ padding-right:.58em; }
+  /* "mind?" stands slightly proud of the headline : a touch larger, italic.
+     The punctuation after "mind" gets its own breathing room inside the
+     word as well, so it can never sit on the mask edge or the screen edge */
+  .titre-fin .mind{ font-family:'Instrument Serif',Georgia,serif; font-style:italic; text-transform:none;
+    font-weight:400; font-size:1.14em; letter-spacing:0; padding-right:.1em; }
+  .mail-fin{ font-family:'Inter Tight','Helvetica Neue',Arial,sans-serif; font-weight:500;
+    font-size:clamp(23px,3vw,44px); line-height:1.1; letter-spacing:-.01em; color:var(--texte); }
+  .pied__lien{ position:relative; display:inline-block; padding:6px 0 10px; color:var(--texte); text-decoration:none; word-break:break-word; }
+  .pied__lien::before,.pied__lien::after{ content:""; position:absolute; left:0; right:0; bottom:0; height:1px; }
+  .pied__lien::before{ background:rgba(242,240,234,.22); }
+  .pied__lien::after{ background:var(--texte); transform:scaleX(0); transition:transform .35s var(--ease); }
+  .pied__lien:hover::after,.pied__lien:focus-visible::after{ transform:scaleX(1); }
+  /* both contact lines are left-aligned and near-identical in length
+     (26 and 28 characters), so they start on the same left edge and end
+     around the same place, in the same size, weight and colour */
+  .contact__liens{ display:flex; flex-direction:column; align-items:flex-start; gap:24px; margin-top:40px; }
+  .contact__liens .pied__lien{ text-align:left; }
+  .pied__infos{ color:var(--doux); font-size:12px; letter-spacing:.12em; margin-top:84px;
+    display:flex; flex-direction:column; gap:14px; text-transform:uppercase; font-family:'JetBrains Mono',monospace; line-height:1.6; }
+  @media (min-width:768px){ .pied__infos{ margin-top:98px; flex-direction:row; justify-content:space-between; } }
+  .pied__infos a{ color:inherit; text-decoration:none; display:inline-flex; align-items:center; min-height:44px; margin:-14px 0; }
+  .pied__infos a:hover{ color:var(--texte); }
+
+  /* ---------- email links : three layers, in order ----------
+     1. EXTRACTED FROM THE OLD WIX PORTFOLIO (fetched its page
+     source directly) : its email link is exactly
+     <a href="mailto:youssef.said1313@gmail.com?subject=Hey%2C%20I%20just%20saw%20your%20portfolio!" target="_self">
+     — same address, same pre-filled subject. Both email anchors
+     here now carry that markup verbatim. On the Wix site (a
+     top-level page) that is all it takes : the OS shows its
+     "Create mail with" choice (Gmail / default mail app).
+     2. NO SCRIPT TOUCHES ANY EMAIL CLICK, ANYWHERE : earlier
+     rounds retargeted anchors at click time (target="_top"
+     when framed) or navigated from script, and inside the app
+     viewer those taps died silently — the sheet's own buttons
+     included. Every email anchor on this page is now a plain
+     native anchor with target="_self" (the Wix value) whose
+     click no handler cancels, retargets or re-routes : the
+     browser's own handling of the tap is the hand-off, exactly
+     as on the old site. The one script near the links only
+     OBSERVES (focus loss / page hide = the system took over).
+     3. THE WORKAROUND, if a host viewer still drops the
+     hand-off : a small sheet appears (only when the page
+     demonstrably never lost focus / never hid after the tap)
+     whose buttons are the same kind of plain anchors, needing
+     no typing and no web login : on phones/tablets "Open Gmail
+     app" deep-links the Gmail app itself (googlegmail://co?…
+     on iOS, an intent: URL on Android — the app opens already
+     signed in, with address and subject filled, the route for
+     visitors who removed Apple Mail and live in Gmail), with
+     "Open Gmail" right beside it (Gmail compose over https: in
+     a new tab — the escape no viewer blocks, the same way this
+     page's LinkedIn link leaves the frame) ; on desktop
+     "Open Gmail" is the one Gmail route shown. Plus
+     "Open mail app" (the same plain mailto:) and
+     "Copy address". Fixed to the bottom, above the top bar
+     and the cursor. --- */
+  .mail-repli{ position:fixed; left:16px; right:16px; bottom:16px; z-index:130;
+    display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px;
+    background:var(--ivoire); color:var(--encre); border:1px solid var(--trait-encre);
+    padding:14px 18px; box-shadow:0 12px 40px rgba(0,0,0,.45); }
+  .mail-repli[hidden]{ display:none; }
+  .mail-repli__texte{ font-size:14px; line-height:1.45; margin:0; flex:1 1 220px; }
+  .mail-repli__texte b{ font-weight:600; }
+  .mail-repli__actions{ display:flex; flex-wrap:wrap; gap:8px; }
+  .mail-repli__btn{ appearance:none; border:1px solid var(--encre); background:transparent; color:var(--encre);
+    font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase;
+    min-height:44px; padding:0 14px; cursor:pointer;
+    display:inline-flex; align-items:center; justify-content:center; text-decoration:none; }
+  .mail-repli__btn[hidden]{ display:none; }
+  .mail-repli__btn--plein{ background:var(--encre); color:var(--ivoire); }
+  .mail-repli__btn:hover{ text-decoration:underline; text-underline-offset:4px; }
+  @media (min-width:768px){ .mail-repli{ left:auto; right:32px; bottom:32px; max-width:520px; } }
+  /* ---------- case study overlay ---------- */
+  .flight{ position:fixed; inset:0; z-index:100; background:var(--fond); color:var(--texte);
+    opacity:0; pointer-events:none; transition:opacity .45s var(--ease); overflow-y:auto; overscroll-behavior:contain; }
+  .flight.ouvert{ opacity:1; pointer-events:auto; }
+  .flight__barre{ position:sticky; top:0; display:flex; justify-content:space-between; align-items:center;
+    padding:0 20px; height:var(--barre); background:rgba(17,17,16,.92); border-bottom:1px solid var(--trait); z-index:2; }
+  @media (min-width:768px){ .flight__barre{ padding:0 32px; } }
+  .flight__fermer{ background:none; border:0; color:var(--texte); font-family:'JetBrains Mono',monospace; font-size:12px;
+    letter-spacing:.16em; text-transform:uppercase; cursor:pointer; min-height:44px; display:inline-flex; align-items:center; gap:10px; padding:0; }
+  .flight__fermer:hover{ text-decoration:underline; text-underline-offset:6px; }
+  .flight__corps{ display:grid; grid-template-columns:1fr; gap:0; padding:28px 20px 90px; }
+  @media (min-width:900px){ .flight__corps{ grid-template-columns:1.05fr .95fr; gap:56px; padding:44px 32px 110px; } }
+  /* the image box hugs the picture itself : no letterbox, no black block
+     around portrait or landscape mockups */
+  .flight__img{ width:auto; max-width:100%; height:auto; max-height:84vh; margin:0 auto; object-fit:contain; display:block;
+    background:transparent; cursor:zoom-in;
+    opacity:1; transition:opacity .3s var(--ease); }
+  .flight__img.charge{ opacity:0; }
+  .flight__img[hidden]{ display:none; }
+  /* the case film : the Game Pass key visual is its cover art, shown
+     as the video poster until the reader presses play */
+  .flight__video{ width:100%; height:auto; aspect-ratio:16/9; display:block; background:#000; cursor:pointer; }
+  .flight__video[hidden]{ display:none; }
+  .flight__video-wrap{ position:relative; }
+  .flight__video-wrap[hidden]{ display:none; }
+  /* the case film slot holds ONLY the film itself — a single
+     local <video> and nothing else, on every device. There is
+     no iframe and no embedded external page anywhere : the
+     earlier phone build framed the old Wix portfolio page
+     here, and that embed is gone for good. The same player
+     and full control bar — play / pause, seek, time, mute
+     and full-screen — serve every screen ; only the file
+     differs : phones play the compressed, lower-storage
+     rendition (assets/9e2df2a65980.mp4, 640×360) so it
+     runs easily, desktop plays the higher-resolution file
+     (assets/feb444119cc6.mp4, 854×480) so it stays sharp on a
+     big screen. See choixVideoSrc in the script. */
+  .flight__video{ -webkit-tap-highlight-color:transparent; }
+  /* the case film carries its OWN control bar, not the browser's
+     native one : inside the sandboxed frame the native full-screen
+     icon renders greyed out and unclickable (the host frame withholds
+     fullscreen permission), so the native controls are gone entirely
+     and every button below is a real, fully opaque, clickable element
+     in the hero cream. Play/pause, seek, time, mute and — at the
+     bottom right, beside the volume button, exactly where the native
+     icon sat — a full-screen button wired in JS : it asks the browser
+     for true fullscreen on the film wrap first, and where that is
+     refused it opens the fullscreen viewer, so the film always ends
+     up filling the screen. */
+  .flight__controles{ position:absolute; left:0; right:0; bottom:0; z-index:3;
+    display:flex; align-items:center; gap:6px; padding:26px 12px 10px;
+    background:linear-gradient(to top, rgba(0,0,0,.78), rgba(0,0,0,0)); color:var(--creme); }
+  .flight__controles[hidden]{ display:none; }
+  .fv-btn{ flex:0 0 auto; width:42px; height:42px; display:flex; align-items:center; justify-content:center;
+    background:transparent; border:0; padding:0; color:var(--creme); opacity:1; cursor:pointer; }
+  .fv-btn svg{ width:21px; height:21px; display:block; fill:var(--creme); }
+  .fv-btn svg[hidden]{ display:none; }
+  .fv-btn:hover svg{ fill:#fff; }
+  .fv-btn:focus-visible{ outline:1px solid var(--creme); outline-offset:2px; }
+  .fv-temps{ flex:0 0 auto; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.08em;
+    color:var(--creme); white-space:nowrap; padding:0 2px; }
+  .fv-seek{ flex:1 1 auto; min-width:40px; -webkit-appearance:none; appearance:none; height:3px; border-radius:2px;
+    background:rgba(242,240,234,.38); outline-offset:4px; cursor:pointer; }
+  .fv-seek::-webkit-slider-thumb{ -webkit-appearance:none; appearance:none; width:13px; height:13px; border-radius:50%;
+    background:var(--creme); border:0; cursor:pointer; }
+  .fv-seek::-moz-range-thumb{ width:13px; height:13px; border-radius:50%; background:var(--creme); border:0; cursor:pointer; }
+  /* when the wrap itself goes truly fullscreen, the film fills it */
+  .flight__video-wrap:fullscreen{ background:#000; display:flex; align-items:center; }
+  .flight__video-wrap:fullscreen .flight__video{ width:100%; height:100%; object-fit:contain; }
+  /* buffering spinner — the SAME loading screen on desktop and
+     phone : a ring centred over the film, shown ONLY while the
+     film is genuinely loading or stalled — the wiring lives in
+     JS on the player's own events (loadstart / waiting / stalled
+     show it, playing / canplay hide it), so it never appears
+     over a film that is playing or ready, on any screen size. */
+  .video-spin{ position:absolute; left:50%; top:50%; width:54px; height:54px; z-index:4;
+    transform:translate(-50%,-50%); border-radius:50%; background:rgba(17,17,16,.55);
+    display:none; align-items:center; justify-content:center; pointer-events:none; }
+  .video-spin.vu{ display:flex; }
+  .video-spin::before{ content:""; width:26px; height:26px; border-radius:50%;
+    border:3px solid rgba(242,240,234,.28); border-top-color:var(--accent);
+    animation:video-spin-tour .8s linear infinite; }
+  @keyframes video-spin-tour{ to{ transform:rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce){ .video-spin::before{ animation-duration:1.6s; } }
+  .flight__vignette{ position:relative; }
+  .flight__vignette .film-badge{ position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+    width:44px; height:44px; border-radius:50%; background:rgba(17,17,16,.72); color:var(--creme);
+    display:flex; align-items:center; justify-content:center; font-size:14px; pointer-events:none; }
+  .flight__vignette .film-duree{ position:absolute; right:6px; bottom:6px; background:rgba(17,17,16,.8); color:var(--creme);
+    font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.1em; padding:3px 6px; pointer-events:none; }
+  /* aspect-aware masonry : two independent columns, each image at its
+     natural aspect ratio, stacked with one tight 8px gap. No shared row
+     heights, so a landscape mockup beside a tall poster can never leave
+     a black block underneath it (the old 2-column row grid did exactly
+     that on the Xbox, GelaSkins and Musicals pages). JS fills the
+     shorter column first, so the two stacks end near level. */
+  .flight__galerie{ display:flex; gap:8px; align-items:flex-start; margin-top:28px; }
+  .flight__col{ flex:1 1 0; min-width:0; display:flex; flex-direction:column; gap:8px; }
+  .flight__vignette{ width:100%; height:auto; padding:0; border:1px solid var(--trait); background:#232320; cursor:pointer; overflow:hidden; display:block; }
+  .flight__vignette img{ width:100%; height:auto; display:block; }
+  .flight__vignette[aria-current="true"]{ border-color:var(--texte); }
+  .flight__titre{ font-size:clamp(52px,7.5vw,120px); margin:34px 0 6px; }
+  @media (min-width:900px){ .flight__titre{ margin-top:0; } }
+  .flight__camp{ font-family:'Instrument Serif',Georgia,serif; font-size:clamp(24px,2.6vw,36px); color:var(--texte); margin:0 0 8px; }
+  .flight__tag{ font-family:'Instrument Serif',Georgia,serif; font-style:italic; font-size:clamp(18px,2vw,24px); color:var(--doux); margin:0 0 34px; }
+  .flight__bloc{ border-top:1px solid var(--trait); padding:20px 0 24px; }
+  .flight__bloc h3{ margin:0 0 10px; }
+  .flight__bloc p{ margin:0; font-size:16px; line-height:1.65; color:var(--doux); max-width:56ch; text-wrap:pretty; }
+  /* prev / next project : centred in the page, spanning the full
+     width under both columns, each arrow with its small label
+     underneath it */
+  .flight__nav{ grid-column:1 / -1; display:flex; justify-content:center; gap:56px; margin-top:52px; width:100%; }
+  .flight__nav-item{ display:flex; flex-direction:column; align-items:center; gap:9px; }
+  .flight__nav-label{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--gris); text-align:center; white-space:nowrap; }
+  body.bloque{ overflow:hidden; }
+  /* phone door gate : while the class is on, the page cannot scroll
+     at all — touch and wheel input drive the fish dissolve instead
+     (see the porteGate script). Removed the moment the dissolve
+     completes, so the NEXT scroll gesture scrolls the page. */
+  html.verrouille{ overflow:hidden; overscroll-behavior:none; }
+  html.verrouille body{ overflow:hidden; }
+
+  /* ---------- fullscreen viewer (lightbox) ---------- */
+  .visionneuse{ position:fixed; inset:0; z-index:120; background:rgba(17,17,16,.97); color:var(--texte);
+    display:flex; align-items:center; justify-content:center;
+    opacity:0; pointer-events:none; transition:opacity .35s var(--ease); }
+  .visionneuse.ouvert{ opacity:1; pointer-events:auto; }
+  .visionneuse[hidden]{ display:none; }
+  .visionneuse__img{ max-width:96vw; max-height:92vh; max-height:92dvh; width:auto; height:auto; display:block; cursor:zoom-out; }
+  .visionneuse__img[hidden]{ display:none; }
+  /* the fullscreen film must actually fill the screen : it used to
+     sit at its file's intrinsic width (width:auto), which on a
+     desktop is SMALLER than the inline player, ringed by a huge dark
+     border. It is now sized off the viewport itself — as wide as
+     96vw, or as tall as 88vh at 16:9, whichever comes first — so the
+     browser scales the film (854×480 on desktop, 640×360 on phones)
+     up to take a significant share of the screen, with object-fit
+     keeping the picture undistorted.
+     The seek bar overlays the bottom and the counter / Close sit
+     above it, so 88vh (not 92) keeps the film clear of both. */
+  .visionneuse__video{ width:min(96vw, calc(88vh * 16 / 9)); width:min(96vw, calc(88dvh * 16 / 9));
+    height:auto; aspect-ratio:16/9; max-width:96vw; max-height:88vh; max-height:88dvh;
+    object-fit:contain; display:block; background:#000; }
+  .visionneuse__video[hidden]{ display:none; }
+  /* in true fullscreen (the viewer itself granted fullscreen) the
+     film takes even more of the screen, and the backdrop goes
+     fully black behind it */
+  .visionneuse:fullscreen{ background:#000; }
+  .visionneuse:fullscreen .visionneuse__video{ width:min(98vw, calc(92vh * 16 / 9)); width:min(98vw, calc(92dvh * 16 / 9));
+    max-width:98vw; max-height:92vh; max-height:92dvh; }
+  .visionneuse__btn{ position:absolute; width:48px; height:48px; border:1px solid var(--trait); background:rgba(17,17,16,.65);
+    color:var(--texte); font-size:18px; cursor:pointer; border-radius:0; z-index:2;
+    display:flex; align-items:center; justify-content:center; }
+  .visionneuse__btn:hover{ border-color:var(--texte); }
+  .visionneuse__fermer{ top:calc(var(--barre) + 10px); right:20px; font-family:'JetBrains Mono',monospace; font-size:13px; width:auto; padding:0 16px; }
+  .visionneuse__prec{ left:14px; top:50%; transform:translateY(-50%); }
+  .visionneuse__suiv{ right:14px; top:50%; transform:translateY(-50%); }
+  @media (min-width:768px){ .visionneuse__fermer{ right:32px; } .visionneuse__prec{ left:24px; } .visionneuse__suiv{ right:24px; } }
+  .visionneuse__compteur{ position:absolute; left:20px; top:calc(var(--barre) + 24px); }
+  /* the fullscreen film's own controls, YouTube-style : a centre
+     cluster over the picture — rewind 10 seconds, a large play /
+     pause, forward 10 seconds — plus a slim seek bar along the
+     bottom. The cluster stays up while the film is paused and
+     fades a few seconds into playback; moving the pointer (or
+     touching the film) brings it back. Shown only while the
+     fullscreen item is the film. */
+  .visionneuse__centre{ position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); z-index:3;
+    display:flex; align-items:center; gap:clamp(20px,4vw,44px);
+    opacity:0; pointer-events:none; transition:opacity .3s var(--ease); }
+  .visionneuse__centre[hidden]{ display:none; }
+  .visionneuse__centre.vu{ opacity:1; pointer-events:auto; }
+  .vc-btn{ width:64px; height:64px; border-radius:50%; border:1px solid rgba(242,240,234,.4);
+    background:rgba(17,17,16,.62); color:var(--creme); cursor:pointer; padding:0;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0; }
+  .vc-btn svg{ width:24px; height:24px; display:block; fill:var(--creme); }
+  .vc-btn svg[hidden]{ display:none; }
+  .vc-btn .vc-dix{ font-family:'JetBrains Mono',monospace; font-size:10px; line-height:1; letter-spacing:.06em; color:var(--creme); }
+  .vc-btn--play{ width:92px; height:92px; }
+  .vc-btn--play svg{ width:36px; height:36px; }
+  .vc-btn:hover{ border-color:var(--creme); background:rgba(17,17,16,.82); }
+  .vc-btn:focus-visible{ outline:1px solid var(--creme); outline-offset:3px; }
+  .visionneuse__vbarre{ position:absolute; left:0; right:0; bottom:0; z-index:3;
+    display:flex; align-items:center; gap:10px; padding:30px 16px 14px;
+    background:linear-gradient(to top, rgba(0,0,0,.72), rgba(0,0,0,0)); color:var(--creme);
+    opacity:0; pointer-events:none; transition:opacity .3s var(--ease); }
+  .visionneuse__vbarre[hidden]{ display:none; }
+  .visionneuse__vbarre.vu{ opacity:1; pointer-events:auto; }
+  @media (min-width:768px){ .visionneuse__vbarre{ padding:30px 28px 18px; } }
+
+  .sr-only{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+
+  /* ---------- phone pass : even header spacing, tight section rhythm,
+     fish dissolve fully inside the viewport ---------- */
+  @media (max-width:767px){
+    .acces{ padding:0 16px; }
+    .acces .logo{ gap:9px; }
+    .acces .logo__img{ height:42px; }
+    .acces .logo small{ font-size:10px; letter-spacing:.12em; }
+    .acces nav{ gap:19px; }
+    .acces nav a{ font-size:11px; letter-spacing:.11em; }
+    .porte{ height:206vh; }
+    .porte__logo{ width:min(70vh,92vw); }
+    .porte__bas{ padding:18px; }
+    .hero-sec{ height:116vh; }
+    .hero__phrase .soustitre{ margin-top:3vh; }
+    .hero__coin--g{ left:18px; bottom:18px; }
+    .work-sec{ padding:calc(var(--barre) + 14px) 0 30px; }
+    .glisseur{ padding:4vh 0 2vh; }
+    .item{ width:min(76vw,340px); }
+    .hero{ padding:56px 20px 52px; }
+    .cred{ margin-top:44px; padding:22px 0 24px; }
+    .cred__groupe{ gap:64px; padding-right:64px; }
+    .honneurs{ padding:52px 20px 64px; }
+    #contact{ padding:62px 20px 22px; }
+    .contact__liens{ gap:18px; margin-top:30px; }
+    .pied__infos{ margin-top:46px; }
+    .flight__corps{ padding:20px 16px 70px; }
+    .flight__barre{ padding:0 16px; }
+    .flight__titre{ margin-top:26px; }
+  }
+
+  /* ---------- phone adjustments : door gate, one-line lines,
+     centred hints and controls ---------- */
+  @media (max-width:767px){
+    /* the door is exactly one screen tall on phones : no tall cream
+       tail of empty scroll between the hero and Art Direction. The
+       first scroll gesture drives the dissolve through the JS gate
+       (the page itself is locked until the fish has fully
+       dissipated), and the Art Direction panel is one screen too,
+       so the next gesture lands straight on the work. */
+    .porte{ height:100vh; height:100dvh; }
+    .hero-sec{ height:100vh; height:100dvh; }
+
+    /* Art Direction : "Campaigns, Branding, Content, and Direction"
+       on ONE line instead of two */
+    .hero__phrase > .meta{ font-size:10px; letter-spacing:.05em; white-space:nowrap; }
+    /* "Move: stir the water · play with the fish" centred, one line */
+    .meta.hero__coin--g{ left:0; right:0; text-align:center;
+      font-size:10px; letter-spacing:.05em; white-space:nowrap; }
+
+    /* Selected work hint : Press, the arrows, Swipe, the hand, Drag
+       and the mini bar sit BESIDE the two arrow buttons on the same
+       row — never underneath them. The buttons and the hint shrink
+       a touch on phones so the whole row fits one line, legibly */
+    .gv-commandes{ flex-wrap:nowrap; gap:6px; padding:10px 16px 0; }
+    .gv-commandes .gv-btn{ width:40px; height:40px; flex:0 0 40px; font-size:16px; }
+    .gv-commandes .indice{ flex:1 1 auto; min-width:0; margin-left:2px; font-size:9.5px; letter-spacing:.04em;
+      display:flex; justify-content:flex-start; }
+    .gv-commandes .hint-line{ flex-wrap:nowrap; gap:4px; white-space:nowrap; }
+    .hint-arrows{ white-space:nowrap; letter-spacing:.04em; }
+    .hint-swipe{ gap:3px; }
+    .hint-hand{ width:12px; height:12px; flex:0 0 12px; }
+    .hint-drag{ gap:4px; }
+    .hint-mini{ flex:0 0 18px; width:18px; }
+
+    /* the dot sentence in the hero : no canvas blur at all on
+       phones, so the letters formed by the dots stay sharp */
+    #porte-fumee{ filter:none; }
+
+    /* contact headline a touch smaller on phones, so the last
+       line — and the punctuation after "mind" — ends well
+       inside the screen instead of on its edge */
+    .titre-fin{ font-size:13.4vw; }
+
+    /* About : LinkedIn and Email me on the first line, See the work
+       on its own line underneath them */
+    .hero__actions li:nth-child(3){ order:1; }
+    .hero__actions li:nth-child(2){ order:2; }
+    .hero__actions li:nth-child(1){ order:3; flex:0 0 100%; display:flex; justify-content:center; }
+
+    /* case study prev / next : two equal-width items, so both arrow
+       buttons sit symmetrically around the page centre, and each
+       label stays on ONE line (the wider "Previous project" used
+       to wrap inside its fixed 118px box while "Next project"
+       fitted, leaving the pair uneven) */
+    .flight__nav{ gap:24px; }
+    .flight__nav-item{ flex:1 1 0; max-width:180px; }
+
+    /* fullscreen film : the centre play / pause and ±10 second
+       buttons a good size down, so they stop taking over the
+       picture on a phone screen */
+    .visionneuse__centre{ gap:18px; }
+    .vc-btn{ width:46px; height:46px; }
+    .vc-btn svg{ width:18px; height:18px; }
+    .vc-btn--play{ width:64px; height:64px; }
+    .vc-btn--play svg{ width:25px; height:25px; }
+    .vc-btn .vc-dix{ font-size:9px; }
+
+    /* contact footer : "Youssef Said · Art Director · Toronto, ON"
+       on one line, and the whole footer row sits a touch lower */
+    .pied__infos{ font-size:10px; letter-spacing:.05em; margin-top:60px; }
+    .pied__infos > span:first-child{ white-space:nowrap; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    /* reduced motion keeps the original scroll-driven door : the
+       one-screen gated door above is only for the animated path */
+    .porte{ height:206vh; }
+    *,*::before,*::after{ animation-duration:.001s !important; transition-duration:.001s !important; }
+    .mot{ transform:none; } .revele{ opacity:1; transform:none; }
+    .defile-fleche{ animation:none; }
+    .cred__piste{ animation:none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="c-anneau" aria-hidden="true"><span class="c-libelle">View</span></div>
+<div class="c-point" aria-hidden="true"></div>
+
+<canvas id="fluide" aria-hidden="true"></canvas>
+
+<header class="acces" id="acces">
+  <a class="logo" href="#porte" aria-label="Youssef Said, back to top"><img class="logo__img" src="assets/e308d70c8498.png" alt="" width="2100" height="2100" /><small>Youssef Said</small></a>
+  <nav aria-label="Main">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- 1 · THE DOOR, the fish logo dissolves into smoke as you scroll -->
+<section class="porte" id="porte" aria-label="Youssef Said, art director">
+  <div class="porte__ecran" id="porte-ecran">
+    <div class="monde" aria-hidden="true"></div>
+    <div class="porte__nom"><img class="porte__logo" id="porte-logo" src="assets/e308d70c8498.png" alt="Youssef Said logo: a bold red geometric fish with legs, a white ring eye and a white scale pattern" width="2100" height="2100" fetchpriority="high" /></div>
+    <canvas id="porte-fumee" aria-hidden="true"></canvas>
+    <div class="porte__bas">
+      <p class="meta ligne-une">Youssef Said · Art Director · Toronto, ON</p>
+      <p class="meta droite">Scroll <span class="defile-fleche">↓</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- 1b · HERO, the pond panel : a red fish swims the dark water, the cursor stirs the surface -->
+<section class="hero-sec" id="hero" aria-label="Art direction">
+  <div class="hero__ecran" id="hero-ecran">
+    <div class="hero__phrase">
+      <div class="hero__lockup">
+        <h1 class="titre"><span class="masque"><span class="mot" style="--i:0">Art</span></span><span class="masque"><span class="mot" style="--i:1">Direction</span></span></h1>
+        <p class="serif soustitre">Ideas that stir the water.</p>
+      </div>
+      <p class="meta">Campaigns, Branding, Content, and Direction</p>
+    </div>
+    <p class="meta hero__coin hero__coin--g">Move: stir the water · play with the fish</p>
+    <p class="meta hero__coin hero__coin--d">Selected work below ↓</p>
+  </div>
+</section>
+
+
+
+<div class="site">
+  <main>
+    <!-- 3 · ABOUT + SERVICES -->
+    <section id="services" aria-labelledby="services-titre">
+      <h2 class="sr-only" id="services-titre">Selected work and about</h2>
+<!-- 2 · SELECTED WORK, drag gallery -->
+<section class="work-sec" id="work" aria-labelledby="work-titre">
+  <h2 class="sr-only" id="work-titre">Selected work</h2>
+  <div class="gv-entete">
+    <p class="meta meta--texte gv-titre">Selected work</p>
+    <p class="meta" aria-hidden="true"><span id="gv-compteur">01</span> / 06</p>
+  </div>
+
+  <div class="glisseur" id="glisseur" tabindex="0" role="group" aria-roledescription="carousel"
+       aria-label="Selected work. Swipe sideways on a trackpad or touch screen to move through the projects, press the arrow buttons, or use the left and right arrow keys. Scrolling up and down moves the page. Activate a project to open its case study.">
+    <ol class="piste" id="piste">
+      <li class="item" data-ancre="T">
+        <button class="item__lien" type="button" data-case="0" data-cursor="view" aria-label="Open case study: Xbox, PC Game Pass">
+          <span class="item__cadre"><img src="assets/0570f8ec8fd0.jpg" alt="Xbox PC Game Pass 'Shuffle Your Play' poster mocked up on a brick wall, a framed Halo Master Chief helmet poster under the headline, with the line 'Being bad at a new game isn't embarrassing. Only being good at one is.'" width="1344" height="1792" fetchpriority="high" draggable="false" /></span>
+          <span class="item__legende">
+            <span class="meta item__nom">01 · Xbox · PC Game Pass</span>
+            <span class="meta item__fl" aria-hidden="true">→</span>
+            <span class="meta item__disc">Campaign · Art Direction · 1st Place</span>
+            <span class="meta item__tag">“We didn't know what Xbox was building. We built it anyway.”</span>
+          </span>
+        </button>
+      </li>
+      <li class="item" data-ancre="B">
+        <button class="item__lien" type="button" data-case="1" data-cursor="view" aria-label="Open case study: GelaSkins">
+          <span class="item__cadre"><img src="assets/405861c7e19f.jpg" alt="GelaSkins billboard on an ivy-covered brick wall, a tattooed inmate in orange sweatpants slides a phone with a pink My Little Pony skin into his pocket, under the line 'Everyone has their thing'" width="1344" height="1792" draggable="false" /></span>
+          <span class="item__legende">
+            <span class="meta item__nom">02 · GelaSkins</span>
+            <span class="meta item__fl" aria-hidden="true">→</span>
+            <span class="meta item__disc">Campaign · Art Direction · 3rd Place</span>
+            <span class="meta item__tag">“The inmate in the orange jumpsuit has My Little Pony in his pocket.”</span>
+          </span>
+        </button>
+      </li>
+      <li class="item" data-ancre="T">
+        <button class="item__lien" type="button" data-case="2" data-cursor="view" aria-label="Open case study: Corona Sunbrew">
+          <span class="item__cadre"><img src="assets/8da2ce2a1d1a.jpg" alt="Corona Sunbrew billboard against a blue sky, a lime wedge working as a clock under the line 'Any time is Sunbrew time'" width="1344" height="1792" draggable="false" /></span>
+          <span class="item__legende">
+            <span class="meta item__nom">03 · Corona Sunbrew</span>
+            <span class="meta item__fl" aria-hidden="true">→</span>
+            <span class="meta item__disc">Campaign · Art Direction</span>
+            <span class="meta item__tag">“Alcohol-free beer for the people everyone forgot.”</span>
+          </span>
+        </button>
+      </li>
+      <li class="item" data-ancre="B">
+        <button class="item__lien" type="button" data-case="3" data-cursor="view" aria-label="Open case study: H and R Block">
+          <span class="item__cadre"><img src="assets/c96b052c04a8.jpg" alt="H&amp;R Block billboard under a wide blue sky, rock climbers on the artwork and a climber hanging below the frame, beside the line 'Because you have better things to do than taxes'" width="1344" height="1792" draggable="false" /></span>
+          <span class="item__legende">
+            <span class="meta item__nom">04 · H&amp;R Block</span>
+            <span class="meta item__fl" aria-hidden="true">→</span>
+            <span class="meta item__disc">Campaign · Art Direction</span>
+            <span class="meta item__tag">“Gen Z dreads tax season. We showed them what they'd rather be doing.”</span>
+          </span>
+        </button>
+      </li>
+      <li class="item" data-ancre="M">
+        <button class="item__lien" type="button" data-case="4" data-cursor="view" aria-label="Open case study: One and Only Musicals">
+          <span class="item__cadre"><img src="assets/b50b1856782a.jpg" alt="One &amp; Only Musicals, a pillar screen in a mall shows Karen Blixen holding a phone to her ear, with a red rotary phone on a table beside it" width="1184" height="1618" loading="lazy" draggable="false" /></span>
+          <span class="item__legende">
+            <span class="meta item__nom">05 · One &amp; Only Musicals</span>
+            <span class="meta item__fl" aria-hidden="true">→</span>
+            <span class="meta item__disc">Campaign · AI Experience</span>
+            <span class="meta item__tag">“Karen Blixen calls you herself.”</span>
+          </span>
+        </button>
+      </li>
+      <li class="item" data-ancre="T">
+        <button class="item__lien" type="button" data-case="5" data-cursor="view" aria-label="Open case study: Logo Redesign">
+          <span class="item__cadre"><img src="assets/b6e2340595c3.jpg" alt="Logo Redesign: the new Roc &amp; Basic church mark, a white r and B joined, set over a photograph of children looking up" width="800" height="1067" loading="lazy" draggable="false" /></span>
+          <span class="item__legende">
+            <span class="meta item__nom">06 · Logo Redesign</span>
+            <span class="meta item__fl" aria-hidden="true">→</span>
+            <span class="meta item__disc">Identity · Branding · Real Clients</span>
+            <span class="meta item__tag">“Two communities. Two old marks. One job: a logo that finally fits.”</span>
+          </span>
+        </button>
+      </li>
+    </ol>
+  </div>
+
+  <div class="gv-commandes">
+    <button class="gv-btn" type="button" id="gv-prec" aria-label="Previous project">←</button>
+    <button class="gv-btn" type="button" id="gv-suiv" aria-label="Next project">→</button>
+    <span class="meta indice" aria-hidden="true"><span class="souris hint-line"><span>Press</span><span aria-hidden="true">·</span><span class="hint-arrows">← →</span><span aria-hidden="true">·</span><span class="hint-swipe"><span>Swipe</span><svg class="hint-hand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 11V8a1.5 1.5 0 0 0-3 0v3"/><path d="M15 11V6.5a1.5 1.5 0 0 0-3 0V11"/><path d="M12 11V4.2a1.5 1.5 0 0 0-3 0V12"/><path d="M18 9.5a1.5 1.5 0 0 1 3 .5V14a8 8 0 0 1-8 8h-1.2c-2.3 0-4-.7-5.5-2.1l-3.4-3.4a1.6 1.6 0 0 1 2.3-2.3L9 15.6"/></svg></span><span aria-hidden="true">·</span><span class="hint-drag"><span>Drag</span><span class="hint-mini" aria-hidden="true"><i></i><b></b></span></span></span><span class="tactile hint-line"><span>Press</span><span aria-hidden="true">·</span><span class="hint-arrows">← →</span><span aria-hidden="true">·</span><span class="hint-swipe"><span>Swipe</span><svg class="hint-hand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 11V8a1.5 1.5 0 0 0-3 0v3"/><path d="M15 11V6.5a1.5 1.5 0 0 0-3 0V11"/><path d="M12 11V4.2a1.5 1.5 0 0 0-3 0V12"/><path d="M18 9.5a1.5 1.5 0 0 1 3 .5V14a8 8 0 0 1-8 8h-1.2c-2.3 0-4-.7-5.5-2.1l-3.4-3.4a1.6 1.6 0 0 1 2.3-2.3L9 15.6"/></svg></span><span aria-hidden="true">·</span><span class="hint-drag"><span>Drag</span><span class="hint-mini" aria-hidden="true"><i></i><b></b></span></span></span></span>
+  </div>
+  <div class="gv-progres" id="gv-progres" role="slider" tabindex="0" aria-label="Scrub through the selected work" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="gv-barre"></i><span class="gv-progres__dot" id="gv-dot"></span></div>
+</section>
+
+      <!-- 3 · ABOUT, below the work : the work comes first -->
+      <div class="hero" id="about">
+        <p class="hero__qui meta revele" style="--i:0"><b>About me</b></p>
+        <p class="hero__promesse revele" style="--i:1">An art director based in Toronto, built on one idea that stirs the water.</p>
+        <ul class="hero__actions revele" style="--i:2">
+          <li><a class="hero__cta" href="#work">See the work ↑</a></li>
+          <li><a href="mailto:youssef.said1313@gmail.com?subject=Hey%2C%20I%20just%20saw%20your%20portfolio!" target="_self" data-mailto>Email me ↗</a></li>
+          <li><a href="https://www.linkedin.com/in/youssef-said-a8b263274" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+        </ul>
+        <p class="hero__parcours revele" style="--i:3">I studied Creative Advertising at Humber and started a clothing brand, Maracousi, back in high school. I won Humber's Xbox pitch competition, then studied abroad in Copenhagen, Denmark, where I pitched an app to investors and received a 2 million Danish kroner offer ($400K CAD) to develop it. Back in Canada, I created a logo for a French elementary school. The work I mentioned lives throughout this portfolio.</p>
+        <p class="hero__perso revele" style="--i:4">Outside of work, I'm a huge foodie, everywhere from Michelin-starred restaurants to Sweden's Disgusting Food Museum, and I'm rarely without headphones, constantly exploring new music and making some of my own along the way.</p>
+      </div>
+
+      <div class="disciplines">
+        <div class="cred">
+          <div class="cred__piste">
+            <div class="cred__groupe">
+              <img class="cred__logo" style="height:36px" src="assets/0ecbdd48b5f1.png" alt="Humber Polytechnic" width="818" height="181" loading="lazy" />
+              <img class="cred__logo" style="height:38px" src="assets/7e51bad9346e.png" alt="Salt XC" width="922" height="360" loading="lazy" />
+              <img class="cred__logo" style="height:34px" src="assets/bb74f2888698.png" alt="Creatica Studios" width="1303" height="360" loading="lazy" />
+              <img class="cred__logo" style="height:40px" src="assets/20bbc0661876.png" alt="Canyon Entertainment Group" width="623" height="114" loading="lazy" />
+              <img class="cred__logo" style="height:42px" src="assets/fc7fec994fde.png" alt="KEA Copenhagen, Copenhagen School of Design and Technology" width="909" height="360" loading="lazy" />
+              <img class="cred__logo" style="height:54px" src="assets/4028b30217b7.png" alt="GelaSkins" width="1024" height="1024" loading="lazy" />
+              <img class="cred__logo" style="height:54px" src="assets/f2f8c0cfce9d.png" alt="Jane and Finch Collective for Youth Employment" width="922" height="757" loading="lazy" />
+              <img class="cred__logo" style="height:38px" src="assets/aeedbf8815bf.png" alt="Maracousi" width="1088" height="360" loading="lazy" />
+              <img class="cred__logo" style="height:58px" src="assets/3157f3ab0e92.png" alt="École élémentaire catholique Saint-Nicolas, Milton" width="272" height="360" loading="lazy" />
+              <img class="cred__logo" style="height:54px" src="assets/b3ec5ef7df46.png" alt="St. Trinité" width="273" height="360" loading="lazy" />
+              <img class="cred__logo" style="height:46px" src="assets/87f6f5d4e283.png" alt="MonAvenir, Conseil scolaire catholique" width="712" height="360" loading="lazy" />
+              <img class="cred__logo" style="height:50px" src="assets/1150d7312edb.png" alt="Grace and Family Church, Mississauga" width="688" height="360" loading="lazy" />
+            </div>
+            <div class="cred__groupe" aria-hidden="true">
+              <img class="cred__logo" style="height:36px" src="assets/0ecbdd48b5f1.png" alt="" width="818" height="181" loading="lazy" />
+              <img class="cred__logo" style="height:38px" src="assets/7e51bad9346e.png" alt="" width="922" height="360" loading="lazy" />
+              <img class="cred__logo" style="height:34px" src="assets/bb74f2888698.png" alt="" width="1303" height="360" loading="lazy" />
+              <img class="cred__logo" style="height:40px" src="assets/20bbc0661876.png" alt="" width="623" height="114" loading="lazy" />
+              <img class="cred__logo" style="height:42px" src="assets/fc7fec994fde.png" alt="" width="909" height="360" loading="lazy" />
+              <img class="cred__logo" style="height:54px" src="assets/4028b30217b7.png" alt="" width="1024" height="1024" loading="lazy" />
+              <img class="cred__logo" style="height:54px" src="assets/f2f8c0cfce9d.png" alt="" width="922" height="757" loading="lazy" />
+              <img class="cred__logo" style="height:38px" src="assets/aeedbf8815bf.png" alt="" width="1088" height="360" loading="lazy" />
+              <img class="cred__logo" style="height:58px" src="assets/3157f3ab0e92.png" alt="" width="272" height="360" loading="lazy" />
+              <img class="cred__logo" style="height:54px" src="assets/b3ec5ef7df46.png" alt="" width="273" height="360" loading="lazy" />
+              <img class="cred__logo" style="height:46px" src="assets/87f6f5d4e283.png" alt="" width="712" height="360" loading="lazy" />
+              <img class="cred__logo" style="height:50px" src="assets/1150d7312edb.png" alt="" width="688" height="360" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="honneurs">
+        <h2 class="titre revele" style="--i:0"><span class="masque"><span class="mot" style="--i:0">Awards and</span></span><span class="masque"><span class="mot" style="--i:1">achievements</span></span></h2>
+        <ol class="honneurs__liste">
+          <li class="honneur revele" style="--i:0">
+            <span class="meta">Feb 2024</span>
+            <span class="honneur__quoi">1st Place: Xbox Marketing Pitch Competition</span>
+            <span class="honneur__detail">Humber Sprint Week · Salt XC</span>
+          </li>
+          <li class="honneur revele" style="--i:1">
+            <span class="meta">Jun 2024</span>
+            <span class="honneur__quoi">2M DKK ($400K CAD) investor offer: app pitch</span>
+            <span class="honneur__detail">KEA Copenhagen exchange</span>
+          </li>
+          <li class="honneur revele" style="--i:2">
+            <span class="meta">Apr 2023</span>
+            <span class="honneur__quoi">3rd Place: GelaSkins campaign competition</span>
+            <span class="honneur__detail">Cash prize · Real Toronto client brief</span>
+          </li>
+          <li class="honneur revele" style="--i:3">
+            <span class="meta">Apr 2023</span>
+            <span class="honneur__quoi">3rd Place: Jane and Finch Collective</span>
+            <span class="honneur__detail">Community campaign competition</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 4 · CONTACT -->
+    <section id="contact" aria-labelledby="contact-titre">
+      <p class="meta revele" style="--i:0; margin-top:14px;">Available now · Open to work</p>
+      <div style="margin-top:30px;">
+        <h2 class="titre titre-fin" id="contact-titre"><span class="masque"><span class="mot" style="--i:0">Have a role</span></span><span class="masque"><span class="mot" style="--i:1">in <span class="mind">mind?</span></span></span></h2>
+        <div class="contact__liens">
+          <a class="pied__lien mail-fin revele" style="--i:1" href="mailto:youssef.said1313@gmail.com?subject=Hey%2C%20I%20just%20saw%20your%20portfolio!" target="_self" data-mailto>youssef.said1313@gmail.com</a>
+          <a class="pied__lien mail-fin revele" style="--i:2" href="https://www.linkedin.com/in/youssef-said-a8b263274" target="_blank" rel="noopener">linkedin.com/in/youssef-said</a>
+        </div>
+      </div>
+      <p class="pied__infos">
+        <span>Youssef Said · Art Director · Toronto, ON</span>
+        <span>© 2026 · <a href="#porte">Back to the surface ↑</a></span>
+      </p>
+    </section>
+  </main>
+</div>
+
+<!-- FULLSCREEN VIEWER -->
+<div class="visionneuse" id="visionneuse" role="dialog" aria-modal="true" aria-label="Image, full screen" hidden>
+  <p class="meta visionneuse__compteur" id="visionneuse-compteur">1 / 4</p>
+  <button class="visionneuse__btn visionneuse__fermer" type="button" id="visionneuse-fermer">Close ✕</button>
+  <button class="visionneuse__btn visionneuse__prec" type="button" id="visionneuse-prec" aria-label="Previous item">←</button>
+  <img class="visionneuse__img" id="visionneuse-img" src="assets/ed41adb5fa8a.jpg" alt="" />
+  <video class="visionneuse__video" id="visionneuse-video" playsinline webkit-playsinline preload="metadata" poster="assets/ed41adb5fa8a.jpg" disablepictureinpicture controlslist="nodownload noremoteplayback" hidden></video>
+  <div class="video-spin" id="visionneuse-video-spin" aria-hidden="true"></div>
+  <div class="visionneuse__centre" id="visionneuse-centre" hidden>
+    <button class="vc-btn" type="button" id="vc-retour" aria-label="Rewind 10 seconds">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.6 5.2V2.6L7.4 6.6l5.2 4V8.1a4.9 4.9 0 1 1-4.9 4.9H5.3a7.3 7.3 0 1 0 7.3-7.8z"/></svg>
+      <span class="vc-dix">10</span>
+    </button>
+    <button class="vc-btn vc-btn--play" type="button" id="vc-play" aria-label="Pause the case film">
+      <svg id="vc-ico-play" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M7 4.5v15l13-7.5z"/></svg>
+      <svg id="vc-ico-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>
+    </button>
+    <button class="vc-btn" type="button" id="vc-avance" aria-label="Forward 10 seconds">
+      <svg viewBox="0 0 24 24" aria-hidden="true" style="transform:scaleX(-1)"><path d="M12.6 5.2V2.6L7.4 6.6l5.2 4V8.1a4.9 4.9 0 1 1-4.9 4.9H5.3a7.3 7.3 0 1 0 7.3-7.8z"/></svg>
+      <span class="vc-dix">10</span>
+    </button>
+  </div>
+  <div class="visionneuse__vbarre" id="visionneuse-vbarre" hidden>
+    <span class="fv-temps" id="vc-temps" aria-hidden="true">0:00 / 2:00</span>
+    <input class="fv-seek" type="range" id="vc-seek" min="0" max="1000" value="0" step="1" aria-label="Seek through the case film, full screen" />
+  </div>
+  <button class="visionneuse__btn visionneuse__suiv" type="button" id="visionneuse-suiv" aria-label="Next item">→</button>
+</div>
+
+<!-- CASE STUDY OVERLAY -->
+<div class="flight" id="flight" role="dialog" aria-modal="true" aria-labelledby="flight-titre" hidden>
+  <div class="flight__barre">
+    <span class="meta meta--texte" id="flight-compteur">Case 01 / 06</span>
+    <button class="flight__fermer" type="button" id="flight-fermer">Close ✕</button>
+  </div>
+  <div class="flight__corps">
+    <div>
+      <div class="flight__video-wrap" id="flight-video-wrap" hidden>
+        <video class="flight__video" id="flight-video" playsinline webkit-playsinline preload="metadata" tabindex="0" poster="assets/ed41adb5fa8a.jpg" disablepictureinpicture controlslist="nodownload noremoteplayback" aria-label="Xbox, PC Game Pass case film: a collage of game worlds under the Game Pass wordmark. Tap or press space to play or pause.">
+        </video>
+        <div class="flight__controles" id="flight-controles">
+          <button class="fv-btn" type="button" id="fv-play" aria-label="Play the case film">
+            <svg id="fv-ico-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg>
+            <svg id="fv-ico-pause" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>
+          </button>
+          <span class="fv-temps" id="fv-temps" aria-hidden="true">0:00 / 2:00</span>
+          <input class="fv-seek" type="range" id="fv-seek" min="0" max="1000" value="0" step="1" aria-label="Seek through the case film" />
+          <button class="fv-btn" type="button" id="fv-muet" aria-label="Mute the case film">
+            <svg id="fv-ico-son" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 4.5v-15L7 9H3z"/><path d="M16.2 8.6a4.4 4.4 0 0 1 0 6.8l-1-1.2a3 3 0 0 0 0-4.4z"/><path d="M18.4 6a8 8 0 0 1 0 12l-1-1.2a6.6 6.6 0 0 0 0-9.6z"/></svg>
+            <svg id="fv-ico-muet" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M3 9v6h4l5 4.5v-15L7 9H3z"/><path d="M16 9.4l6 5.2M22 9.4l-6 5.2" stroke="#F2F0EA" stroke-width="1.8" fill="none"/></svg>
+          </button>
+          <button class="fv-btn" type="button" id="fv-plein" aria-label="Watch the case film full screen">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v2.4H6.4V10H4zM14 4h6v6h-2.4V6.4H14zM4 14h2.4v3.6H10V20H4zM17.6 14H20v6h-6v-2.4h3.6z"/></svg>
+          </button>
+        </div>
+        <div class="video-spin" id="flight-video-spin" aria-hidden="true"></div>
+      </div>
+      <img class="flight__img" id="flight-img" src="assets/ed41adb5fa8a.jpg" alt="" width="1600" height="899" title="View full screen" role="button" tabindex="0" aria-label="View this image full screen" />
+      <p class="meta" id="flight-media-hint" style="margin-top:12px; text-align:center;">Click for full screen, use arrow to browse</p>
+      <div class="flight__galerie" id="flight-galerie" role="group" aria-label="Project images"></div>
+      <p class="meta" id="flight-disc" style="margin-top:14px;">Campaign · Art Direction</p>
+    </div>
+    <div>
+      <h2 class="titre flight__titre" id="flight-titre">Xbox</h2>
+      <p class="flight__camp" id="flight-camp">“Shuffle Your Play” · PC Game Pass</p>
+      <p class="flight__tag" id="flight-tag"></p>
+      <div class="flight__bloc"><h3 class="meta meta--texte">The brief</h3><p id="flight-brief"></p></div>
+      <div class="flight__bloc"><h3 class="meta meta--texte">The insight</h3><p id="flight-insight"></p></div>
+      <div class="flight__bloc"><h3 class="meta meta--texte">The idea</h3><p id="flight-idea"></p></div>
+      <div class="flight__bloc"><h3 class="meta meta--texte">The execution</h3><p id="flight-exec"></p></div>
+      <div class="flight__bloc"><h3 class="meta meta--texte">The outcome</h3><p id="flight-outcome"></p></div>
+    </div>
+    <div class="flight__nav">
+      <div class="flight__nav-item">
+        <button class="gv-btn" type="button" id="flight-prec" aria-label="Previous case study">←</button>
+        <span class="flight__nav-label">Previous project</span>
+      </div>
+      <div class="flight__nav-item">
+        <button class="gv-btn" type="button" id="flight-suiv" aria-label="Next case study">→</button>
+        <span class="flight__nav-label">Next project</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function clamp(v,a,b){ return v<a?a:(v>b?b:v); }
+  function smooth(v){ v = clamp(v,0,1); return v*v*(3-2*v); }
+  function smoother(v){ v = clamp(v,0,1); return v*v*v*(v*(v*6-15)+10); }
+
+  /* ---------- case data : real copy + real images from the live portfolio ---------- */
+  var CASES = [
+    { titre:"Xbox", camp:"\u201CShuffle Your Play\u201D \u00B7 PC Game Pass",
+      tag:"We didn't know what Xbox was building. We built it anyway.",
+      disc:"Campaign \u00B7 Art Direction \u00B7 Humber Sprint Week \u00B7 2024",
+      galerie:[
+        { src:"assets/37d7e914bbff.jpg", alt:"'Shuffle Your Play' posters mocked up on a concrete city wall, three posters side by side: Master Chief, the green shuffle arrows, and the Doom Slayer, under tree shadows" },
+        { src:"assets/d0bb6f67ddea.jpg", alt:"Shuffle Your Play on phones, the discovery tool filtered by genre, mode and mood" },
+        { src:"assets/0fa91a8174ca.jpg", alt:"The 'Welcome, NOOB' Xbox email mocked up on a desktop monitor on a desk, Gmail open showing Master Chief pointing at the reader" }
+      ],
+      /* the Game Pass collage is not a still : it is the cover art
+         (poster) of the case film, so it leads the case as a playable
+         video and is not repeated in the stills gallery */
+      video:{ src:"assets/feb444119cc6.mp4", srcMobile:"assets/9e2df2a65980.mp4", poster:"assets/ed41adb5fa8a.jpg",
+        alt:"Xbox PC Game Pass case film, cover art: a collage of game worlds under the Game Pass wordmark" },
+      brief:"Humber Sprint Week, a live client brief: Salt XC, Xbox's agency of record in Canada. The product was PC Game Pass, the timeline was one week, and a strong enough idea could actually be used.",
+      insight:"PC gamers see themselves as a different tribe from console players, tech-savvy, wary of being sold to, many running ad blockers. PC Game Pass has hundreds of games, but hardcore players stick to the same two or three. The barrier isn't the catalog. It's comfort.",
+      idea:"Shuffle Your Play, rebuild the \u201Csurprise me\u201D button into a real discovery tool, filterable by genre, mode or mood, and build the campaign around escaping your routine.",
+      exec:"Native content, not ads: Canadian streamers like xQc playing genres they'd never touch, live on stream; a shuffle filter for TikTok and Snapchat; social posts written in PC gamer shorthand, including an \u201Cescape your routine\u201D post that swapped the word \u201Cescape\u201D for the literal ESC key.",
+      outcome:"First place in the program. Salt XC's Creative Director said the social ads looked ready for Xbox's own Instagram and singled out the ESC post. Months later, Xbox shipped a near-identical shuffle feature, Salt XC confirmed it had been in development for months before Sprint Week. Two teams, no contact, same answer." },
+    { titre:"GelaSkins", camp:"\u201CEverybody Has Their Thing\u201D",
+      tag:"The inmate in the orange jumpsuit has My Little Pony in his pocket.",
+      disc:"Campaign \u00B7 Art Direction \u00B7 Real Client \u00B7 2023",
+      galerie:[
+        { src:"assets/6fea795ec637.jpg", alt:"Billboard mockup, a tattooed inmate in an orange jumpsuit slides a phone with a pink My Little Pony skin into his pocket, ivy growing around the billboard on a brick wall, under the line 'Everyone has their thing'" },
+        { src:"assets/4439cc9121a5.jpg", alt:"Billboard, a businessman in a black suit slides a phone with a Justin Bieber skin into his pocket" },
+        { src:"assets/2530b77fd3c9.jpg", alt:"Wild posting, 'Everyone has their thing' on a city wall" }
+      ],
+      brief:"A small Toronto brand making custom skins for phones, laptops and tablets. It works with local Toronto artists, customers can upload their own art, and it is loved but unknown, on a budget of a few hundred dollars.",
+      insight:"People get skins to show who they are. So who has the least room to do that? People in uniform, suits, scrubs, jumpsuits. Their device is the one thing they still control.",
+      idea:"Everybody Has Their Thing, people in uniform, with a skin that shows their real side.",
+      exec:"A businessman in an all-black suit slides his phone into his pocket; the skin is Justin Bieber. An inmate in an orange jumpsuit, covered in tattoos with bloody knuckles, has a phone with a My Little Pony skin, taken from GelaSkins' own site. Run as wild postings: GelaSkins owns its printers, cutters and adhesive, so production stays in-house for almost nothing.",
+      outcome:"Third place and a cash prize. The CEO laughed out loud during the pitch and said it nailed the brand's voice." },
+    { titre:"Corona Sunbrew", camp:"\u201CSunbrew to Sundown\u201D",
+      tag:"Alcohol-free beer for the people everyone forgot.",
+      disc:"Campaign \u00B7 Art Direction \u00B7 Academic Concept",
+      galerie:[
+        { src:"assets/79e5d71748b2.jpg", alt:"Billboard, a lime wedge working as a clock, 'Any time is Sunbrew time'" },
+        { src:"assets/2debd29690cd.jpg", alt:"Bus decal, a headless driver with a beer in his lap, completed by the real driver's head: 'The only buzz on this bus is the AC. It's just Sunbrew.'" },
+        { src:"assets/ec0474f414a9.jpg", alt:"Social post, a pregnant woman squeezes a lime into a Sunbrew" }
+      ],
+      brief:"An alcohol-free beer. Most alcohol-free beer talks to two people: the health-focused, and the regular drinker who wants a lighter option.",
+      insight:"Health-focused people will just take supplements, and regular drinkers won't switch, leaving pregnant women, drivers, people under drinking age, anyone who wants a drink but can't. Nobody was talking to them.",
+      idea:"Sunbrew to Sundown, the beer for anyone, any time of day.",
+      exec:"A pregnant woman squeezes a lime into a beer. A decal of a headless driver with a beer in his lap, placed under a bus driver's window so his real head completes it: \u201CThe only buzz on this bus is the AC. It's just Sunbrew.\u201D A lime wedge that works as a clock for \u201CAny time is Sunbrew time.\u201D",
+      outcome:"An academic concept, a complete campaign system across billboard, transit and social, built for the audiences every other alcohol-free brand ignored." },
+    { titre:"H&R Block", camp:"\u201CBetter Things to Do\u201D",
+      tag:"Gen Z dreads tax season. We showed them what they'd rather be doing.",
+      disc:"Campaign \u00B7 Art Direction \u00B7 Academic Concept",
+      galerie:[
+        { src:"assets/33d16c9d93ee.jpg", alt:"Billboard, a camping scene pokes out of the frame: 'Because you have better things to do than taxes'" },
+        { src:"assets/1c42cd558dce.jpg", alt:"Billboard, a rock climber breaks out of the frame over the H&R Block green" },
+        { src:"assets/73d32c685cfa.jpg", alt:"Social mockup: an iPhone showing two H&R Block Canada Instagram posts, a knitter holding embroidery reading 'Because you have better things to do than taxes' and a Dress to Impress runway post with the same line" }
+      ],
+      brief:"Tax season is stressful, and H&R Block needed to be likeable during it, and to reach young, first-time filers.",
+      insight:"85% of Canadian Gen Zs experience stress and anxiety doing their taxes. Explaining taxes wouldn't help. So show everything they'd rather be doing instead.",
+      idea:"Better Things to Do, \u201CBecause you have better things to do than taxes.\u201D",
+      exec:"Billboards where the image pokes out of the frame, the things Gen Z actually likes, escaping the ad itself: camping, rock climbing, a guy who went viral for knitting, Dress to Impress.",
+      outcome:"An academic concept, one line, one layout system, and a visual device that makes the benefit physical: life, breaking out of the frame." },
+    { titre:"One & Only Musicals", camp:"\u201CKaren's Call\u201D",
+      tag:"Karen Blixen calls you herself.",
+      disc:"Campaign \u00B7 AI Experience \u00B7 Academic Concept",
+      galerie:[
+        { src:"assets/b50b1856782a.jpg", alt:"A pillar screen in a mall shows Karen Blixen holding a phone to her ear, Karen Blixen The Musical branding and a QR code below her, with a red rotary phone on a table beside the screen" },
+        { src:"assets/f175c2dcf286.jpg", alt:"Karen Blixen sitting in a field, on the phone, inviting you to the musical" },
+        { src:"assets/f215f903db02.jpg", alt:"A man picks up the ringing phone beside a screen showing Karen Blixen" },
+        { src:"assets/cc6820f3bc0a.jpg", alt:"A hotel lobby filled with life-size safari animals, a giraffe, an elephant and a lion, where guests wave back at Karen Blixen smiling and waving from a tall screen" }
+      ],
+      brief:"A Danish musical production company with an aging audience needed younger ticket buyers.",
+      insight:"Young people scroll past ads, but trends, nostalgia and interactive experiences catch their attention. So combine all three.",
+      idea:"Karen's Call, Karen Blixen, the musical's lead, phones you to invite you herself.",
+      exec:"Karen built with AI: her look, her voice, a personality that can hold a conversation. Screens around Denmark show Karen holding a phone, with a rotary phone ringing on a table next to the screen, pick it up and she invites you. Ticket emails come from Karen, and at the theatre another screen has her welcoming the people she invited.",
+      outcome:"An academic concept, an invitation no one can scroll past, because it rings." },
+    { titre:"Logo Redesign", camp:"Roc & Basic, Grace & Family Church \u00B7 Saint-Nicolas School",
+      tag:"Two communities. Two old marks. One job: a logo that finally fits.",
+      disc:"Logo Redesign \u00B7 Identity \u00B7 Real Clients",
+      galerie:[
+        { src:"assets/6693af056ec4.jpg", alt:"Roc & Basic, before and after together in one picture: on the left, labelled Before, the two old logos side by side, Roc with mountains above it and Basic with four silhouettes; on the right, labelled After, the new unified mark, a lowercase r joined to an uppercase B in white, set over a photograph of children looking up" },
+        { src:"assets/9a9f16300f0a.jpg", alt:"Saint-Nicolas, before and after together in one picture: on the left, labelled Before, the old logo, four stick figures standing on an open book under the school name; on the right, labelled After, the new shield logo, Saint Nicolas standing over an open book between two students, a red fleur-de-lis and a green trillium either side of \u00C9.\u00C9.C. St-Nicolas" },
+        { src:"assets/8d6b0568f597.jpg", alt:"The Saint-Nicolas reveal at the school: a screen reads \u2018Nouveau logo de St-Nicolas, 1\u00E8re place: Youssef Said\u2019, flanked by blue and silver balloons" },
+        { src:"assets/c2f09bdd30c2.jpg", alt:"The new Saint-Nicolas logo in use, printed on the back of a white hoodie, pointed out at the school reveal" }
+      ],
+      brief:"Two real clients, the same job: a logo that had stopped saying who they are. Grace & Family Church in Mississauga needed the first fix. Its two youth groups, Roc (Remember Our Creator, grades 6 to 8) and Basic (Brothers And Sisters In Christ, grades 9 to 12), each had their own logo, even though they do everything together: games, retreats, and worship in the same room. The church wanted one logo for both. Saint-Nicolas, a French Catholic elementary school in Milton, needed a new logo: the old one was an afterthought, made by the IT guy because he knew the software. In the gallery, each redesign is shown as one picture, the old logo on the left and the new one on the right, then the school reveal.",
+      insight:"A logo is the shortest sentence an institution ever writes about itself, and both of these were getting it wrong. Roc and Basic looked like two separate organisations on paper, when in real life they are one community in one room. And nothing in the old Saint-Nicolas mark carried what makes the school the school: the diversity of its students, its patron saint, its Catholic roots, and its Franco-Ontarian pride.",
+      idea:"Roc & Basic: the first letter of each name, an r and a B, joined into one shape. That is the community: two groups, one solid whole. The r is lowercase on purpose: Roc is the younger, smaller group, looking up and learning from the older kids. The B is uppercase because Basic is the older group. An uppercase letter starts a sentence, and for these kids it is the start of adult life: university, and a life of leading the younger members and their friends. Saint-Nicolas: a shield built around the school itself. Saint Nicolas stands over an open book, one student on each side of him, with the red fleur-de-lis and the green trillium flanking the name \u00C9.\u00C9.C. St-Nicolas: patron saint, Catholic roots, diversity and Franco-Ontarian identity, all in one crest.",
+      exec:"Two different constructions for two different problems. The church needed one bold monogram: the joined rB is set in solid white, strong enough to sit directly over photography of the kids themselves, so the mark and the community are literally in the same frame. The school needed everything it stands for gathered into a single, ownable crest that works at any size, from a screen to the back of a hoodie.",
+      outcome:"Roc & Basic is in talks with the church elders and youth group leaders now, with a rollout planned across social media, the church website, and merch. Saint-Nicolas is rolling the logo out now as its new logo. It was unveiled at a school reveal, where the screen announced it as the winning design, \u2018Nouveau logo de St-Nicolas, 1\u00E8re place: Youssef Said\u2019, and it is already in use, printed on a hoodie for the day." }
+  ];
+
+  /* ---------- reveals : IntersectionObserver, fire once, never stuck ---------- */
+  var io = ("IntersectionObserver" in window) ? new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add("vu"); io.unobserve(en.target); } });
+  }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }) : null;
+  var revealerListe = [];
+  document.querySelectorAll(".revele, .work-sec, .hero__phrase .titre, #contact-titre").forEach(function(el){
+    if (io) io.observe(el); else el.classList.add("vu");
+    if (!el.classList.contains("vu")) revealerListe.push(el);
+  });
+  /* fallback sweep : a position check on a slow cadence, so a reveal can
+     never stay stuck whatever the scroll path (drag, keyboard, capture) */
+  var cadre = 0;
+  function balayageReveals(){
+    if (!revealerListe.length) return;
+    revealerListe = revealerListe.filter(function(el){
+      var r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight * 0.94 && r.bottom > -40){
+        el.classList.add("vu");
+        if (io) io.unobserve(el);
+        return false;
+      }
+      return true;
+    });
+  }
+
+  /* ---------- the door : logo sampled into smoke particles ----------
+     Extracted verbatim from the version Youssef downloaded
+     (Portfolio_Neuv_Style_Concept__1__0_xb8n.html) — this is the
+     original fish transition, replacing the later reconstructions.
+     Only adaptation : the sample image is read from
+     assets/e308d70c8498.png (the same red fish mark) instead of the
+     downloaded file's embedded copy, and the later, separately
+     requested page details around it (no top-left Scroll, the
+     lowered red portfolio line, the bigger hero fish) are kept.
+     Smoothing pass on top of the extracted code : the displayed
+     progress is interpolated every frame toward the raw scroll
+     progress, the dissolve uses the quintic curve, each particle
+     runs on a slightly offset clock and the logo is sampled at
+     full resolution (11,500 particles), so far more in-between
+     frames carry the morph. Fog pass : the soft puff layer over
+     the bubbles is cut from 44 puffs at 0.13 alpha to 14 at 0.04,
+     the bubbles grow less so they stay distinct, and the canvas
+     blur drops from 3px to 1.1px. */
+  var porte = document.getElementById("porte");
+  var ecran = document.getElementById("porte-ecran");
+  var logoImg = document.getElementById("porte-logo");
+  var pCanvas = document.getElementById("porte-fumee");
+  var pCtx = pCanvas.getContext("2d");
+  var porteVu = false, porteP = 0, portePDoux = -1, echantillons = [], bouffees = [], logoRect = null, PW = 0, PH = 0;
+  var textePts = [], texteW = 2400, texteH = 170;
+  /* phone door gate state (see the gate wiring after majPorte) :
+     while actif, majPorte reads this virtual progress instead of
+     the native scroll position ; termine keeps the dissipated end
+     state once the gate has been completed and released */
+  var porteGate = { actif:false, termine:false, p:0, fini:false, dernierY:null, minuteur:null,
+                    partie:false, inverseEnCours:false };
+
+  (function chargeEchantillons(){
+    var im = new Image();
+    im.onload = function(){
+      var S = 320, cv = document.createElement("canvas");
+      cv.width = S; cv.height = S;
+      var c = cv.getContext("2d");
+      c.drawImage(im, 0, 0, S, S);
+      var data;
+      try { data = c.getImageData(0, 0, S, S).data; } catch(e){ return; }
+      var pts = [];
+      /* sampled on every pixel (was every 2nd) so the particle fish
+         is more than twice as dense : far more in-between points
+         carry the dissolve, so no single step reads as a jump */
+      for (var y = 0; y < S; y += 1){
+        for (var x = 0; x < S; x += 1){
+          var i = (y * S + x) * 4, r = data[i], g = data[i+1], b = data[i+2];
+          if (r > 110 && r - g > 45 && r - b > 45) pts.push({ x:x/S, y:y/S, s:Math.random(), s2:Math.random() });
+        }
+      }
+      if (pts.length > 11500){
+        var pas = pts.length / 11500, out = [];
+        for (var k = 0; k < pts.length; k += pas) out.push(pts[Math.floor(k)]);
+        pts = out;
+      }
+      echantillons = pts;
+      bouffees = [];
+      /* the soft fog puffs : most of them are gone (14, was 44) —
+         they were the haze hovering over the bubbles */
+      for (var j = 0; j < pts.length && bouffees.length < 14; j += Math.max(1, Math.floor(pts.length/14))){
+        bouffees.push({ pt: pts[j], phase: Math.random(), rayon: 0.7 + Math.random()*0.6 });
+      }
+    };
+    im.src = "assets/e308d70c8498.png";
+  })();
+
+  /* --- the sentence formed by dots : "YOUSSEF SAID PORTFOLIO",
+     on ONE line, in a much smaller font, is rendered to
+     an offscreen canvas and sampled into target points. In majPorte,
+     red dots (the fish's own red, 237,50,55) start FROM THE SHAPE
+     OF THE FISH — each one's start position is a sampled point
+     inside the fish silhouette (from echantillons), never a
+     rectangle around it — and gather into these targets, so the
+     words themselves are made of dots, sitting in the middle of the
+     white ones. The line is measured and shrunk to fit the canvas,
+     and dessineTexte caps its drawn width inside the width of the
+     dissipated cloud around it. --- */
+  function chargeTexte(){
+    var cv = document.createElement("canvas");
+    cv.width = texteW; cv.height = texteH;
+    var c = cv.getContext("2d");
+    c.clearRect(0, 0, texteW, texteH);
+    c.fillStyle = "#fff";
+    c.textBaseline = "middle";
+    var ligne = "YOUSSEF SAID PORTFOLIO";
+    /* Anton on its own is a smidge too condensed for a sentence
+       built from dots : at dot size the letters ran together and
+       merged into one pile. The sentence is therefore drawn
+       letter by letter with generous tracking between every
+       character — and extra air around the spaces — so each
+       letter stands on its own and can be read individually.
+       If the tracked line outgrows the canvas, the font and the
+       tracking shrink together, keeping the proportions. */
+    var fs = 112, tracking = 18;
+    function largeurLigne(taille, ecart){
+      c.font = taille + "px Anton, 'Archivo', sans-serif";
+      var total = 0;
+      for (var n = 0; n < ligne.length; n++){
+        var ch = ligne.charAt(n);
+        total += (ch === " " ? taille * 0.42 : c.measureText(ch).width) + ecart;
+      }
+      return total - ecart;
+    }
+    var mesure = largeurLigne(fs, tracking);
+    if (mesure > texteW * 0.96){
+      var ratio = (texteW * 0.96) / mesure;
+      fs = Math.max(30, Math.floor(fs * ratio));
+      tracking = Math.max(6, Math.floor(tracking * ratio));
+      mesure = largeurLigne(fs, tracking);
+    }
+    c.textAlign = "left";
+    var curseurX = (texteW - mesure) / 2;
+    for (var m = 0; m < ligne.length; m++){
+      var lettre = ligne.charAt(m);
+      if (lettre === " "){ curseurX += fs * 0.42 + tracking; continue; }
+      c.fillText(lettre, curseurX, texteH / 2);
+      curseurX += c.measureText(lettre).width + tracking;
+    }
+    var data;
+    try { data = c.getImageData(0, 0, texteW, texteH).data; } catch(e){ return; }
+    var pts = [];
+    /* sampled on a regular 2px grid (was every pixel) : the dots
+       land on an even lattice inside each letterform instead of
+       a dense random-looking clump, so the letter shapes stay
+       full and read cleanly once drawn */
+    for (var y = 0; y < texteH; y += 2){
+      for (var x = 0; x < texteW; x += 2){
+        var idx = (y * texteW + x) * 4;
+        if (data[idx + 3] > 120) pts.push({ x: x / texteW, y: y / texteH, s: Math.random(), s2: Math.random() });
+      }
+    }
+    if (pts.length > 6800){
+      var pasT = pts.length / 6800, outT = [];
+      for (var k = 0; k < pts.length; k += pasT) outT.push(pts[Math.floor(k)]);
+      pts = outT;
+    }
+    textePts = pts;
+  }
+  if (document.fonts && document.fonts.load){
+    document.fonts.load("96px Anton").then(function(){ chargeTexte(); });
+    /* fallback if the font promise stalls */
+    setTimeout(function(){ if (!textePts.length) chargeTexte(); }, 900);
+  } else { chargeTexte(); }
+
+  function dessineTexte(d, temps){
+    if (!textePts.length || !logoRect) return;
+    var form = smoother(clamp((d - 0.52) / 0.42, 0, 1));
+    if (form <= 0) return;
+    var cx = logoRect.x + logoRect.w / 2;
+    var cy = logoRect.y + logoRect.h / 2;
+    /* one line, never wider than the dissipated dots behind it :
+       the cloud spreads beyond the logo's own box, so capping the
+       line inside that box keeps it safely inside the cloud. On
+       phones the line runs a touch bigger and its dots a touch
+       larger and fully opaque, so the sentence reads sharply
+       instead of dissolving into the blur of the cloud */
+    var surPhone = PW < 768;
+    var tw = surPhone ? Math.min(logoRect.w * 1.04, PW * 0.96)
+                      : Math.min(logoRect.w * 0.94, PW * 0.88);
+    var th = tw * (texteH / texteW);
+    var rad = surPhone ? Math.max(1.45, Math.min(2, tw / 360))
+                       : Math.max(0.95, Math.min(1.35, tw / 540));
+    var ease = form;
+    for (var i = 0; i < textePts.length; i++){
+      var pt = textePts[i];
+      var tx = cx - tw / 2 + pt.x * tw;
+      var ty = cy - th / 2 + pt.y * th;
+      /* start FROM THE FISH SHAPE : the previous start scattered
+         the dots over a rectangle (logo width x 0.95 by logo
+         height x 0.7), which visibly exceeded the fish's own
+         outline — dots appeared where the fish never was. Now
+         every red dot's start is a real sampled point inside the
+         fish silhouette (echantillons holds only red fish pixels),
+         picked deterministically per dot so the whole silhouette
+         is covered, with only a few pixels of calm sway. No dot
+         can start outside the parameters of the fish. */
+      var sx, sy;
+      if (echantillons.length){
+        var fPt = echantillons[(i * 37 + Math.floor(pt.s * 211)) % echantillons.length];
+        sx = logoRect.x + fPt.x * logoRect.w + Math.sin(temps * 0.6 + pt.s * 6.283) * 2.5;
+        sy = logoRect.y + fPt.y * logoRect.h + Math.cos(temps * 0.5 + pt.s2 * 6.283) * 1.8;
+      } else {
+        /* fish samples not loaded yet : stay inside a tight
+           central area rather than the old rectangle */
+        sx = cx + (pt.s - 0.5) * logoRect.w * 0.4 + Math.sin(temps * 0.6 + pt.s * 6.283) * 2.5;
+        sy = cy + (pt.s2 - 0.5) * logoRect.h * 0.3 + Math.cos(temps * 0.5 + pt.s2 * 6.283) * 1.8;
+      }
+      /* while gathering, the word dots carry a sub-pixel shimmer
+         (under 1px) against the background dots' 11–16px sway.
+         ONCE THE WORDS ARE FULLY FORMED (form reaches 1) there is
+         NO animation left on them at all : no shimmer, no sway, no
+         drift — every dot is drawn at exactly its target point,
+         so the sentence stays frozen precisely where it formed,
+         in the middle of where the logo was, in the middle of the
+         dissipated dots, however long the reader keeps scrolling
+         toward the next section */
+      var forme = form >= 1;
+      var px = forme ? tx : sx + (tx - sx) * ease + Math.sin(temps * 0.45 + pt.s * 6.283) * 0.85 * ease;
+      var py = forme ? ty : sy + (ty - sy) * ease + Math.cos(temps * 0.4 + pt.s2 * 6.283) * 0.65 * ease;
+      var a = forme ? 1 : Math.min(1, ease * 1.2);
+      pCtx.fillStyle = "rgba(237,50,55," + a.toFixed(3) + ")";
+      pCtx.beginPath(); pCtx.arc(px, py, rad, 0, 6.2832); pCtx.fill();
+    }
+  }
+
+  function mesurePorte(){
+    /* full device resolution (capped at 2) : capping at 1.5 was
+       softening the dot sentence on retina phones */
+    var dpr = Math.min(2, window.devicePixelRatio || 1);
+    PW = ecran.clientWidth; PH = ecran.clientHeight;
+    pCanvas.width = PW * dpr; pCanvas.height = PH * dpr;
+    pCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    /* the logo sits dead centre of the sticky screen (flex-centred
+       in .porte__nom), so its box is derived from the screen size
+       itself : the dissipated cloud and the dot sentence are then
+       anchored to that same centre — the middle of the screen,
+       exactly where the intact fish sits — and can never be
+       shifted by the logo's own dissolve transform or by the
+       scroll position at the moment of measurement */
+    var lw = logoImg.offsetWidth || Math.min(PH * 0.8, PW * 0.94);
+    var lh = logoImg.offsetHeight || lw;
+    logoRect = { x: (PW - lw) / 2, y: (PH - lh) / 2, w: lw, h: lh };
+  }
+  mesurePorte();
+
+  function majPorte(temps){
+    var r = porte.getBoundingClientRect();
+    var total = porte.offsetHeight - window.innerHeight;
+    var pBrut = total > 0 ? clamp(-r.top / total, 0, 1) : 1;
+    /* phone gate : the gesture-driven virtual progress wins over
+       the native scroll position while the gate is active, and
+       keeps the end state after it completes */
+    if (porteGate.actif || porteGate.termine) pBrut = porteGate.p;
+    /* temporal interpolation : the displayed progress eases toward
+       the raw scroll progress a little every animation frame, so a
+       single scroll tick is replayed as many small in-between
+       frames instead of one jump — the dissolve glides even when
+       the wheel or trackpad moves in coarse steps. The step is
+       halved (0.14 -> 0.07), doubling the number of in-between
+       frames each scroll tick is replayed over, which matters
+       most at the very start of the dissolve where the eye is
+       comparing against the still-intact logo. */
+    if (reduce || portePDoux < 0) portePDoux = pBrut;
+    else {
+      portePDoux += (pBrut - portePDoux) * 0.07;
+      if (Math.abs(pBrut - portePDoux) < 0.0002) portePDoux = pBrut;
+    }
+    var p = portePDoux;
+    porteP = p;
+    /* the dissolve now starts earlier and runs over a longer
+       stretch (was (p - 0.10) / 0.78) : the opening of the curve
+       is spread over far more scroll distance, so the first
+       visible change is a fraction of what it was per tick */
+    var d = smoother((p - 0.06) / 0.82);          /* quintic dissolve curve : gentler ends, more middle frames */
+    /* a dedicated opening curve for the logo itself : smootherstep
+       over the first 36% of the dissolve. Its slope is zero at
+       d = 0, so the pure logo leaves its intact state almost
+       imperceptibly — tiny blur, tiny swell, tiny fade per frame —
+       then accelerates, and still reaches fully gone at the same
+       point as before, so no ghost ever lingers behind the dots */
+    var debut = smoother(clamp(d / 0.36, 0, 1));
+    var fond = smoother((p - 0.16) / 0.74);       /* the dark world fades in around the smoke */
+    ecran.style.setProperty("--p", fond.toFixed(4));
+    ecran.style.setProperty("--fin", clamp((d - 0.72) / 0.28, 0, 1).toFixed(4));
+    if (reduce){
+      var logoAlphaR = clamp(1 - debut, 0, 1);
+      logoImg.style.opacity = String(logoAlphaR);
+      logoImg.style.visibility = logoAlphaR <= 0.001 ? "hidden" : "visible";
+      pCtx.clearRect(0, 0, PW, PH);
+      dessineTexte(d, 0);
+      return;
+    }
+    /* The logo BECOMES the dots — it must never linger as a ghost
+       behind them. It is gone by roughly a third of the dissolve
+       (debut reaches 1 at d = 0.36), well before the cloud has
+       spread, so nothing of the solid mark is semi-visible behind
+       the dissipated dots. The change is HOW it gets there : the
+       old linear fade (1 - d * 3.2) dropped at full speed from
+       the very first frame, which read as a big jump off the pure
+       logo; the debut curve starts with zero slope, so the first
+       frames differ from the intact logo by almost nothing —
+       a whisper of blur and swell first, the fade following —
+       and there are many more in-between states before the dots
+       take over. The particles sampled from it carry its shape
+       and colour onward. */
+    var logoAlpha = clamp(1 - debut, 0, 1);
+    logoImg.style.opacity = String(logoAlpha);
+    logoImg.style.visibility = logoAlpha <= 0.001 ? "hidden" : "visible";
+    logoImg.style.filter = "blur(" + (debut * 3.2 + d * 0.8).toFixed(2) + "px)";
+    logoImg.style.transform = "scale(" + (1 + debut * 0.022 + d * 0.028).toFixed(4) + ") translateY(0vh)";
+    /* --- particles : the fish becomes the cloud --- */
+    pCtx.clearRect(0, 0, PW, PH);
+    if (d <= 0.0005 || !logoRect || !echantillons.length){ dessineTexte(d, temps); return; }
+    /* the particles' own birth curve : smootherstep over the
+       first 22% of the dissolve. Previously the bubbles popped
+       in at full size and near-full opacity the moment d passed
+       0.002, sitting on top of a logo that had already dropped
+       a chunk of opacity — that double step was the visible jump
+       at the start. Now the dots crossfade in : they are born
+       tiny and almost transparent exactly where the fish pixels
+       are, and grow and firm up gradually while the logo eases
+       out on its own debut curve, so logo and dots overlap in
+       many blended intermediate frames instead of swapping */
+    var naissance = smoother(clamp(d / 0.22, 0, 1));
+    var i, pt, bx, by, dx, dy;
+    for (i = 0; i < echantillons.length; i++){
+      pt = echantillons[i];
+      /* each bubble runs the same dissolve on its own slightly
+         offset clock, so the whole fish never changes state in
+         one step : hundreds of staggered micro-steps read as a
+         continuous, smooth morph. The stagger is finer and the
+         run-up slower than before (was d * 1.18 - s * 0.18), so
+         at the start neighbouring dots barely differ and nothing
+         moves noticeably in the first frames */
+      var t = smoother(clamp(d * 1.08 - pt.s * 0.12, 0, 1));
+      var drift = t * t;
+      bx = logoRect.x + pt.x * logoRect.w;
+      by = logoRect.y + pt.y * logoRect.h;
+      dx = (pt.x - 0.5) * logoRect.w * 0.82 * drift
+         + Math.sin(temps * 0.6 + pt.s * 6.283) * 16 * t
+         + 52 * t * (pt.s - 0.5);
+      /* no net lift any more : the old dy pushed every dot up by
+         22–116px, so the cloud landed visibly higher than the fish.
+         The vertical spread is now symmetric around zero, so the
+         dissipated dots settle centred on the logo's own box —
+         the middle of the screen, where the intact fish sits */
+      dy = (pt.s2 - 0.5) * logoRect.h * 0.18 * drift
+         + Math.cos(temps * 0.5 + pt.s2 * 6.283) * 11 * t;
+      /* bubbles stay tighter as they disperse (was +6.5) : less
+         overlap, so the cloud reads as distinct semi-translucent
+         bubbles instead of one foggy mass. The cloud is also far
+         denser than before (11,500 sampled dots, more than four
+         times the old 2,600) and held a little tighter, so the middle of
+         the dissolve — where the fish used to thin out and look
+         sparse — stays full and rich. */
+      /* radius and opacity ride the birth curve at the start :
+         born at about a third of their resting size and a
+         fraction of their opacity, reaching the values below
+         only once naissance completes — after that the original
+         sizing and fading take over unchanged */
+      var rad = (0.45 + naissance * 0.8) + t * 3.4 + pt.s2 * 1.5;
+      var cr = Math.round(237 + (240 - 237) * t);
+      var cg = Math.round(50 + (238 - 50) * t);
+      var cb = Math.round(55 + (232 - 55) * t);
+      pCtx.fillStyle = "rgba(" + cr + "," + cg + "," + cb + "," + (0.94 * (1 - t * 0.62) * (0.12 + 0.88 * naissance)).toFixed(3) + ")";
+      pCtx.beginPath(); pCtx.arc(bx + dx, by + dy, rad, 0, 6.2832); pCtx.fill();
+    }
+    /* soft smoke puffs anchored to the silhouette — most of the
+       fog is removed : far fewer puffs, much fainter and smaller,
+       just a whisper of haze left over the bubbles */
+    for (i = 0; i < bouffees.length; i++){
+      var bf = bouffees[i];
+      var lp = clamp(d * 1.3 - bf.phase * 0.3, 0, 1);
+      if (lp <= 0 || lp >= 1) continue;
+      var px = logoRect.x + bf.pt.x * logoRect.w + Math.sin(temps * 0.4 + bf.phase * 6.283) * 20 * lp + 34 * lp * (bf.pt.s - 0.5);
+      var py = logoRect.y + bf.pt.y * logoRect.h + Math.cos(temps * 0.35 + bf.phase * 6.283) * 10 * lp + (bf.phase - 0.5) * 30 * lp;
+      var prad = (10 + lp * 38) * bf.rayon;
+      var g = pCtx.createRadialGradient(px, py, 0, px, py, prad);
+      var a = 0.04 * Math.sin(lp * Math.PI);
+      g.addColorStop(0, "rgba(242,240,234," + a.toFixed(3) + ")");
+      g.addColorStop(1, "rgba(242,240,234,0)");
+      pCtx.fillStyle = g;
+      pCtx.beginPath(); pCtx.arc(px, py, prad, 0, 6.2832); pCtx.fill();
+    }
+    /* red dots gather into the sentence in the middle of the white
+       dissipated cloud */
+    dessineTexte(d, temps);
+  }
+
+  /* ---------- phone door gate : the first scroll gesture belongs
+     to the dissolve, the second one scrolls the page ----------
+     Phones only (max-width 767px, motion allowed) : the door is
+     one screen tall (CSS above) and the page starts locked
+     (html.verrouille — no native scrolling at all). Touch and
+     wheel input advance porteGate.p instead, which majPorte reads
+     as the dissolve progress, so a scroll gesture can only stir
+     the animation and can never carry the visitor down through
+     the sections early. The lock is released only when the fish
+     has FULLY dissipated and that same gesture ends (touchend, or
+     a beat after the wheel goes quiet), so it always takes a
+     second, separate scroll to move through the site. While
+     locked the dissolve stays reversible : swiping back down
+     re-forms the fish. Nav taps skip the gate entirely. */
+  var mqPorte = window.matchMedia("(max-width: 767px)");
+  function verrouillePorte(){
+    porteGate.actif = true;
+    document.documentElement.classList.add("verrouille");
+  }
+  function deverrouillePorte(){
+    porteGate.actif = false;
+    porteGate.termine = true;
+    porteGate.partie = false;
+    if (porteGate.minuteur){ clearTimeout(porteGate.minuteur); porteGate.minuteur = null; }
+    document.documentElement.classList.remove("verrouille");
+  }
+  function avancePorte(delta){
+    if (!porteGate.actif) return;
+    var pas = Math.max(260, window.innerHeight * 0.58);
+    porteGate.p = clamp(porteGate.p + delta / pas, 0, 1);
+    if (porteGate.p > 0.985) porteGate.p = 1;
+    if (porteGate.p < 0.015) porteGate.p = 0;
+    if (porteGate.p >= 1) porteGate.fini = true;
+    else if (porteGate.p < 1) porteGate.fini = false;
+  }
+  /* ---------- returning to the surface : ONE mechanism, two
+     triggers ---------- Tapping "Back to the surface", or
+     scrolling back up to the very top after having genuinely
+     been down the page, plays the dissolve BACKWARDS : the
+     dots stream home and re-form the fish over about a second
+     and a half, and the door ends in exactly its page-load
+     state — gate locked on the intact logo, ready for the
+     next downward swipe to dissolve it again.
+     Why this replaces the previous machinery : the old version
+     split the job across three fragile interlocks — a flag
+     armed by the link tap, a scroll listener, and a 300 ms
+     interval watcher — any of which could silently not fire
+     on a real phone, and when they didn't, the tap still
+     scrolled to the top but the dots just floated there and
+     then snapped back to the logo. joueInverse is a single
+     self-clocked animation that writes the gate progress
+     directly ; it depends on no scroll event, no watcher and
+     no anchor jump, so there is nothing left to not fire. */
+  function joueInverse(){
+    if (porteGate.inverseEnCours || !porteGate.termine) return;
+    porteGate.termine = false;
+    porteGate.partie = false;
+    porteGate.fini = false;
+    verrouillePorte();
+    porteGate.inverseEnCours = true;
+    var departP = porteGate.p, t0 = performance.now(), duree = 1600;
+    (function etape(now){
+      if (!porteGate.inverseEnCours) return;
+      var k = clamp((now - t0) / duree, 0, 1);
+      porteGate.p = departP * (1 - smoother(k));
+      if (k < 1) requestAnimationFrame(etape);
+      else { porteGate.p = 0; porteGate.inverseEnCours = false; }
+    })(t0);
+  }
+  if (mqPorte.matches && !reduce && (window.scrollY || 0) < 4 &&
+      (!window.location.hash || window.location.hash === "#porte")){
+    verrouillePorte();
+  }
+  window.addEventListener("touchstart", function(e){
+    /* a fresh touch during the automatic reverse hands the
+       dissolve straight back to the visitor's own gesture */
+    if (porteGate.inverseEnCours) porteGate.inverseEnCours = false;
+    if (porteGate.actif && e.touches.length) porteGate.dernierY = e.touches[0].clientY;
+  }, { passive:true });
+  window.addEventListener("touchmove", function(e){
+    if (!porteGate.actif) return;
+    e.preventDefault();
+    if (!e.touches.length) return;
+    var y = e.touches[0].clientY;
+    if (porteGate.dernierY !== null) avancePorte(porteGate.dernierY - y);
+    porteGate.dernierY = y;
+  }, { passive:false });
+  function finGestePorte(){
+    porteGate.dernierY = null;
+    if (porteGate.actif && porteGate.fini) deverrouillePorte();
+  }
+  window.addEventListener("touchend", finGestePorte, { passive:true });
+  window.addEventListener("touchcancel", finGestePorte, { passive:true });
+  window.addEventListener("wheel", function(e){
+    if (!porteGate.actif) return;
+    e.preventDefault();
+    if (porteGate.inverseEnCours) porteGate.inverseEnCours = false;
+    avancePorte(e.deltaY);
+    if (porteGate.fini && !porteGate.minuteur){
+      porteGate.minuteur = setTimeout(function(){
+        porteGate.minuteur = null;
+        if (porteGate.actif && porteGate.fini) deverrouillePorte();
+      }, 420);
+    }
+  }, { passive:false });
+  /* nav taps skip the gate : complete the dissolve, unlock, and
+     let the anchor jump happen exactly as normal. A tap on
+     "Back to the surface" (#porte) on a phone where the gate
+     has run is handled end-to-end here instead : the native
+     anchor jump is replaced by a scripted glide to the top,
+     and the moment the page arrives (polled on a short timer,
+     with a hard fallback so it fires even where the scroll
+     reports nothing) joueInverse re-forms the fish. On
+     desktop, and on phones where the gate never engaged, the
+     link keeps its plain native behaviour — the scroll-driven
+     door there already reverses with the scroll position. */
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener("click", function(e){
+      if (a.getAttribute("href") === "#porte"){
+        if (mqPorte.matches && !reduce && porteGate.termine){
+          e.preventDefault();
+          if ((window.scrollY || 0) <= 4){ joueInverse(); return; }
+          try { window.scrollTo({ top:0, behavior:"smooth" }); }
+          catch (err) { window.scrollTo(0, 0); }
+          var essais = 0;
+          var guet = setInterval(function(){
+            essais++;
+            if ((window.scrollY || 0) <= 4 || essais > 32){
+              clearInterval(guet);
+              if ((window.scrollY || 0) > 4) window.scrollTo(0, 0);
+              joueInverse();
+            }
+          }, 50);
+        }
+        return;
+      }
+      if (porteGate.actif){
+        porteGate.p = 1; porteGate.fini = true; deverrouillePorte();
+      }
+    });
+  });
+  /* scrolling back up to the very top after genuinely having
+     been down the page (partie) runs the same reverse on its
+     own — the dots gather back into the logo instead of
+     floating at the top of the page. partie is what keeps the
+     gate from re-engaging in the instant after it first
+     releases, while the page is still sitting at the top. */
+  window.addEventListener("scroll", function(){
+    if (!mqPorte.matches || reduce) return;
+    var y = window.scrollY || 0;
+    if (porteGate.termine && y > window.innerHeight * 0.6) porteGate.partie = true;
+    if (porteGate.termine && porteGate.partie && y <= 4) joueInverse();
+  }, { passive:true });
+  /* rotated or resized up to a desktop width : hand the door back
+     to its native scroll-driven behaviour */
+  if (mqPorte.addEventListener) mqPorte.addEventListener("change", function(e){
+    if (!e.matches){
+      if (porteGate.actif) deverrouillePorte();
+      porteGate.termine = false;
+    }
+  });
+
+  /* ---------- hero panel ---------- */
+  var heroSec = document.getElementById("hero");
+  var heroEcran = document.getElementById("hero-ecran");
+  var heroPhrase = heroEcran.querySelector(".hero__phrase");
+
+  /* ---------- visibility gates : no canvas work off-screen ---------- */
+  if ("IntersectionObserver" in window){
+    new IntersectionObserver(function(en){ porteVu = en[0].isIntersecting; }, { rootMargin: "80px" }).observe(porte);
+  } else { porteVu = true; }
+
+  /* ---------- custom cursor (lerp inside the master loop) ---------- */
+  var fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  var ptEl = document.querySelector(".c-point"), ring = document.querySelector(".c-anneau");
+  var mx = -100, my = -100, rx = -100, ry = -100, curseurActif = false;
+  if (fine && !reduce){
+    curseurActif = true;
+    document.addEventListener("mousemove", function(e){
+      mx = e.clientX; my = e.clientY;
+      ptEl.style.transform = "translate(" + mx + "px," + my + "px)";
+      if (!document.body.classList.contains("curseur-vu")){ document.body.classList.add("curseur-vu"); rx = mx; ry = my; }
+      var view = e.target.closest ? e.target.closest("[data-cursor='view']") : null;
+      var lien = e.target.closest ? e.target.closest("a, button") : null;
+      var zone = e.target.closest ? e.target.closest(".porte, .work-sec, .hero-sec") : null;
+      document.body.classList.toggle("curseur-view", !!view);
+      document.body.classList.toggle("curseur-lien", !!lien && !view);
+      document.body.classList.toggle("curseur-zone", !!zone);
+    }, { passive:true });
+    document.addEventListener("mouseleave", function(){ document.body.classList.remove("curseur-vu"); });
+  }
+
+  /* ---------- master rAF loop : scroll-linked motion lives here, nowhere else ---------- */
+  function boucle(ts){
+    requestAnimationFrame(boucle);
+    var temps = ts / 1000;
+    cadre++;
+    if (cadre % 10 === 0) balayageReveals();
+    if (porteVu) majPorte(temps);
+    /* the Art Direction lockup carries NO scroll-linked animation :
+       "Art Direction", "Ideas that stir the water." and the line
+       under them sit at their natural, final size from the moment
+       the section arrives and never scale, shrink or settle as the
+       reader scrolls — there is plenty happening in the dissolve
+       above and in the fish and water around them already */
+    if (curseurActif){
+      rx += (mx - rx) * 0.16; ry += (my - ry) * 0.16;
+      ring.style.transform = "translate(" + rx.toFixed(1) + "px," + ry.toFixed(1) + "px)";
+    }
+  }
+  requestAnimationFrame(boucle);
+  window.addEventListener("resize", function(){ mesurePorte(); tailleCanvas(); }, { passive:true });
+
+  /* ---------- the pond, now page-wide : a red fish swims the dark
+     water and moving the cursor disturbs the surface. The canvas is
+     fixed to the viewport, so as the reader scrolls the fish slowly
+     and smoothly swims along with them from section to section, a
+     small companion for the whole page. There is no ripple effect
+     on the ART DIRECTION headline any more — that distortion is
+     gone; only the water itself ripples. Strength is zoned :
+     full in the Art Direction section, much more subtle everywhere
+     else (Selected Work, About, Awards, Contact — lower opacity,
+     rarer, weaker rings and trail, a fainter fish), and absent
+     entirely over the door (hero) and while a case study is open. ---- */
+  var canvas = document.getElementById("fluide");
+  var ctx = canvas.getContext("2d");
+  var CW = 0, CH = 0, tempsF = 0;
+  var ondes = [];        /* ripples : {x, y, r, vie, force} */
+  var sillage = [];      /* trail : smoke puffs {x, y, vie, r, dx, dy} shed at the tail */
+  /* zone state, eased every frame so the fish and water fade between
+     full and subtle instead of snapping as sections change */
+  var pondMode = "cache";            /* "plein" | "discret" | "cache" */
+  var pondIntensite = 0.35;          /* eased : 1 full, ~0.32 subtle */
+  var pondIntensiteCible = 0.35;
+  var pondAlpha = 0;                 /* eased canvas fade : 0 hidden, 1 shown */
+  var pondAlphaCible = 0;
+  var flightEl = document.getElementById("flight");
+  var visionEl = document.getElementById("visionneuse");
+  function majZonePond(){
+    var vh = window.innerHeight;
+    if ((flightEl && !flightEl.hidden) || (visionEl && !visionEl.hidden)){
+      pondMode = "cache"; pondAlphaCible = 0; return;
+    }
+    var hr = heroSec.getBoundingClientRect();
+    if (hr.top < vh * 0.55 && hr.bottom > vh * 0.45){
+      pondMode = "plein"; pondIntensiteCible = 1; pondAlphaCible = 1; return;
+    }
+    var pr = porte.getBoundingClientRect();
+    if (pr.bottom > vh * 0.5){
+      pondMode = "cache"; pondAlphaCible = 0; return;
+    }
+    pondMode = "discret"; pondIntensiteCible = 0.32; pondAlphaCible = 1;
+  }
+  var poisson = { x:0, y:0, cap:0.5, cible:null, vitesse:1.05, vitesseCible:1.05,
+                  errance:0, phase:0, comportementT:0, fuiteT:0, fuiteX:0, fuiteY:0, sursaut:0 };
+  /* the fish has no fixed spawn point : it swims continuously as a
+     page-wide companion, starting near the centre of the water and
+     wandering freely from section to section */
+  function tailleCanvas(){
+    var dpr = Math.min(1.25, window.devicePixelRatio || 1);
+    CW = window.innerWidth; CH = window.innerHeight;
+    canvas.width = CW * dpr; canvas.height = CH * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    if (!poisson.x){ poisson.x = CW * 0.5; poisson.y = CH * 0.55; }
+    poisson.x = clamp(poisson.x, 0, CW); poisson.y = clamp(poisson.y, 0, CH);
+  }
+  tailleCanvas();
+  function onde(x, y, force){
+    ondes.push({ x:x, y:y, r:2, vie:1, force:force || 1 });
+    if (ondes.length > 90) ondes.splice(0, ondes.length - 90);
+  }
+  /* startle the fish : stirring (or dropping a press) close to it
+     sends it darting away, as a real fish bolts from a disturbance.
+     It flees directly away from the stir point, further than before,
+     nearly the whole pond, and it opens with a split-second burst :
+     for the first few frames it lunges at more than double flee
+     speed with its tail beating flat out, then settles into the
+     still-fast flee until it reaches safety. */
+  function effrayerPoisson(x, y, rayon){
+    if (!poisson.x) return;
+    var d = Math.hypot(poisson.x - x, poisson.y - y);
+    if (d > rayon) return;
+    var loin = Math.atan2(poisson.y - y, poisson.x - x);
+    poisson.fuiteT = 140;
+    poisson.sursaut = 16;   /* the split-second opening burst */
+    poisson.fuiteX = clamp(poisson.x + Math.cos(loin) * CW * 0.88, CW * 0.05, CW * 0.95);
+    poisson.fuiteY = clamp(poisson.y + Math.sin(loin) * CH * 0.80, CH * 0.06, CH * 0.94);
+    poisson.cible = { x: poisson.fuiteX, y: poisson.fuiteY };
+    poisson.vitesseCible = 6.6;
+  }
+  /* the pointer stirs the surface anywhere the pond is present :
+     a fresh ring only after it has travelled a good distance, a
+     stronger one where it presses. Outside Art Direction the stir
+     is rarer and weaker — the pointer must travel much further
+     between rings and each ring carries less force. Coordinates are
+     viewport coordinates, matching the fixed canvas. */
+  var dernierRemous = null;
+  window.addEventListener("pointermove", function(e){
+    if (pondMode === "cache") return;
+    var x = e.clientX, y = e.clientY;
+    var seuil = pondMode === "plein" ? 84 : 190;
+    if (!dernierRemous || Math.hypot(x - dernierRemous.x, y - dernierRemous.y) > seuil){
+      onde(x, y, pondMode === "plein" ? 1 : 0.45);
+      dernierRemous = { x:x, y:y };
+    }
+    effrayerPoisson(x, y, pondMode === "plein" ? 215 : 180);
+  }, { passive:true });
+  window.addEventListener("pointerdown", function(e){
+    if (pondMode === "cache") return;
+    onde(e.clientX, e.clientY, pondMode === "plein" ? 1.6 : 0.7);
+    effrayerPoisson(e.clientX, e.clientY, pondMode === "plein" ? 290 : 220);
+  }, { passive:true });
+  document.addEventListener("mouseleave", function(){ dernierRemous = null; });
+  var cadreF = 0;
+  /* as the page scrolls, invite the fish along : every so often while
+     scrolling, give it a fresh target in the visible water so it
+     visibly swims down (or up) into the new section with the reader,
+     smoothly, under its normal eased motion — never a teleport */
+  var dernierAccompagne = 0, dernierScrollY = window.scrollY || 0;
+  window.addEventListener("scroll", function(){
+    var y = window.scrollY || 0;
+    var dy = y - dernierScrollY; dernierScrollY = y;
+    var now = performance.now();
+    if (Math.abs(dy) > 24 && now - dernierAccompagne > 650 && pondMode !== "cache" && poisson.fuiteT <= 0){
+      dernierAccompagne = now;
+      poisson.cible = {
+        x: CW * (0.18 + Math.random() * 0.64),
+        y: CH * (dy > 0 ? (0.42 + Math.random() * 0.34) : (0.24 + Math.random() * 0.34))
+      };
+      poisson.comportementT = Math.max(poisson.comportementT, 120);
+    }
+  }, { passive:true });
+
+  function longueurPoisson(){ return clamp(CW * 0.10, 72, 136); }
+  /* the fish : one red almond with a fan tail and a dark ring eye, an
+     echo of the logo. Its motion is deliberately un-robotic : speed
+     eases in and out rather than staying constant, it picks a new
+     temperament every few seconds (a slow drift, a cruise, a short
+     unhurried dart, a coast), a smooth wander built from layered
+     sines bends its path between targets, and its tail beats faster
+     the faster it swims. Startled, it bolts. Behind it, a fading
+     trail is drawn from the points its tail has passed through. */
+  function majPoisson(){
+    var marge = 0.13;
+    /* --- temperament : sporadic, never metronomic --- */
+    if (poisson.sursaut > 0) poisson.sursaut--;
+    if (poisson.fuiteT > 0){
+      poisson.fuiteT--;
+      /* the burst comes first : a split second far above flee speed */
+      poisson.vitesseCible = poisson.sursaut > 0 ? 11.5 : 6.6;
+      if (poisson.fuiteT === 0){ poisson.comportementT = 0; poisson.cible = null; }
+    } else {
+      poisson.comportementT--;
+      if (poisson.comportementT <= 0){
+        poisson.comportementT = 130 + Math.random() * 230;   /* ~2 to 6 seconds */
+        var humeur = Math.random();
+        /* idle speeds lifted across the board — the fish used to sit
+           near-stagnant between stirs; now even its slowest drift
+           keeps clearly moving, and its cruise is a touch brisker */
+        if (humeur < 0.34) poisson.vitesseCible = 0.62 + Math.random() * 0.30;       /* drift */
+        else if (humeur < 0.74) poisson.vitesseCible = 1.00 + Math.random() * 0.55;  /* cruise */
+        else if (humeur < 0.90) poisson.vitesseCible = 2.05 + Math.random() * 0.75;  /* dart */
+        else poisson.vitesseCible = 0.42 + Math.random() * 0.22;                     /* coast */
+        if (Math.random() < 0.45) poisson.cible = null;   /* sometimes change its mind */
+      }
+    }
+    if (!poisson.cible || Math.hypot(poisson.cible.x - poisson.x, poisson.cible.y - poisson.y) < 38){
+      poisson.cible = {
+        x: CW * (marge + Math.random() * (1 - 2 * marge)),
+        y: CH * (marge + Math.random() * (1 - 2 * marge))
+      };
+    }
+    /* smooth wander : layered sines, so the path curves organically
+       instead of running ruler-straight at the target */
+    poisson.errance = Math.sin(tempsF * 0.55) * 0.34 + Math.sin(tempsF * 1.31 + 1.7) * 0.18 + Math.sin(tempsF * 0.21 + 4.1) * 0.22;
+    var vise = Math.atan2(poisson.cible.y - poisson.y, poisson.cible.x - poisson.x) + poisson.errance * 0.38;
+    var ecart = vise - poisson.cap;
+    while (ecart > Math.PI) ecart -= Math.PI * 2;
+    while (ecart < -Math.PI) ecart += Math.PI * 2;
+    /* it turns more sharply when fleeing, and more lazily at a drift;
+       the turn itself is eased toward the desired heading */
+    var plafond = poisson.sursaut > 0 ? 0.24 : (poisson.fuiteT > 0 ? 0.115 : 0.016 + Math.min(0.02, poisson.vitesse * 0.012));
+    poisson.cap += clamp(ecart * 0.09, -plafond, plafond);
+    /* speed eases toward its target : an instant lunge during the
+       opening burst, a hard acceleration while fleeing, a gentle
+       settle the rest of the time */
+    var aisance = poisson.sursaut > 0 ? 0.34 : (poisson.fuiteT > 0 ? 0.16 : 0.026);
+    poisson.vitesse += (poisson.vitesseCible - poisson.vitesse) * aisance;
+    poisson.x += Math.cos(poisson.cap) * poisson.vitesse;
+    poisson.y += Math.sin(poisson.cap) * poisson.vitesse;
+    poisson.x = clamp(poisson.x, CW * 0.04, CW * 0.96);
+    poisson.y = clamp(poisson.y, CH * 0.05, CH * 0.95);
+    /* tail beat follows effort — and during the burst it wags flat
+       out, far faster than its swimming beat */
+    poisson.phase += 0.045 + poisson.vitesse * 0.075 + (poisson.sursaut > 0 ? 0.65 : 0);
+    /* --- the trail : a wide wake, three to four lines across, shed
+       at the tail each step — puffs laid side by side perpendicular
+       to the heading so the trail reads as a broad band, not one
+       stream, each jittered the way smoke breaks up --- */
+    var L = longueurPoisson();
+    var lignes = [-1.5, -0.5, 0.5, 1.5];
+    for (var li = 0; li < lignes.length; li++){
+      var cote = lignes[li] * L * 0.11 + (Math.random() - 0.5) * L * 0.05;
+      var enArriere = (Math.random() - 0.5) * L * 0.06;
+      sillage.push({
+        x: poisson.x - Math.cos(poisson.cap) * L * 0.46 - Math.sin(poisson.cap) * cote - Math.cos(poisson.cap) * enArriere,
+        y: poisson.y - Math.sin(poisson.cap) * L * 0.46 + Math.cos(poisson.cap) * cote - Math.sin(poisson.cap) * enArriere,
+        vie: 1,
+        r: 2.0 + Math.random() * 2.2,
+        dx: (Math.random() - 0.5) * 0.14,
+        dy: -0.05 - Math.random() * 0.08
+      });
+    }
+    if (sillage.length > 420) sillage.splice(0, sillage.length - 420);
+  }
+  /* the trail is drawn the way the logo dissipates : not a line but
+     a wide band of small, soft circles, each at an even lower opacity
+     than before so the wake stays subtle, gaining presence only where
+     puffs overlap. Each puff swells and thins as it ages, so the
+     trail still fades the further back it goes. */
+  function dessineSillage(){
+    for (var i = sillage.length - 1; i >= 0; i--){
+      var s = sillage[i];
+      s.vie -= 0.010;
+      if (s.vie <= 0){ sillage.splice(i, 1); continue; }
+      s.x += s.dx; s.y += s.dy;
+      s.r += 0.16;                       /* smoke expands as it disperses */
+      var a = 0.07 * s.vie * s.vie * pondIntensite;
+      if (a < 0.002) continue;
+      var g = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, s.r);
+      g.addColorStop(0, "rgba(237,50,55," + a.toFixed(3) + ")");
+      g.addColorStop(0.6, "rgba(237,50,55," + (a * 0.55).toFixed(3) + ")");
+      g.addColorStop(1, "rgba(237,50,55,0)");
+      ctx.fillStyle = g;
+      ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, 6.2832); ctx.fill();
+    }
+  }
+  function dessinePoisson(t){
+    var L = longueurPoisson();            /* body length */
+    var W = L * 0.30;                     /* body depth */
+    var ondule = Math.sin(poisson.phase) * 0.14;
+    ctx.save();
+    ctx.translate(poisson.x, poisson.y);
+    ctx.rotate(poisson.cap + ondule * 0.35);
+    /* a very low-opacity red glow around it, in place of the old
+       subtle white halo */
+    var halo = ctx.createRadialGradient(0, 0, 0, 0, 0, L * 0.95);
+    halo.addColorStop(0, "rgba(237,50,55," + (0.09 * pondIntensite).toFixed(3) + ")");
+    halo.addColorStop(0.55, "rgba(237,50,55," + (0.035 * pondIntensite).toFixed(3) + ")");
+    halo.addColorStop(1, "rgba(237,50,55,0)");
+    ctx.fillStyle = halo;
+    ctx.beginPath(); ctx.arc(0, 0, L * 0.95, 0, 6.2832); ctx.fill();
+    ctx.fillStyle = "rgba(237,50,55," + (0.24 * (0.35 + 0.65 * pondIntensite)).toFixed(3) + ")";
+    /* body : a single leaf curve, nose to tail joint */
+    ctx.beginPath();
+    ctx.moveTo(L * 0.5, 0);
+    ctx.bezierCurveTo(L * 0.16, -W * 0.62, -L * 0.28, -W * 0.48, -L * 0.40, 0);
+    ctx.bezierCurveTo(-L * 0.28, W * 0.48, L * 0.16, W * 0.62, L * 0.5, 0);
+    ctx.fill();
+    /* tail : a fan sweeping against the body's sway */
+    var bal = Math.sin(poisson.phase - 0.9) * L * 0.10;
+    ctx.beginPath();
+    ctx.moveTo(-L * 0.38, 0);
+    ctx.quadraticCurveTo(-L * 0.58, -W * 0.52 + bal, -L * 0.64, -W * 0.95 + bal);
+    ctx.quadraticCurveTo(-L * 0.50, bal * 0.4, -L * 0.64, W * 0.95 + bal);
+    ctx.quadraticCurveTo(-L * 0.58, W * 0.52 + bal, -L * 0.38, 0);
+    ctx.fill();
+    /* the eye : a small dark ring near the head, like the logo's */
+    ctx.fillStyle = "rgba(17,17,16," + (0.6 * (0.35 + 0.65 * pondIntensite)).toFixed(3) + ")";
+    ctx.beginPath(); ctx.arc(L * 0.30, -W * 0.16, L * 0.038 + 0.8, 0, 6.2832); ctx.fill();
+    ctx.restore();
+  }
+  function dessineOndes(){
+    ctx.lineWidth = 1;
+    for (var i = ondes.length - 1; i >= 0; i--){
+      var o = ondes[i];
+      o.r += 0.8 + o.force * 0.4;
+      o.vie -= 0.012;
+      if (o.vie <= 0){ ondes.splice(i, 1); continue; }
+      var a = 0.22 * o.vie * Math.min(1, o.force) * pondIntensite;
+      ctx.strokeStyle = "rgba(242,240,234," + a.toFixed(3) + ")";
+      ctx.beginPath(); ctx.arc(o.x, o.y, o.r, 0, 6.2832); ctx.stroke();
+    }
+  }
+  function dessineFluide(){
+    requestAnimationFrame(dessineFluide);
+    if (!CW || document.hidden) return;
+    /* while a case study (or the fullscreen viewer) is open, the
+       pond does NO work at all — no fish maths, no gradients, no
+       trail puffs. That background canvas was competing with the
+       film's decoder for the same phone CPU/GPU, which is what
+       sagged the frame rate and knocked the audio out on phones
+       while the same page played fine on desktop. The overlay
+       covers the canvas completely anyway, so nothing is lost
+       visually, and the fish resumes the moment the case closes. */
+    if ((flightEl && !flightEl.hidden) || (visionEl && !visionEl.hidden)){
+      if (canvas.style.opacity !== "0") canvas.style.opacity = "0";
+      return;
+    }
+    if (++cadreF % 2) return;
+    tempsF += 0.016;
+    /* zone + eased strength : the fish keeps swimming even while the
+       pond is faded out (door / case study), so it is mid-swim, in a
+       new place, when the water fades back in */
+    majZonePond();
+    if (pondMode === "plein"){
+      /* Art Direction : no fade-in at all. The moment this section is
+         the one in view, the fish and water are already fully there
+         at full strength, exactly as the "Art Direction" title is
+         already there — never caught mid-fade on arrival. */
+      pondAlpha = pondAlphaCible;
+      pondIntensite = pondIntensiteCible;
+    } else {
+      pondIntensite += (pondIntensiteCible - pondIntensite) * 0.28;
+      /* fades are near-instant in the other zones too : scrolling up
+         to the hero (door) the fish is gone within a few frames
+         instead of slowly thinning out */
+      pondAlpha += (pondAlphaCible - pondAlpha) * (pondAlphaCible > pondAlpha ? 0.65 : 0.55);
+      if (Math.abs(pondAlphaCible - pondAlpha) < 0.03) pondAlpha = pondAlphaCible;
+    }
+    canvas.style.opacity = pondAlpha.toFixed(3);
+    ctx.clearRect(0, 0, CW, CH);
+    /* the pond stirs on its own now and then in Art Direction, and
+       far less often — and more weakly — everywhere else */
+    if (pondMode === "plein" && cadreF % 460 === 0) onde(CW * (0.12 + Math.random() * 0.76), CH * (0.12 + Math.random() * 0.76), 0.7);
+    else if (pondMode === "discret" && cadreF % 1500 === 0) onde(CW * (0.12 + Math.random() * 0.76), CH * (0.12 + Math.random() * 0.76), 0.35);
+    majPoisson();
+    if (pondAlpha < 0.02) return;
+    dessineOndes();
+    dessineSillage();
+    dessinePoisson(tempsF);
+  }
+  if (reduce){
+    /* reduced motion : no swimming companion, no ripples — the pond
+       stays off entirely rather than freezing a fish on screen */
+    canvas.style.opacity = "0";
+    canvas.style.display = "none";
+  } else { dessineFluide(); }
+
+  /* ---------- gallery : mouse drag with momentum; on touch screens a
+     finger swipe scrolls the strip natively (touch-action allows both
+     axes, so a horizontal swipe drives the carousel with the browser's
+     own momentum while a vertical swipe still scrolls the page) and a
+     custom pointer-drag fallback below covers webviews that do not
+     hand the gesture to the scroller ---------- */
+  var glisseur = document.getElementById("glisseur");
+  var compteur = document.getElementById("gv-compteur");
+  var barre = document.getElementById("gv-barre");
+  var dot = document.getElementById("gv-dot");
+  var progres = document.getElementById("gv-progres");
+  var items = glisseur.querySelectorAll(".item");
+  function pas(){ return items.length > 1 ? (items[1].offsetLeft - items[0].offsetLeft) : glisseur.clientWidth * 0.8; }
+  var compteurEnAttente = false;
+  function majCompteur(){
+    var max = glisseur.scrollWidth - glisseur.clientWidth;
+    var ratio = max > 0 ? glisseur.scrollLeft / max : 0;
+    var idx = Math.min(items.length, Math.max(1, Math.round(ratio * (items.length - 1)) + 1));
+    compteur.textContent = (idx < 10 ? "0" : "") + idx;
+    /* the fill grows with the scroll through the work, and the small
+       circle rides its leading end, filling in as it advances */
+    barre.style.width = (ratio * 100) + "%";
+    if (dot){ dot.style.left = (ratio * 100) + "%"; dot.style.setProperty("--f", ratio.toFixed(3)); }
+    if (progres) progres.setAttribute("aria-valuenow", String(Math.round(ratio * 100)));
+    compteurEnAttente = false;
+  }
+  glisseur.addEventListener("scroll", function(){
+    if (!compteurEnAttente){ compteurEnAttente = true; requestAnimationFrame(majCompteur); }
+  }, { passive:true });
+  majCompteur();
+
+  var drag = null, dragMoved = false, vitesse = 0, dernierX = 0, inertie = null;
+  function stopInertie(){ if (inertie){ cancelAnimationFrame(inertie); inertie = null; } }
+  glisseur.addEventListener("pointerdown", function(e){
+    if (e.pointerType !== "mouse" && e.pointerType !== "touch" && e.pointerType !== "pen") return;
+    stopInertie();
+    drag = { x: e.clientX, y: e.clientY, sl: glisseur.scrollLeft,
+             engage: e.pointerType === "mouse" };
+    dernierX = e.clientX; vitesse = 0; dragMoved = false;
+    glisseur.classList.add("glisse");
+    /* no setPointerCapture : capturing to the container retargets the
+       click that follows to the container, and the cards never open */
+  });
+  window.addEventListener("pointermove", function(e){
+    if (!drag) return;
+    var dx = e.clientX - drag.x;
+    if (!drag.engage){
+      /* touch fallback : wait for a clearly horizontal gesture before
+         driving the strip; a vertical-dominant move belongs to the page */
+      var dy = e.clientY - drag.y;
+      if (Math.max(Math.abs(dx), Math.abs(dy)) < 10) return;
+      if (Math.abs(dy) > Math.abs(dx)){ drag = null; glisseur.classList.remove("glisse"); return; }
+      drag.engage = true;
+    }
+    if (Math.abs(dx) > 6) dragMoved = true;
+    vitesse = 0.7 * vitesse + 0.3 * (e.clientX - dernierX);
+    dernierX = e.clientX;
+    glisseur.scrollLeft = drag.sl - dx;
+  });
+  function finDrag(){
+    if (!drag) return;
+    drag = null;
+    glisseur.classList.remove("glisse");
+    if (dragMoved && Math.abs(vitesse) > 0.5 && !reduce){
+      var v = vitesse;
+      var step = function(){
+        glisseur.scrollLeft -= v;
+        v *= 0.94;
+        if (Math.abs(v) > 0.4){ inertie = requestAnimationFrame(step); } else { inertie = null; }
+      };
+      inertie = requestAnimationFrame(step);
+    }
+    /* keep dragMoved alive one tick so the click that follows a drag is swallowed */
+    setTimeout(function(){ dragMoved = false; }, 50);
+  }
+  window.addEventListener("pointerup", finDrag);
+  window.addEventListener("pointercancel", finDrag);
+  glisseur.addEventListener("click", function(e){ if (dragMoved){ e.preventDefault(); e.stopPropagation(); } }, true);
+
+  document.getElementById("gv-prec").addEventListener("click", function(){ stopInertie(); glisseur.scrollBy({ left:-pas(), behavior: reduce ? "auto" : "smooth" }); });
+  document.getElementById("gv-suiv").addEventListener("click", function(){ stopInertie(); glisseur.scrollBy({ left: pas(), behavior: reduce ? "auto" : "smooth" }); });
+  glisseur.addEventListener("keydown", function(e){
+    if (e.key === "ArrowRight"){ e.preventDefault(); glisseur.scrollBy({ left: pas(), behavior: reduce ? "auto" : "smooth" }); }
+    if (e.key === "ArrowLeft"){ e.preventDefault(); glisseur.scrollBy({ left:-pas(), behavior: reduce ? "auto" : "smooth" }); }
+  });
+
+  /* ---------- scrolling over Selected Work : no wheel handling at
+     all, deliberately. Vertical wheel and trackpad up/down input is
+     never intercepted, so it scrolls the page vertically only and
+     can never slide the carousel sideways. A trackpad two-finger
+     swipe left or right reaches the strip as a native horizontal
+     scroll on the overflow-x scroller itself (deltaX drives
+     scrollLeft in the browser), moving the carousel left or right
+     with no event translation. Touch swipe and the arrow buttons
+     work as before. ---------- */
+
+  /* ---------- the progress track is a timeline : grab the circle (or
+     anywhere on the track) and scrub through the work, the way a video
+     timeline seeks. Pointer capture keeps the drag alive outside the
+     thin track; the keyboard walks it one project at a time. ---------- */
+  var cherche = false;
+  function ratioDepuis(e){
+    var r = progres.getBoundingClientRect();
+    return r.width > 0 ? clamp((e.clientX - r.left) / r.width, 0, 1) : 0;
+  }
+  function vaRatio(ratio){
+    var max = glisseur.scrollWidth - glisseur.clientWidth;
+    stopInertie();
+    glisseur.scrollLeft = ratio * max;
+    majCompteur();
+  }
+  progres.addEventListener("pointerdown", function(e){
+    cherche = true;
+    try { progres.setPointerCapture(e.pointerId); } catch(err){}
+    progres.classList.add("cherche");
+    vaRatio(ratioDepuis(e));
+    e.preventDefault();
+  });
+  progres.addEventListener("pointermove", function(e){ if (cherche) vaRatio(ratioDepuis(e)); });
+  function finCherche(){ cherche = false; progres.classList.remove("cherche"); }
+  progres.addEventListener("pointerup", finCherche);
+  progres.addEventListener("pointercancel", finCherche);
+  progres.addEventListener("keydown", function(e){
+    var max = glisseur.scrollWidth - glisseur.clientWidth;
+    var cur = max > 0 ? glisseur.scrollLeft / max : 0;
+    var pasTouche = items.length > 1 ? 1 / (items.length - 1) : 1;
+    if (e.key === "ArrowRight" || e.key === "ArrowUp"){ e.preventDefault(); vaRatio(clamp(cur + pasTouche, 0, 1)); }
+    else if (e.key === "ArrowLeft" || e.key === "ArrowDown"){ e.preventDefault(); vaRatio(clamp(cur - pasTouche, 0, 1)); }
+    else if (e.key === "Home"){ e.preventDefault(); vaRatio(0); }
+    else if (e.key === "End"){ e.preventDefault(); vaRatio(1); }
+  });
+
+  /* ---------- case overlay ---------- */
+  var flight = document.getElementById("flight");
+  var fImg = document.getElementById("flight-img"), fTitre = document.getElementById("flight-titre"),
+      fCamp = document.getElementById("flight-camp"), fTag = document.getElementById("flight-tag"),
+      fDisc = document.getElementById("flight-disc"), fGalerie = document.getElementById("flight-galerie"),
+      fBrief = document.getElementById("flight-brief"), fInsight = document.getElementById("flight-insight"),
+      fIdea = document.getElementById("flight-idea"), fExec = document.getElementById("flight-exec"),
+      fOutcome = document.getElementById("flight-outcome"), fCompteur = document.getElementById("flight-compteur");
+  var courant = 0, dernierFocus = null;
+  var galCourante = [], idxImage = 0;
+  var fVideo = document.getElementById("flight-video");
+  var fVideoWrap = document.getElementById("flight-video-wrap");
+  var fHint = document.getElementById("flight-media-hint");
+  /* ---------- the case film : local file only ----------
+     The film slot holds the video and nothing else, on every
+     device. There is no iframe and no embedded external page
+     any more — the earlier phone build framed the whole old
+     Wix portfolio page here, which let visitors scroll
+     through that entire site inside this window. That frame,
+     its URL and all of its wiring are gone. The film is the
+     local file only, played inline with playsinline /
+     preload metadata / poster and no autoplay. Phones play
+     the compressed, lower-storage rendition re-encoded from
+     the owner's own compressed upload
+     (assets/9e2df2a65980.mp4, 640×360) ; desktop plays
+     the higher-resolution file (assets/feb444119cc6.mp4,
+     854×480), which stays sharp on a big screen — see
+     choixVideoSrc / montreVideo. Every screen gets the
+     player's full control bar — seek, mute and full-screen
+     included. */
+  [fVideo].forEach(function(v){
+    if (!v) return;
+    v.addEventListener("contextmenu", function(e){ e.preventDefault(); });
+  });
+
+  /* ---------- fullscreen viewer ---------- */
+  var vision = document.getElementById("visionneuse"), vImg = document.getElementById("visionneuse-img"),
+      vVideo = document.getElementById("visionneuse-video"),
+      vCompteur = document.getElementById("visionneuse-compteur"), visionOuverte = false, visionFocus = null;
+  /* the fullscreen roster : for a case with a film, the video is a
+     first-class item in the sequence (first, matching its thumbnail),
+     followed by every still. Prev/next steps through stills AND the
+     video, never skipping it. */
+  var rosterCourant = [], idxRoster = 0;
+  /* pick the film rendition for this screen : phones (767px and
+     under, the same breakpoint the layout uses) get the
+     lower-storage 640×360 file so it runs easily on a phone
+     connection ; desktop gets the higher-resolution 854×480
+     file (assets/feb444119cc6.mp4), which stays sharp on a big
+     screen — the lower file was far too blurry there. */
+  function choixVideoSrc(c){
+    if (!c || !c.video) return null;
+    var surPhone = window.matchMedia("(max-width: 767px)").matches;
+    if (surPhone && c.video.srcMobile) return c.video.srcMobile;
+    return c.video.srcDesktop || c.video.src;
+  }
+  function construireRoster(c){
+    var r = [];
+    /* pick the film rendition for this device before anything
+       reads c.video.src (see montreVideo) */
+    if (c.video){
+      c.video.srcDesktop = c.video.srcDesktop || (c.video.src !== c.video.srcMobile ? c.video.src : "assets/feb444119cc6.mp4");
+      c.video.src = choixVideoSrc(c);
+    }
+    if (c.video) r.push({ kind:"video", src:c.video.src, poster:c.video.poster, alt:c.video.alt });
+    c.galerie.forEach(function(g){ r.push({ kind:"image", src:g.src, alt:g.alt }); });
+    return r;
+  }
+  /* ---------- the fullscreen film : a YouTube-style handoff ----
+     There are two <video> elements — the small one on the case
+     stage and the big one in this viewer — and the rule is that
+     only ONE of them is ever playing. Entering the film here
+     captures the small player's exact position and play state,
+     pauses the small player FIRST, then starts the big one at
+     that same position. Leaving hands the position back the same
+     way, so the small film resumes (or rests) exactly where the
+     big one left off. No doubled audio, ever. */
+  var vcCentre = document.getElementById("visionneuse-centre"),
+      vcBarre = document.getElementById("visionneuse-vbarre"),
+      vcPlay = document.getElementById("vc-play"),
+      vcIcoPlay = document.getElementById("vc-ico-play"),
+      vcIcoPause = document.getElementById("vc-ico-pause"),
+      vcTemps = document.getElementById("vc-temps"),
+      vcSeek = document.getElementById("vc-seek"),
+      vcCherche = false, vcMinuteur = null;
+  function vcFmt(s){
+    if (!isFinite(s) || s < 0) s = 0;
+    var m = Math.floor(s / 60), r = Math.floor(s % 60);
+    return m + ":" + (r < 10 ? "0" : "") + r;
+  }
+  /* icon visibility is toggled through the hidden ATTRIBUTE,
+     never the .hidden property : on <svg> elements the property
+     does not reliably reflect to the attribute, so the CSS
+     [hidden] rule never matched and the button kept its initial
+     symbol — the centre button sat on the pause symbol whatever
+     the film did, and the inline button never flipped either.
+     setAttribute / removeAttribute works on every element. */
+  function iconeVisible(el, oui){
+    if (!el) return;
+    if (oui) el.removeAttribute("hidden"); else el.setAttribute("hidden", "");
+  }
+  function vcMaj(){
+    if (!vVideo) return;
+    var enLecture = !vVideo.paused && !vVideo.ended;
+    iconeVisible(vcIcoPlay, !enLecture);
+    iconeVisible(vcIcoPause, enLecture);
+    if (vcPlay) vcPlay.setAttribute("aria-label", enLecture ? "Pause the case film" : "Play the case film");
+    if (vcTemps) vcTemps.textContent = vcFmt(vVideo.currentTime) + " / " + vcFmt(vVideo.duration || 120);
+    if (vcSeek && !vcCherche && vVideo.duration > 0) vcSeek.value = String(Math.round(vVideo.currentTime / vVideo.duration * 1000));
+  }
+  /* the centre cluster stays up while paused; while playing it
+     fades after a few seconds and returns on any pointer move */
+  function vcMontre(){
+    /* every time the centre cluster appears, its big button is
+       re-synced with the film's real state first, so the symbol
+       it shows can never be a leftover from an earlier state */
+    vcMaj();
+    if (!vcCentre || vcCentre.hidden) return;
+    vcCentre.classList.add("vu");
+    if (vcBarre) vcBarre.classList.add("vu");
+    if (vcMinuteur){ clearTimeout(vcMinuteur); vcMinuteur = null; }
+    if (vVideo && !vVideo.paused && !vVideo.ended){
+      vcMinuteur = setTimeout(function(){
+        vcCentre.classList.remove("vu");
+        if (vcBarre) vcBarre.classList.remove("vu");
+      }, 2600);
+    }
+  }
+  function vcCache(){
+    if (vcMinuteur){ clearTimeout(vcMinuteur); vcMinuteur = null; }
+    if (vcCentre){ vcCentre.classList.remove("vu"); vcCentre.hidden = true; }
+    if (vcBarre){ vcBarre.classList.remove("vu"); vcBarre.hidden = true; }
+  }
+  /* ---------- buffering spinner : same loading screen on
+     desktop and phone ----------
+     One spinner per player (the small film on the case stage and
+     the big one in the fullscreen viewer), driven purely by the
+     player's own events, so it shows only while that film is
+     genuinely loading or stalled and disappears the moment it can
+     play again : loadstart / waiting / stalled (and a seek into
+     unloaded data) show it ; playing hides it ; canplay hides it
+     while paused (enough is buffered to start) ; pause, ended,
+     error and emptied always clear it, so it can never sit stuck
+     over a film that is merely paused. There is no viewport gate
+     any more : desktop and phone get the identical loading
+     screen, exactly as the owner asked. */
+  function brancheSpinner(video, spin){
+    if (!video || !spin) return;
+    function montre(){ spin.classList.add("vu"); }
+    function cache(){ spin.classList.remove("vu"); }
+    video.addEventListener("loadstart", montre);
+    video.addEventListener("waiting", montre);
+    video.addEventListener("stalled", montre);
+    video.addEventListener("seeking", function(){ if (video.readyState < 3) montre(); });
+    video.addEventListener("playing", cache);
+    video.addEventListener("canplay", function(){ if (video.paused || video.ended) cache(); });
+    video.addEventListener("seeked", function(){ if (video.readyState >= 3) cache(); });
+    video.addEventListener("pause", cache);
+    video.addEventListener("ended", cache);
+    video.addEventListener("error", cache);
+    video.addEventListener("emptied", cache);
+  }
+  brancheSpinner(fVideo, document.getElementById("flight-video-spin"));
+  brancheSpinner(vVideo, document.getElementById("visionneuse-video-spin"));
+  if (vVideo) vVideo.addEventListener("contextmenu", function(e){ e.preventDefault(); });
+  /* start the big film where the small one left off. The small
+     player is the source of truth on entry (it is always synced
+     when the big one is left), and it is paused before anything
+     here plays, so the two can never sound at once. */
+  function demarreVisionVideo(g){
+    /* the centre cluster is up from the first frame, before the
+       film's metadata even arrives, so the controls are never
+       missing while the big player loads */
+    vcMaj(); vcMontre();
+    var depart = 0, jouer = true;
+    if (fVideo){
+      depart = fVideo.currentTime || 0;
+      jouer = !fVideo.paused && !fVideo.ended;
+      fVideo.pause();
+    }
+    vVideo.setAttribute("aria-label", g.alt);
+    function applique(){
+      try { vVideo.currentTime = depart; } catch(e){}
+      if (jouer){ var pr = vVideo.play(); if (pr && pr.catch) pr.catch(function(){}); }
+      else { vVideo.pause(); }
+      vcMaj(); vcMontre();
+    }
+    if (vVideo.getAttribute("data-src") !== g.src){
+      vVideo.pause();
+      vVideo.preload = "metadata";
+      vVideo.src = g.src;
+      if (g.poster) vVideo.poster = g.poster;
+      vVideo.setAttribute("data-src", g.src);
+      vVideo.addEventListener("loadedmetadata", function uneFois(){
+        vVideo.removeEventListener("loadedmetadata", uneFois);
+        applique();
+      });
+      vVideo.load();
+    } else if (vVideo.readyState >= 1){ applique(); }
+    else {
+      vVideo.addEventListener("loadedmetadata", function uneFois2(){
+        vVideo.removeEventListener("loadedmetadata", uneFois2);
+        applique();
+      });
+      vVideo.load();
+    }
+  }
+  /* hand the film back to the small player : same position, and
+     it resumes playing only if the big one was playing */
+  function rendVisionVideo(reprendre){
+    if (!vVideo || !fVideo) return;
+    var t = vVideo.currentTime || 0;
+    var jouait = !vVideo.paused && !vVideo.ended;
+    vVideo.pause();
+    function applique(){
+      try { fVideo.currentTime = t; } catch(e){}
+      if (reprendre && jouait){ var pr = fVideo.play(); if (pr && pr.catch) pr.catch(function(){}); }
+    }
+    if (fVideo.readyState >= 1) applique();
+    else fVideo.addEventListener("loadedmetadata", function uneFois(){
+      fVideo.removeEventListener("loadedmetadata", uneFois);
+      applique();
+    });
+  }
+  function visionItemVideo(){
+    var g = rosterCourant[idxRoster];
+    return !!(g && g.kind === "video" && vVideo && !vVideo.hidden);
+  }
+  function majVision(){
+    var g = rosterCourant[idxRoster];
+    if (!g) return;
+    vCompteur.textContent = (idxRoster + 1) + " / " + rosterCourant.length;
+    /* the film is an ordinary item in this roster on EVERY
+       device, phones included : it plays inside this viewer,
+       between the stills, with the viewer's own centre controls
+       — never in the phone's native player */
+    if (g.kind === "video"){
+      vImg.hidden = true;
+      vVideo.hidden = false;
+      if (vcCentre) vcCentre.hidden = false;
+      if (vcBarre) vcBarre.hidden = false;
+      demarreVisionVideo(g);
+    } else {
+      if (visionItemVideo()) rendVisionVideo(false);
+      if (vVideo){ vVideo.pause(); vVideo.hidden = true; }
+      vcCache();
+      vImg.hidden = false;
+      vImg.src = g.src; vImg.alt = g.alt;
+    }
+  }
+  function ouvrirVision(pourFilm){
+    if (!rosterCourant.length) return;
+    majVision();
+    visionFocus = document.activeElement;
+    vision.hidden = false;
+    requestAnimationFrame(function(){ vision.classList.add("ouvert"); });
+    visionOuverte = true;
+    document.getElementById("visionneuse-fermer").focus();
+    /* for the film, also ask the browser for true fullscreen on
+       the viewer itself — the viewer carries the film AND its
+       centre controls, so both routes look and behave the same.
+       Where the host frame refuses, the viewer still fills the
+       whole window on its own. Failure is silent by design. */
+    if (pourFilm){
+      try {
+        if (vision.requestFullscreen){
+          var pr = vision.requestFullscreen();
+          if (pr && pr.catch) pr.catch(function(){});
+        }
+      } catch(e){}
+    }
+  }
+  function ouvrirVisionVideo(){
+    var c = CASES[courant];
+    if (!c || !c.video) return;
+    idxRoster = 0;   /* the video leads the roster */
+    montreVideo();
+    ouvrirVision(true);
+  }
+  function fermerVision(){
+    /* if the film is on screen here, hand it back to the small
+       player first — position and play state included */
+    if (visionItemVideo()) rendVisionVideo(true);
+    else if (vVideo) vVideo.pause();
+    vcCache();
+    try { if (document.fullscreenElement && document.exitFullscreen) document.exitFullscreen(); } catch(e){}
+    vision.classList.remove("ouvert");
+    visionOuverte = false;
+    setTimeout(function(){ vision.hidden = true; if (visionFocus) visionFocus.focus(); }, 300);
+  }
+  function pasVision(d){
+    if (!rosterCourant.length) return;
+    /* leaving the film for a still : the big player pauses and its
+       position is banked into the small player before we move */
+    if (visionItemVideo()) rendVisionVideo(false);
+    idxRoster = (idxRoster + d + rosterCourant.length) % rosterCourant.length;
+    var g = rosterCourant[idxRoster];
+    /* keep the case stage underneath in step with the viewer */
+    if (g.kind === "video") montreVideo(); else montreImage({ src:g.src, alt:g.alt });
+    majVision();
+  }
+  /* centre cluster wiring : play / pause in the middle, ten
+     seconds back and forward either side, click the film itself
+     to toggle, and a seek bar along the bottom */
+  if (vVideo){
+    var basculeVision = function(){
+      if (vVideo.paused || vVideo.ended){ var pr = vVideo.play(); if (pr && pr.catch) pr.catch(function(){}); }
+      else vVideo.pause();
+      /* re-sync the centre button's icon with the state just
+         toggled to — immediately, and again on the next frame
+         once the toggle has settled. The big centre button must
+         always match the film : pause bars while it plays, a
+         play triangle while it is paused — never stuck on one
+         symbol regardless of what the film is doing. The play /
+         pause / playing events below re-sync it as well. */
+      vcMaj();
+      requestAnimationFrame(function(){ vcMaj(); });
+    };
+    if (vcPlay) vcPlay.addEventListener("click", basculeVision);
+    vVideo.addEventListener("click", basculeVision);
+    var vcRetour = document.getElementById("vc-retour"), vcAvance = document.getElementById("vc-avance");
+    if (vcRetour) vcRetour.addEventListener("click", function(){
+      vVideo.currentTime = Math.max(0, (vVideo.currentTime || 0) - 10); vcMaj(); vcMontre();
+    });
+    if (vcAvance) vcAvance.addEventListener("click", function(){
+      var dur = isFinite(vVideo.duration) ? vVideo.duration : Infinity;
+      vVideo.currentTime = Math.min(dur, (vVideo.currentTime || 0) + 10); vcMaj(); vcMontre();
+    });
+    ["play","playing","pause","ended","loadedmetadata","seeked","waiting"].forEach(function(ev){
+      vVideo.addEventListener(ev, function(){ vcMaj(); vcMontre(); });
+    });
+    vVideo.addEventListener("timeupdate", vcMaj);
+    if (vcSeek){
+      vcSeek.addEventListener("pointerdown", function(){ vcCherche = true; });
+      vcSeek.addEventListener("pointerup", function(){ vcCherche = false; });
+      vcSeek.addEventListener("input", function(){
+        if (vVideo.duration > 0){
+          vVideo.currentTime = (parseInt(vcSeek.value, 10) / 1000) * vVideo.duration;
+          if (vcTemps) vcTemps.textContent = vcFmt(vVideo.currentTime) + " / " + vcFmt(vVideo.duration);
+        }
+      });
+      vcSeek.addEventListener("change", function(){ vcCherche = false; });
+    }
+    vision.addEventListener("mousemove", function(){ if (visionItemVideo()) vcMontre(); });
+    vision.addEventListener("touchstart", function(){ if (visionItemVideo()) vcMontre(); }, { passive:true });
+  }
+  fImg.addEventListener("click", ouvrirVision);
+  fImg.addEventListener("keydown", function(e){
+    if (e.key === "Enter" || e.key === " "){ e.preventDefault(); ouvrirVision(); }
+  });
+  /* the case film's own control bar (see the markup) : the browser's
+     native controls are not used inline, because inside the host
+     frame their full-screen icon renders greyed out and unclickable.
+     Every inline control here is a plain page element in the hero
+     cream, fully opaque and clickable. The full-screen button at
+     the bottom right, beside the mute button, opens the
+     fullscreen viewer on EVERY device, phones included — the
+     film never leaves the page for a native player. The viewer
+     also asks the browser for true fullscreen on itself, and
+     takes over the film YouTube-style : the small player pauses
+     first and the big one continues at the exact same position
+     (see demarreVisionVideo), with its own centre play / pause
+     and ±10 second controls, and never a second copy of the film
+     left playing underneath. In the viewer the film is simply
+     the first item of the same roster as the still mockups :
+     prev / next steps through film and images alike. */
+  function allerPleinEcran(){
+    ouvrirVisionVideo();
+  }
+  if (fVideo){
+    var fvPlay = document.getElementById("fv-play"),
+        fvIcoPlay = document.getElementById("fv-ico-play"),
+        fvIcoPause = document.getElementById("fv-ico-pause"),
+        fvTemps = document.getElementById("fv-temps"),
+        fvSeek = document.getElementById("fv-seek"),
+        fvMuet = document.getElementById("fv-muet"),
+        fvIcoSon = document.getElementById("fv-ico-son"),
+        fvIcoMuet = document.getElementById("fv-ico-muet"),
+        fvPlein = document.getElementById("fv-plein"),
+        fvCherche = false;
+    function fvFmt(s){
+      if (!isFinite(s) || s < 0) s = 0;
+      var m = Math.floor(s / 60), r = Math.floor(s % 60);
+      return m + ":" + (r < 10 ? "0" : "") + r;
+    }
+    function fvMaj(){
+      var enLecture = !fVideo.paused && !fVideo.ended;
+      iconeVisible(fvIcoPlay, !enLecture);
+      iconeVisible(fvIcoPause, enLecture);
+      if (fvPlay) fvPlay.setAttribute("aria-label", enLecture ? "Pause the case film" : "Play the case film");
+      if (fvTemps) fvTemps.textContent = fvFmt(fVideo.currentTime) + " / " + fvFmt(fVideo.duration || 120);
+      if (fvSeek && !fvCherche && fVideo.duration > 0) fvSeek.value = String(Math.round(fVideo.currentTime / fVideo.duration * 1000));
+      var muet = fVideo.muted || fVideo.volume === 0;
+      iconeVisible(fvIcoSon, !muet);
+      iconeVisible(fvIcoMuet, muet);
+      if (fvMuet) fvMuet.setAttribute("aria-label", muet ? "Unmute the case film" : "Mute the case film");
+    }
+    if (fvPlay) fvPlay.addEventListener("click", function(){
+      if (fVideo.paused || fVideo.ended){ var pr = fVideo.play(); if (pr && pr.catch) pr.catch(function(){}); }
+      else fVideo.pause();
+    });
+    fVideo.addEventListener("click", function(){
+      if (fVideo.paused){ var pr = fVideo.play(); if (pr && pr.catch) pr.catch(function(){}); }
+      else fVideo.pause();
+    });
+    /* double-tap and the F key open the fullscreen viewer on
+       every device, phones included, the same route the
+       full-screen button in the control bar takes */
+    fVideo.addEventListener("dblclick", function(){ allerPleinEcran(); });
+    fVideo.addEventListener("keydown", function(e){
+      if (e.key === " " || e.key === "Enter"){
+        e.preventDefault();
+        if (fVideo.paused){ var pr = fVideo.play(); if (pr && pr.catch) pr.catch(function(){}); } else fVideo.pause();
+      }
+      if (e.key === "f" || e.key === "F"){ e.preventDefault(); allerPleinEcran(); }
+    });
+    ["play","pause","ended","timeupdate","loadedmetadata","volumechange"].forEach(function(ev){
+      fVideo.addEventListener(ev, fvMaj);
+    });
+    if (fvSeek){
+      fvSeek.addEventListener("pointerdown", function(){ fvCherche = true; });
+      fvSeek.addEventListener("pointerup", function(){ fvCherche = false; });
+      fvSeek.addEventListener("input", function(){
+        if (fVideo.duration > 0){
+          fVideo.currentTime = (parseInt(fvSeek.value, 10) / 1000) * fVideo.duration;
+          if (fvTemps) fvTemps.textContent = fvFmt(fVideo.currentTime) + " / " + fvFmt(fVideo.duration);
+        }
+      });
+      fvSeek.addEventListener("change", function(){ fvCherche = false; });
+    }
+    if (fvMuet) fvMuet.addEventListener("click", function(){
+      fVideo.muted = !fVideo.muted;
+      fvMaj();
+    });
+    if (fvPlein) fvPlein.addEventListener("click", function(){ allerPleinEcran(); });
+    fvMaj();
+  }
+  vImg.addEventListener("click", fermerVision);
+  vision.addEventListener("click", function(e){ if (e.target === vision) fermerVision(); });
+  document.getElementById("visionneuse-fermer").addEventListener("click", fermerVision);
+  document.getElementById("visionneuse-prec").addEventListener("click", function(){ pasVision(-1); });
+  document.getElementById("visionneuse-suiv").addEventListener("click", function(){ pasVision(1); });
+
+  /* the case film takes the stage : its poster is the Game Pass key
+     visual, so the collage the reader recognises is the film's cover,
+     not a still. Selecting any still pauses the film and swaps back. */
+  function montreVideo(){
+    var c = CASES[courant];
+    if (!c || !c.video || !fVideo) return;
+    /* every device, phones included, gets the same video-only
+       local player below — nothing external is ever framed
+       in this slot */
+    fImg.hidden = true;
+    if (fVideoWrap) fVideoWrap.hidden = false;
+    fVideo.hidden = false;
+    /* the rendition is chosen per screen (see choixVideoSrc) :
+       phones stream the lower-storage rendition — H.264/AAC,
+       640×360 at ~500 kbps total (7.6 MB), faststart with a
+       keyframe every second, so playback holds on ordinary
+       phone connections. Desktop streams the higher-resolution
+       file again (assets/feb444119cc6.mp4, 854×480, 15 MB) : it
+       was working completely fine on desktop, and the 640×360
+       file is far too blurry on a big screen. The fullscreen
+       roster is built from the same chosen source
+       (construireRoster reads c.video.src), so both players
+       stream the same rendition on a given device. */
+    if (c.video){
+      c.video.srcDesktop = c.video.srcDesktop || (c.video.src !== c.video.srcMobile ? c.video.src : "assets/feb444119cc6.mp4");
+      c.video.src = choixVideoSrc(c);
+    }
+    var srcEl = fVideo.querySelector("source");
+    var actuel = srcEl ? srcEl.getAttribute("src") : fVideo.getAttribute("src");
+    /* preload stays at "metadata" : opening the case fetches
+       only the film's header (duration, dimensions, first
+       frame under the poster), never the file itself, so the
+       full download cannot start on page load or case open —
+       it begins when the visitor presses play, and the
+       faststart layout plus one-second keyframes make that
+       start prompt. Call load() EXACTLY ONCE per src change :
+       a second load() while the first fetch is in flight
+       aborts and restarts the download in some browsers, which
+       on a phone reads as buffering that never catches up. A
+       load already in flight (networkState 2) is therefore
+       never re-triggered. */
+    fVideo.preload = "metadata";
+    if (actuel !== c.video.src){
+      if (srcEl) srcEl.src = c.video.src; else fVideo.src = c.video.src;
+      try { fVideo.load(); } catch(e){}
+    } else if (fVideo.readyState === 0 && fVideo.networkState === 0){
+      try { fVideo.load(); } catch(e){}
+    }
+    idxRoster = 0;   /* the video leads the fullscreen roster */
+    if (fHint) fHint.textContent = "The case study film · 2 mins";
+    var btns = fGalerie.querySelectorAll(".flight__vignette");
+    btns.forEach(function(b){ b.setAttribute("aria-current", b.hasAttribute("data-video") ? "true" : "false"); });
+  }
+  function montreImage(g){
+    if (fVideo){ fVideo.pause(); fVideo.hidden = true; }
+    if (fVideoWrap) fVideoWrap.hidden = true;
+    fImg.hidden = false;
+    if (fHint) fHint.textContent = "Click for full screen, use arrow to browse";
+    var ix = -1;
+    for (var gi = 0; gi < galCourante.length; gi++){ if (galCourante[gi].src === g.src){ ix = gi; break; } }
+    if (ix >= 0) idxImage = ix;
+    for (var ri = 0; ri < rosterCourant.length; ri++){
+      if (rosterCourant[ri].kind === "image" && rosterCourant[ri].src === g.src){ idxRoster = ri; break; }
+    }
+    if (visionOuverte) majVision();
+    fImg.classList.add("charge");
+    var im = new Image();
+    im.onload = function(){ fImg.src = g.src; fImg.alt = g.alt; if (im.naturalWidth){ fImg.width = im.naturalWidth; fImg.height = im.naturalHeight; } fImg.classList.remove("charge"); };
+    im.onerror = function(){ fImg.src = g.src; fImg.alt = g.alt; fImg.classList.remove("charge"); };
+    im.src = g.src;
+    var btns = fGalerie.querySelectorAll(".flight__vignette");
+    btns.forEach(function(b){ b.setAttribute("aria-current", b.getAttribute("data-src") === g.src ? "true" : "false"); });
+  }
+  /* no pre-buffering, on any device : the film is never fetched
+     before the visitor presses play. An earlier version started
+     the phone download as soon as Selected Work neared the
+     screen, which pulled megabytes over a phone connection for
+     a film the visitor might never open ; preload="metadata"
+     on both players is the whole policy now. */
+  /* natural sizes, so the masonry can balance columns by real height */
+  var DIMS = {
+    "assets/ed41adb5fa8a.jpg":[1600,899], "assets/37d7e914bbff.jpg":[4000,3000], "assets/d0bb6f67ddea.jpg":[1600,1142], "assets/0fa91a8174ca.jpg":[1600,1011],
+    "assets/4439cc9121a5.jpg":[1600,974], "assets/6fea795ec637.jpg":[1600,1200], "assets/2530b77fd3c9.jpg":[1600,1027],
+    "assets/79e5d71748b2.jpg":[1600,1200], "assets/2debd29690cd.jpg":[1600,900], "assets/ec0474f414a9.jpg":[1600,1093],
+    "assets/33d16c9d93ee.jpg":[1600,1200], "assets/1c42cd558dce.jpg":[1600,1106], "assets/73d32c685cfa.jpg":[2000,1500],
+    "assets/b50b1856782a.jpg":[1184,1618], "assets/f175c2dcf286.jpg":[1600,892], "assets/f215f903db02.jpg":[1396,1078], "assets/cc6820f3bc0a.jpg":[1195,896],
+    "assets/7a601ff2db2e.jpg":[1179,1215], "assets/18d1c854dead.jpg":[1600,1066], "assets/00b3f5988864.jpg":[1600,1003],
+    "assets/9a9f16300f0a.jpg":[1600,916], "assets/6693af056ec4.jpg":[1600,916],
+    "assets/8d6b0568f597.jpg":[2048,1285], "assets/c2f09bdd30c2.jpg":[924,2000]
+  };
+  function ouvrir(i){
+    courant = (i + CASES.length) % CASES.length;
+    var c = CASES[courant];
+    galCourante = c.galerie; idxImage = 0;
+    rosterCourant = construireRoster(c); idxRoster = 0;
+    fTitre.textContent = c.titre; fCamp.textContent = c.camp; fTag.textContent = "\u201C" + c.tag + "\u201D";
+    fDisc.textContent = c.disc;
+    fBrief.textContent = c.brief; fInsight.textContent = c.insight; fIdea.textContent = c.idea;
+    fExec.textContent = c.exec; fOutcome.textContent = c.outcome;
+    fCompteur.textContent = "Case 0" + (courant + 1) + " / 06";
+    fGalerie.innerHTML = "";
+    /* masonry packing : each mockup goes into whichever column is
+       currently shorter, at its natural aspect ratio, with the same
+       tight 8px gap throughout. On Xbox this lands the phone trio
+       directly under the Game Pass collage, in the space the old row
+       grid left black beside the tall poster; on GelaSkins the last
+       mockup sits tight against the one above it. */
+    var colEls = [], colH = [0, 0];
+    for (var ci = 0; ci < 2; ci++){
+      var col = document.createElement("div");
+      col.className = "flight__col";
+      fGalerie.appendChild(col);
+      colEls.push(col);
+    }
+    if (c.video){
+      var vb = document.createElement("button");
+      vb.type = "button"; vb.className = "flight__vignette"; vb.setAttribute("data-video", "1");
+      vb.setAttribute("data-src", c.video.poster);
+      vb.setAttribute("aria-label", "Watch the case film: " + c.video.alt);
+      vb.setAttribute("aria-current", "false");
+      var vth = document.createElement("img");
+      vth.src = c.video.poster; vth.alt = ""; vth.loading = "lazy";
+      vb.appendChild(vth);
+      var badge = document.createElement("span");
+      badge.className = "film-badge"; badge.textContent = "\u25B6"; badge.setAttribute("aria-hidden", "true");
+      vb.appendChild(badge);
+      var duree = document.createElement("span");
+      duree.className = "film-duree"; duree.textContent = "FILM · 2:00"; duree.setAttribute("aria-hidden", "true");
+      vb.appendChild(duree);
+      vb.addEventListener("click", montreVideo);
+      colEls[0].appendChild(vb);
+      colH[0] += 899 / 1600 + 0.03;
+    }
+    c.galerie.forEach(function(g){
+      var b = document.createElement("button");
+      b.type = "button"; b.className = "flight__vignette"; b.setAttribute("data-src", g.src);
+      b.setAttribute("aria-label", "Show image: " + g.alt);
+      b.setAttribute("aria-current", "false");
+      var th = document.createElement("img");
+      th.src = g.src; th.alt = ""; th.loading = "lazy";
+      b.appendChild(th);
+      b.addEventListener("click", function(){ montreImage(g); });
+      var dim = DIMS[g.src] || [4, 3];
+      var cible = colH[0] <= colH[1] ? 0 : 1;
+      colEls[cible].appendChild(b);
+      colH[cible] += dim[1] / dim[0] + 0.03;
+      /* no eager pre-load of the stills here any more : forcing
+         every gallery image to download the moment the case
+         opened put them in direct competition with the film's
+         first seconds on a phone connection. The thumbnails
+         themselves lazy-load, and the film gets the bandwidth
+         first, which is part of why it no longer stalls. */
+    });
+    if (c.video){ montreVideo(); } else { montreImage(c.galerie[0]); }
+    if (flight.hidden){
+      dernierFocus = document.activeElement;
+      flight.hidden = false;
+      document.body.classList.add("bloque");
+      requestAnimationFrame(function(){ flight.classList.add("ouvert"); flight.scrollTop = 0; });
+      document.getElementById("flight-fermer").focus();
+    } else { flight.scrollTop = 0; }
+  }
+  function fermer(){
+    /* close the viewer first (it hands the film back), then make
+       sure the small player is paused for good measure */
+    if (visionOuverte) fermerVision();
+    if (fVideo) fVideo.pause();
+    flight.classList.remove("ouvert");
+    document.body.classList.remove("bloque");
+    setTimeout(function(){ flight.hidden = true; if (dernierFocus) dernierFocus.focus(); }, 350);
+  }
+  document.querySelectorAll("[data-case]").forEach(function(b){
+    b.addEventListener("click", function(){ ouvrir(parseInt(b.getAttribute("data-case"), 10)); });
+  });
+  document.getElementById("flight-fermer").addEventListener("click", fermer);
+  document.getElementById("flight-prec").addEventListener("click", function(){ ouvrir(courant - 1); });
+  document.getElementById("flight-suiv").addEventListener("click", function(){ ouvrir(courant + 1); });
+  document.addEventListener("keydown", function(e){
+    if (visionOuverte){
+      if (e.key === "Escape") fermerVision();
+      if (e.key === "ArrowRight") pasVision(1);
+      if (e.key === "ArrowLeft") pasVision(-1);
+      return;
+    }
+    if (flight.hidden) return;
+    if (e.key === "Escape") fermer();
+    if (e.key === "ArrowRight") ouvrir(courant + 1);
+    if (e.key === "ArrowLeft") ouvrir(courant - 1);
+  });
+
+})();
+</script>
+
+<!-- EMAIL FALLBACK SHEET : stays hidden unless a mailto: hand-off
+     was attempted and demonstrably dropped (see the script below).
+     Every action is a plain native anchor or a one-tap copy — no
+     script touches any of their clicks. On phones/tablets both
+     Gmail routes show (the Gmail APP deep link first, then Gmail
+     compose over https:) ; on desktop, Gmail compose in a new
+     tab. -->
+<div class="mail-repli" id="mail-repli" role="alert" hidden>
+  <p class="mail-repli__texte"><b>Email Youssef.</b> The mail link was blocked in this view &mdash; one tap opens a ready-to-send message to <b>youssef.said1313@gmail.com</b>:</p>
+  <div class="mail-repli__actions">
+    <a class="mail-repli__btn mail-repli__btn--plein" id="mail-repli-gmailapp" href="googlegmail://co?to=youssef.said1313@gmail.com&amp;subject=Hey%2C%20I%20just%20saw%20your%20portfolio!" target="_self" hidden>Open Gmail app</a>
+    <a class="mail-repli__btn mail-repli__btn--plein" id="mail-repli-gmailweb" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=youssef.said1313@gmail.com&amp;su=Hey%2C%20I%20just%20saw%20your%20portfolio!" target="_blank" rel="noopener" hidden>Open Gmail</a>
+    <a class="mail-repli__btn" id="mail-repli-retry" href="mailto:youssef.said1313@gmail.com?subject=Hey%2C%20I%20just%20saw%20your%20portfolio!" target="_self">Open mail app</a>
+    <button class="mail-repli__btn" type="button" id="mail-repli-copie">Copy address</button>
+    <button class="mail-repli__btn" type="button" id="mail-repli-fermer" aria-label="Dismiss">✕</button>
+  </div>
+</div>
+
+<script>
+/* ---------- email links : Wix markup, plain anchors only,
+   and a one-tap workaround sheet (see the CSS note above) ----
+   Layer 1 : the anchors' markup is the old Wix portfolio's,
+   extracted from its page source — plain mailto:, exact
+   subject, target="_self".
+   Layer 2 : NO script touches any email click. Rounds of
+   fixes that retargeted the anchor at click time (to "_top"
+   when framed) or navigated from script kept dying inside
+   the app viewer — up to and including this sheet's own
+   "Open Gmail app" / "Open mail app" buttons, which did
+   nothing when tapped. So now every email anchor on the
+   page — the two portfolio links AND every action in the
+   sheet — is a completely plain native anchor : no click
+   handler cancels, retargets or re-routes any of them, and
+   the browser's own handling of the tap is the hand-off,
+   exactly as on the Wix site.
+   Layer 3 : the only script near the links OBSERVES the
+   hand-off (page hides, loses focus, or unloads = the system
+   took over). If ~1.2s pass with no proof, the fallback
+   sheet appears, carrying plain one-tap anchors out of the
+   frame : the Gmail app deep link on phones/tablets (with
+   Gmail compose over https: beside it — the escape no
+   viewer blocks), Gmail compose in a new tab on desktop,
+   the same mailto: again, or copy the address. --- */
+(function(){
+  var ADRESSE = "youssef.said1313@gmail.com";
+  var barre = document.getElementById("mail-repli");
+  var delai = null, remis = false;
+
+  function marqueRemis(){
+    remis = true;
+    if (delai){ clearTimeout(delai); delai = null; }
+    if (barre) barre.hidden = true;
+  }
+  /* the system taking over always costs the page its focus
+     or its visibility (app switch, iOS's "Create mail with"
+     sheet, a desktop mail client stealing focus) */
+  window.addEventListener("blur", marqueRemis);
+  window.addEventListener("pagehide", marqueRemis);
+  document.addEventListener("visibilitychange", function(){
+    if (document.hidden) marqueRemis();
+  });
+
+  function surveille(){
+    remis = false;
+    if (delai) clearTimeout(delai);
+    delai = setTimeout(function(){
+      delai = null;
+      if (!remis && !document.hidden && barre) barre.hidden = false;
+    }, 1200);
+  }
+
+  /* watch only — the click itself is never touched : no
+     preventDefault, no retargeting, no script navigation.
+     The anchor's own native mailto: action IS the hand-off */
+  function branche(a){
+    a.addEventListener("click", function(){
+      surveille();
+    });
+  }
+  document.querySelectorAll("a[data-mailto]").forEach(branche);
+
+  if (!barre) return;
+
+  /* the sheet's own mail-app anchor gets the same treatment,
+     so a successful retry hides the sheet instead of
+     re-showing it */
+  var retry = document.getElementById("mail-repli-retry");
+  if (retry) branche(retry);
+
+  /* the Gmail routes, matched to the device — and from here
+     on they are PLAIN ANCHORS that no script touches :
+     phones/tablets get the Gmail APP deep link first
+     (googlegmail://co?… — it opens a compose window inside
+     the already-signed-in app, no browser, no login, and it
+     works for visitors who deleted Apple Mail and use Gmail
+     as their mail app), with Gmail compose over https: right
+     beside it as the route no viewer can block. Desktop
+     shows the https: compose route (a new tab : the same
+     escape this page's LinkedIn link uses). Whichever route
+     the visitor takes, the sheet dismisses itself through
+     marqueRemis : a real hand-off always costs the page its
+     focus or its visibility. */
+  var estMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent || "");
+  var gmailApp = document.getElementById("mail-repli-gmailapp");
+  var gmailWeb = document.getElementById("mail-repli-gmailweb");
+  if (estMobile && gmailApp) gmailApp.hidden = false;
+  if (gmailWeb) gmailWeb.hidden = false;
+  /* Android : the Gmail app answers an intent: URL for its own
+     package (with the web compose as the built-in fallback);
+     iOS answers the googlegmail:// scheme directly */
+  if (gmailApp && /Android/i.test(navigator.userAgent || "")){
+    gmailApp.href = "intent://co?to=" + ADRESSE + "&subject=Hey%2C%20I%20just%20saw%20your%20portfolio!" +
+      "#Intent;scheme=googlegmail;package=com.google.android.gm;" +
+      "S.browser_fallback_url=https%3A%2F%2Fmail.google.com%2Fmail%2F%3Fview%3Dcm%26fs%3D1%26to%3D" + ADRESSE +
+      "%26su%3DHey%252C%2520I%2520just%2520saw%2520your%2520portfolio!;end";
+  }
+
+  document.getElementById("mail-repli-fermer").addEventListener("click", function(){
+    barre.hidden = true;
+  });
+  var btnCopie = document.getElementById("mail-repli-copie");
+  btnCopie.addEventListener("click", function(){
+    function fait(){ btnCopie.textContent = "Copied ✓"; }
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(ADRESSE).then(fait, function(){ copieManuelle(); });
+    } else { copieManuelle(); }
+    function copieManuelle(){
+      var ta = document.createElement("textarea");
+      ta.value = ADRESSE;
+      ta.setAttribute("readonly", "");
+      ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      try { if (document.execCommand("copy")) fait(); } catch (err) {}
+      ta.remove();
+    }
+  });
+})();
+</script>
+</body>
+</html>
