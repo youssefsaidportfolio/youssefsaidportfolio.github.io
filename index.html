@@ -3,21 +3,70 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta name="description" content="Youssef Said, art director based in Toronto. Campaigns for Xbox PC Game Pass, GelaSkins, Corona Sunbrew, H&R Block and One & Only Musicals, plus logo redesigns for Saint-Nicolas school and Grace & Family Church." />
-<link rel="icon" type="image/png" href="assets/e308d70c8498.png" />
-<link rel="shortcut icon" type="image/png" href="assets/e308d70c8498.png" />
-<link rel="apple-touch-icon" href="assets/e308d70c8498.png" />
-<title>Youssef Said Art Direction Portfolio</title>
+<title>Youssef Said — Art Director Portfolio | Toronto</title>
+<meta name="description" content="Youssef Said is an art director based in Toronto. Portfolio of advertising campaigns for Xbox PC Game Pass, GelaSkins, Corona Sunbrew, H&R Block and One & Only Musicals, plus logo redesigns for Saint-Nicolas school and Grace & Family Church." />
+<meta name="author" content="Youssef Said" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://youssefsaidportfolio.github.io/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Youssef Said Portfolio" />
+<meta property="og:title" content="Youssef Said — Art Director Portfolio" />
+<meta property="og:description" content="Art director based in Toronto. Campaigns for Xbox PC Game Pass, GelaSkins, Corona Sunbrew, H&R Block and One & Only Musicals, plus logo redesigns for real clients." />
+<meta property="og:url" content="https://youssefsaidportfolio.github.io/" />
+<meta property="og:image" content="https://youssefsaidportfolio.github.io/assets/xbox-2.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Youssef Said — Art Director Portfolio" />
+<meta name="twitter:description" content="Art director based in Toronto. Campaigns for Xbox PC Game Pass, GelaSkins, Corona Sunbrew, H&R Block and One & Only Musicals, plus logo redesigns for real clients." />
+<meta name="twitter:image" content="https://youssefsaidportfolio.github.io/assets/xbox-2.jpg" />
+<meta name="theme-color" content="#111110" />
+<!-- favicon : the fish cropped tight to its own outline (the full
+     logo canvas left it floating in the middle at ~60% size, which
+     is why the tab icon read far smaller than every other tab's).
+     The cropped mark fills the icon frame edge to edge at every
+     size browsers ask for. -->
+<link rel="icon" type="image/x-icon" href="assets/85b293ce9a5f.ico" />
+<link rel="icon" type="image/png" sizes="512x512" href="assets/e96d7888f8c2.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="assets/e0aa692ba851.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/16295e67a494.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="assets/e7351c618d39.png" />
+<link rel="shortcut icon" href="assets/85b293ce9a5f.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/961912dcec30.png" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "name": "Youssef Said",
+      "jobTitle": "Art Director",
+      "url": "https://youssefsaidportfolio.github.io/",
+      "email": "mailto:youssef.said1313@gmail.com",
+      "image": "https://youssefsaidportfolio.github.io/assets/logo.png",
+      "address": { "@type": "PostalAddress", "addressLocality": "Toronto", "addressRegion": "ON", "addressCountry": "CA" },
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "Humber Polytechnic" },
+      "sameAs": [ "https://www.linkedin.com/in/youssef-said-a8b263274" ],
+      "knowsAbout": [ "Art Direction", "Advertising Campaigns", "Branding", "Logo Design", "Social Media Content" ]
+    },
+    {
+      "@type": "WebSite",
+      "name": "Youssef Said — Art Director Portfolio",
+      "url": "https://youssefsaidportfolio.github.io/",
+      "author": { "@type": "Person", "name": "Youssef Said" }
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <style>
   :root{
     color-scheme:dark;
-    /* dark ground restored : the page lives on near-black ink, with
+    /* dark ground restored : the page lives on near-black, with
        ivory text. The door (hero) and the top bar keep their cream
-       panels (--ivoire ground, --encre ink) — the dark world fades
-       in over the cream door as the fish dissolves. */
+       panels (--ivoire ground, --encre ink) — the dark world
+       fades in over the cream door as the fish dissolves, exactly
+       as in the published version. */
     --fond:#111110; --creme:#F2F0EA; --texte:var(--creme); --encre:#111110; --ivoire:var(--creme);
     --trait:rgba(242,240,234,.16); --trait-encre:rgba(17,17,16,.16);
     --gris:#A09D96; --doux:var(--creme); --cote:#A09D96;
@@ -28,7 +77,11 @@
   @media (min-width:768px){ :root{ --barre:64px; } }
   *{ box-sizing:border-box; }
   html{ scroll-behavior:smooth; }
-  html,body{ background:var(--fond); }
+  /* no pull-to-refresh / rubber-band reload at the top of the
+     page : over-scrolling upward past the hero used to trigger
+     a page refresh while the visitor was only trying to scroll
+     back up to the logo. Overscroll at the top now does nothing. */
+  html,body{ background:var(--fond); overscroll-behavior-y:none; }
   body{
     margin:0; color:var(--texte);
     font-family:'Archivo',Helvetica,Arial,sans-serif;
@@ -68,7 +121,8 @@
   .c-point{ width:2px; height:2px; margin:-1px 0 0 -1px; background:#fff; }
   .c-anneau{ width:40px; height:40px; margin:-20px 0 0 -20px; border:1px solid #fff;
     display:flex; align-items:center; justify-content:center;
-    transition:width .25s var(--ease), height .25s var(--ease), margin .25s var(--ease), opacity .25s; }
+    transition:width .25s var(--ease), height .25s var(--ease), margin .25s var(--ease), opacity .25s,
+      background-color .25s var(--ease), border-color .25s var(--ease); }
   .c-libelle{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase;
     color:var(--creme); opacity:0; transition:opacity .2s; }
   body.curseur-vu .c-point{ opacity:1; }
@@ -111,9 +165,14 @@
      hero fish (the transition is measured from the logo's own
      rect, so it is size-independent). */
   .porte{ position:relative; height:206vh; background:var(--ivoire); }
-  .porte__ecran{ position:sticky; top:0; height:100vh; height:100dvh; overflow:hidden; background:var(--ivoire);
+  .porte__ecran{ position:sticky; top:0; height:100vh; height:100svh; overflow:hidden; background:var(--ivoire);
     transform:translateZ(0); -webkit-transform:translateZ(0); backface-visibility:hidden; }
   .monde{ position:absolute; inset:0; background:var(--fond); overflow:hidden; opacity:var(--p,0); will-change:opacity; }
+  /* the published fade in / fade out background, restored : the
+     dark world fades in as one sheet over the cream door, driven
+     by --p from the door script, and fades back out on the way
+     up. The dots background experiment is gone completely —
+     no dots canvas, no other transition in its place. */
   /* No DOM words sit over the dissipated dots any more. The sentence
      that appears in the cloud is drawn on #porte-fumee itself, as red
      dots (sampled from the fish's own red) that gather into letterforms
@@ -135,7 +194,28 @@
 
   /* ---------- 1b. hero : pond panel, a red fish under the headline ---------- */
   .hero-sec{ position:relative; height:125vh; background:transparent; }
-  .hero__ecran{ position:sticky; top:0; height:100vh; height:100dvh; overflow:hidden; background:transparent;
+  /* the seam between the door (hero) and this section : back to
+     the very first blended seam, from before all the background
+     experiments — a plain soft gradient fade band straddling
+     the boundary. It is 34svh tall, centred on the seam
+     (translateY(-50%)), transparent at both ends and fully the
+     dark ground colour (--fond) right at the seam, so whatever
+     crosses here (the swimming fish, the puddles, the smoke,
+     the ripples) dims gradually instead of being sliced by a
+     hard line. pointer-events:none, so it never intercepts
+     anything. No turbulence, no dot grain, no other technique.
+     The cream-to-dark change itself is still the published
+     fade inside the door (see .monde above) ; by the time the
+     seam arrives the door is already fully dark and the
+     section below is the same dark. */
+  .hero-sec::before{ content:""; position:absolute; left:0; right:0; top:0; height:34svh; z-index:4;
+    transform:translateY(-50%); pointer-events:none;
+    background:linear-gradient(to bottom,
+      rgba(17,17,16,0) 0%, rgba(17,17,16,.25) 25%, rgba(17,17,16,.55) 38%,
+      rgba(17,17,16,1) 50%,
+      rgba(17,17,16,.55) 62%, rgba(17,17,16,.25) 75%, rgba(17,17,16,0) 100%);
+    background-size:100% 100%; background-repeat:no-repeat; }
+  .hero__ecran{ position:sticky; top:0; height:100vh; height:100svh; overflow:hidden; background:transparent;
     transform:translateZ(0); -webkit-transform:translateZ(0); backface-visibility:hidden; }
   /* the pond is a fixed, page-wide companion layer in the very back :
      it sits behind every word, picture, project and section surface,
@@ -313,9 +393,14 @@
   .disciplines{ padding:0 20px 8px; }
   @media (min-width:768px){ .disciplines{ padding:0 32px 8px; } }
   /* credibility : monochrome logo marquee, endless left-to-right loop */
-  .cred{ margin-top:64px; border-top:1px solid var(--trait); border-bottom:1px solid var(--trait);
+  .cred{ margin-top:18px; border-top:1px solid var(--trait); border-bottom:1px solid var(--trait);
     padding:26px 0 30px; overflow:hidden; }
-  @media (min-width:768px){ .cred{ margin-top:72px; } }
+  @media (min-width:768px){ .cred{ margin-top:22px; } }
+  /* "Worked with" : the credibility marquee's label, set ABOVE
+     the band's two hairlines — over the whole revolving logo
+     strip, never between its top line and the logos */
+  .cred__titre{ margin-top:64px; }
+  @media (min-width:768px){ .cred__titre{ margin-top:72px; } }
   .cred__piste{ display:flex; width:max-content; animation:cred-defile 48s linear infinite; will-change:transform; }
   .cred:hover .cred__piste{ animation-play-state:paused; }
   .cred__groupe{ display:flex; align-items:center; gap:96px; padding-right:96px; }
@@ -552,7 +637,7 @@
     opacity:0; pointer-events:none; transition:opacity .35s var(--ease); }
   .visionneuse.ouvert{ opacity:1; pointer-events:auto; }
   .visionneuse[hidden]{ display:none; }
-  .visionneuse__img{ max-width:96vw; max-height:92vh; max-height:92dvh; width:auto; height:auto; display:block; cursor:zoom-out; }
+  .visionneuse__img{ max-width:96vw; max-height:92vh; max-height:92svh; width:auto; height:auto; display:block; cursor:zoom-out; will-change:transform; }
   .visionneuse__img[hidden]{ display:none; }
   /* the fullscreen film must actually fill the screen : it used to
      sit at its file's intrinsic width (width:auto), which on a
@@ -564,16 +649,16 @@
      keeping the picture undistorted.
      The seek bar overlays the bottom and the counter / Close sit
      above it, so 88vh (not 92) keeps the film clear of both. */
-  .visionneuse__video{ width:min(96vw, calc(88vh * 16 / 9)); width:min(96vw, calc(88dvh * 16 / 9));
-    height:auto; aspect-ratio:16/9; max-width:96vw; max-height:88vh; max-height:88dvh;
+  .visionneuse__video{ width:min(96vw, calc(88vh * 16 / 9)); width:min(96vw, calc(88svh * 16 / 9));
+    height:auto; aspect-ratio:16/9; max-width:96vw; max-height:88vh; max-height:88svh;
     object-fit:contain; display:block; background:#000; }
   .visionneuse__video[hidden]{ display:none; }
   /* in true fullscreen (the viewer itself granted fullscreen) the
      film takes even more of the screen, and the backdrop goes
      fully black behind it */
   .visionneuse:fullscreen{ background:#000; }
-  .visionneuse:fullscreen .visionneuse__video{ width:min(98vw, calc(92vh * 16 / 9)); width:min(98vw, calc(92dvh * 16 / 9));
-    max-width:98vw; max-height:92vh; max-height:92dvh; }
+  .visionneuse:fullscreen .visionneuse__video{ width:min(98vw, calc(92vh * 16 / 9)); width:min(98vw, calc(92svh * 16 / 9));
+    max-width:98vw; max-height:92vh; max-height:92svh; }
   .visionneuse__btn{ position:absolute; width:48px; height:48px; border:1px solid var(--trait); background:rgba(17,17,16,.65);
     color:var(--texte); font-size:18px; cursor:pointer; border-radius:0; z-index:2;
     display:flex; align-items:center; justify-content:center; }
@@ -583,6 +668,27 @@
   .visionneuse__suiv{ right:14px; top:50%; transform:translateY(-50%); }
   @media (min-width:768px){ .visionneuse__fermer{ right:32px; } .visionneuse__prec{ left:24px; } .visionneuse__suiv{ right:24px; } }
   .visionneuse__compteur{ position:absolute; left:20px; top:calc(var(--barre) + 24px); }
+  /* ---------- fullscreen zoom : desktop only ----------
+     On desktop (fine pointer) a still in the fullscreen viewer
+     can be zoomed far past fit-to-screen to read the small
+     detail in the mockups : trackpad pinch zooms toward the
+     pointer, the buttons and the + / − keys step it, a drag
+     pans, double-click toggles in and out. Once zoomed in, a
+     trackpad two-finger scroll (plain wheel, no ctrlKey) pans
+     the image up / down and side to side instead of zooming.
+     The controls and the zoom cursors exist only under
+     (hover:hover) and (pointer:fine), so phones keep the
+     viewer's plain tap-and-arrows behaviour untouched. */
+  .visionneuse.zoomable .visionneuse__img{ cursor:zoom-in; }
+  .visionneuse.zoomable.zoomee .visionneuse__img{ cursor:grab; }
+  .visionneuse.zoomable.zoomee .visionneuse__img:active{ cursor:grabbing; }
+  .visionneuse__zoom{ position:absolute; right:20px; bottom:20px; z-index:3; display:none; align-items:center; gap:8px; }
+  @media (min-width:768px){ .visionneuse__zoom{ right:32px; bottom:24px; } }
+  @media (hover:hover) and (pointer:fine){ .visionneuse.zoomable .visionneuse__zoom{ display:flex; } }
+  .visionneuse__zoom .visionneuse__btn{ position:static; width:44px; height:44px; font-size:18px; }
+  .visionneuse__zoom .visionneuse__btn--reset{ width:auto; padding:0 14px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.12em; }
+  .visionneuse__zoom-niveau{ font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.1em;
+    color:var(--texte); min-width:46px; text-align:center; }
   /* the fullscreen film's own controls, YouTube-style : a centre
      cluster over the picture — rewind 10 seconds, a large play /
      pause, forward 10 seconds — plus a slim seek bar along the
@@ -634,7 +740,8 @@
     .glisseur{ padding:4vh 0 2vh; }
     .item{ width:min(76vw,340px); }
     .hero{ padding:56px 20px 52px; }
-    .cred{ margin-top:44px; padding:22px 0 24px; }
+    .cred{ margin-top:14px; padding:22px 0 24px; }
+    .cred__titre{ margin-top:44px; }
     .cred__groupe{ gap:64px; padding-right:64px; }
     .honneurs{ padding:52px 20px 64px; }
     #contact{ padding:62px 20px 22px; }
@@ -654,8 +761,43 @@
        (the page itself is locked until the fish has fully
        dissipated), and the Art Direction panel is one screen too,
        so the next gesture lands straight on the work. */
-    .porte{ height:100vh; height:100dvh; }
-    .hero-sec{ height:100vh; height:100dvh; }
+    /* svh, not dvh : svh is the SMALLEST viewport height, a fixed
+       value that does not change when the phone browser's bottom
+       search / URL bar expands or collapses mid-scroll. With dvh
+       these full-screen panels resized every time the bar moved,
+       which dragged the whole screen up and down with it — the
+       page geometry is now completely independent of the bar */
+    .porte{ height:100vh; height:100svh; }
+    .hero-sec{ height:100vh; height:100svh; }
+
+    /* seam, phones only : the lower half of the same original
+       gradient fade as desktop — a seam-anchored band starting
+       right AT the seam, 17svh tall, fully the dark ground
+       colour at the seam and fading to transparent below it.
+       One fade only. Nothing reaches up into the cream hero,
+       so the fade cannot be seen from the hero section and the
+       hero's bottom words stay on plain cream. No turbulence,
+       no dot grain. */
+    .hero-sec::before{ transform:none; height:17svh;
+      background:linear-gradient(to bottom,
+        rgba(17,17,16,1) 0%, rgba(17,17,16,.55) 25%, rgba(17,17,16,.25) 50%,
+        rgba(17,17,16,0) 100%);
+      background-size:100% 100%; background-repeat:no-repeat; }
+
+    /* hero bottom line, phones only : "Youssef Said · Art
+       Director · Toronto, ON" and "Scroll" ALL stay on one single
+       line, lined up together — the row never wraps, the left
+       line never breaks onto a second line, and the Scroll word
+       never drops underneath it. Both labels shrink with the
+       viewport width (vw-based sizes, capped at their usual
+       sizes) so the whole row fits every phone width, and the
+       row is centre-aligned so the two ends sit on the same
+       baseline line. Desktop is untouched. */
+    .porte__bas{ flex-wrap:nowrap; align-items:center; gap:10px; padding:18px 16px; }
+    .porte__bas .ligne-une{ font-size:min(10px, 2.45vw); letter-spacing:.07em;
+      white-space:nowrap; flex:1 1 auto; min-width:0; }
+    .porte__bas .droite{ font-size:min(11px, 2.6vw); letter-spacing:.1em;
+      white-space:nowrap; flex:0 0 auto; text-align:right; }
 
     /* Art Direction : "Campaigns, Branding, Content, and Direction"
        on ONE line instead of two */
@@ -713,8 +855,14 @@
     .vc-btn .vc-dix{ font-size:9px; }
 
     /* contact footer : "Youssef Said · Art Director · Toronto, ON"
-       on one line, and the whole footer row sits a touch lower */
-    .pied__infos{ font-size:10px; letter-spacing:.05em; margin-top:60px; }
+       on one line, and the whole footer row sits lower. The
+       "© 2026 · Back to the surface" line underneath sits lower
+       still — pushed further down again at Youssef's request,
+       with clearly more air between it and the name line above
+       it (phones only — the block's top margin grows from 60px
+       to 84px and the column gap from 30px to 52px). Desktop
+       keeps its side-by-side row. */
+    .pied__infos{ font-size:10px; letter-spacing:.05em; margin-top:84px; gap:52px; }
     .pied__infos > span:first-child{ white-space:nowrap; }
   }
 
@@ -748,6 +896,7 @@
 
 <!-- 1 · THE DOOR, the fish logo dissolves into smoke as you scroll -->
 <section class="porte" id="porte" aria-label="Youssef Said, art director">
+  <p class="sr-only">Youssef Said is an art director and advertising creative based in Toronto, Canada. This portfolio presents his selected work: campaigns for Xbox PC Game Pass, GelaSkins, Corona Sunbrew, H&amp;R Block and One &amp; Only Musicals, plus logo redesigns for Saint-Nicolas school and Grace &amp; Family Church.</p>
   <div class="porte__ecran" id="porte-ecran">
     <div class="monde" aria-hidden="true"></div>
     <div class="porte__nom"><img class="porte__logo" id="porte-logo" src="assets/e308d70c8498.png" alt="Youssef Said logo: a bold red geometric fish with legs, a white ring eye and a white scale pattern" width="2100" height="2100" fetchpriority="high" /></div>
@@ -883,6 +1032,7 @@
       </div>
 
       <div class="disciplines">
+        <p class="meta meta--texte cred__titre revele" style="--i:0">Worked with</p>
         <div class="cred">
           <div class="cred__piste">
             <div class="cred__groupe">
@@ -989,6 +1139,12 @@
     <input class="fv-seek" type="range" id="vc-seek" min="0" max="1000" value="0" step="1" aria-label="Seek through the case film, full screen" />
   </div>
   <button class="visionneuse__btn visionneuse__suiv" type="button" id="visionneuse-suiv" aria-label="Next item">→</button>
+  <div class="visionneuse__zoom" id="visionneuse-zoom">
+    <button class="visionneuse__btn" type="button" id="vz-moins" aria-label="Zoom out">−</button>
+    <span class="visionneuse__zoom-niveau" id="vz-niveau" aria-hidden="true">100%</span>
+    <button class="visionneuse__btn" type="button" id="vz-plus" aria-label="Zoom in">+</button>
+    <button class="visionneuse__btn visionneuse__btn--reset" type="button" id="vz-reset">Reset</button>
+  </div>
 </div>
 
 <!-- CASE STUDY OVERLAY -->
@@ -1413,6 +1569,15 @@
        most at the very start of the dissolve where the eye is
        comparing against the still-intact logo. */
     if (reduce || portePDoux < 0) portePDoux = pBrut;
+    else if (porteGate.inverseEnCours){
+      /* during the automatic phone reverse the displayed progress
+         follows the animation's own clock EXACTLY, frame for
+         frame : the old 0.07 easing lagged behind the reverse
+         clock and then caught up in one step at the end, which
+         is part of why the logo could appear to stall and then
+         snap back instead of visibly re-forming */
+      portePDoux = pBrut;
+    }
     else {
       portePDoux += (pBrut - portePDoux) * 0.07;
       if (Math.abs(pBrut - portePDoux) < 0.0002) portePDoux = pBrut;
@@ -1431,7 +1596,7 @@
        then accelerates, and still reaches fully gone at the same
        point as before, so no ghost ever lingers behind the dots */
     var debut = smoother(clamp(d / 0.36, 0, 1));
-    var fond = smoother((p - 0.16) / 0.74);       /* the dark world fades in around the smoke */
+    var fond = smoother((p - 0.16) / 0.74);       /* the published fade : the dark world fades in around the smoke */
     ecran.style.setProperty("--p", fond.toFixed(4));
     ecran.style.setProperty("--fin", clamp((d - 0.72) / 0.28, 0, 1).toFixed(4));
     if (reduce){
@@ -1460,6 +1625,9 @@
     logoImg.style.visibility = logoAlpha <= 0.001 ? "hidden" : "visible";
     logoImg.style.filter = "blur(" + (debut * 3.2 + d * 0.8).toFixed(2) + "px)";
     logoImg.style.transform = "scale(" + (1 + debut * 0.022 + d * 0.028).toFixed(4) + ") translateY(0vh)";
+    /* --- the dark background is the .monde sheet itself, faded
+       in by the --p custom property set above (opacity), exactly
+       as in the published version --- */
     /* --- particles : the fish becomes the cloud --- */
     pCtx.clearRect(0, 0, PW, PH);
     if (d <= 0.0005 || !logoRect || !echantillons.length){ dessineTexte(d, temps); return; }
@@ -1567,6 +1735,10 @@
   }
   function avancePorte(delta){
     if (!porteGate.actif) return;
+    /* while the automatic reverse is playing, gestures do not
+       drive the progress at all : the reverse always plays
+       through to the intact logo (see joueInverse) */
+    if (porteGate.inverseEnCours) return;
     var pas = Math.max(260, window.innerHeight * 0.58);
     porteGate.p = clamp(porteGate.p + delta / pas, 0, 1);
     if (porteGate.p > 0.985) porteGate.p = 1;
@@ -1591,7 +1763,27 @@
      then snapped back to the logo. joueInverse is a single
      self-clocked animation that writes the gate progress
      directly ; it depends on no scroll event, no watcher and
-     no anchor jump, so there is nothing left to not fire. */
+     no anchor jump, so there is nothing left to not fire.
+     Glitch pass : three more failure modes are closed here.
+     (1) The reverse used to be CANCELLED by the visitor's next
+     touch or wheel tick (inverseEnCours was reset in the
+     touchstart / wheel handlers) — mid-reverse the animation
+     just stopped wherever it was, the screen sat dark with the
+     smoke cloud barely changing while the visitor kept
+     scrolling up, and a later state flip snapped the logo back
+     with no animation shown. The reverse now always plays
+     through : touches during it are ignored by avancePorte.
+     (2) The scroll trigger only armed after the visitor had
+     scrolled down 60% of a screen (partie threshold) ; a short
+     dip down and back up never armed it, so nothing happened
+     at the top no matter how much they scrolled up. The arming
+     distance is now 40px, and the master rAF loop re-checks
+     the top-arrival condition every few frames (verifieRetour),
+     so the reverse fires even if the scroll event itself is
+     swallowed by momentum scrolling or the browser bar.
+     (3) Pull-to-refresh on over-scroll is disabled in CSS
+     (overscroll-behavior-y:none), so scrolling up hard at the
+     top can no longer reload the page. */
   function joueInverse(){
     if (porteGate.inverseEnCours || !porteGate.termine) return;
     porteGate.termine = false;
@@ -1613,9 +1805,10 @@
     verrouillePorte();
   }
   window.addEventListener("touchstart", function(e){
-    /* a fresh touch during the automatic reverse hands the
-       dissolve straight back to the visitor's own gesture */
-    if (porteGate.inverseEnCours) porteGate.inverseEnCours = false;
+    /* a fresh touch during the automatic reverse does NOT cancel
+       it any more : cancelling mid-flight was the stall in the
+       reported glitch (dark smoke screen, nothing moving, then
+       a snap). The reverse always plays through to the logo. */
     if (porteGate.actif && e.touches.length) porteGate.dernierY = e.touches[0].clientY;
   }, { passive:true });
   window.addEventListener("touchmove", function(e){
@@ -1635,7 +1828,6 @@
   window.addEventListener("wheel", function(e){
     if (!porteGate.actif) return;
     e.preventDefault();
-    if (porteGate.inverseEnCours) porteGate.inverseEnCours = false;
     avancePorte(e.deltaY);
     if (porteGate.fini && !porteGate.minuteur){
       porteGate.minuteur = setTimeout(function(){
@@ -1689,9 +1881,24 @@
   window.addEventListener("scroll", function(){
     if (!mqPorte.matches || reduce) return;
     var y = window.scrollY || 0;
-    if (porteGate.termine && y > window.innerHeight * 0.6) porteGate.partie = true;
+    /* arming distance is 40px, not 60% of a screen : any genuine
+       trip down the page and back — even a short dip into Art
+       Direction — arms the reverse, so arriving back at the top
+       always re-forms the fish */
+    if (porteGate.termine && y > 40) porteGate.partie = true;
     if (porteGate.termine && porteGate.partie && y <= 4) joueInverse();
   }, { passive:true });
+  /* safety net, called from the master loop : if the visitor is
+     back at the very top with the gate completed and a genuine
+     trip down behind them, the reverse MUST be playing — fire
+     it from here too, so a swallowed scroll event (momentum,
+     browser-bar resize, programmatic scroll) can never leave
+     the dark smoke screen sitting at the top doing nothing */
+  function verifieRetour(){
+    if (!mqPorte.matches || reduce) return;
+    if (porteGate.termine && porteGate.partie && !porteGate.inverseEnCours &&
+        (window.scrollY || 0) <= 4) joueInverse();
+  }
   /* rotated or resized up to a desktop width : hand the door back
      to its native scroll-driven behaviour */
   if (mqPorte.addEventListener) mqPorte.addEventListener("change", function(e){
@@ -1719,7 +1926,15 @@
     curseurActif = true;
     document.addEventListener("mousemove", function(e){
       mx = e.clientX; my = e.clientY;
-      ptEl.style.transform = "translate(" + mx + "px," + my + "px)";
+      /* the dot is NOT positioned here any more : it used to be
+         written straight onto the element in this handler while
+         the ring eased toward the same point in the rAF loop, so
+         on a fast shake or a sharp change of direction the dot
+         arrived first and the ring chased it — two separate
+         tracks. Both elements are now positioned from the one
+         shared eased position in the master loop (see boucle),
+         so dot and ring move as a single entity, always
+         concentric, with no separation to see. */
       if (!document.body.classList.contains("curseur-vu")){ document.body.classList.add("curseur-vu"); rx = mx; ry = my; }
       var view = e.target.closest ? e.target.closest("[data-cursor='view']") : null;
       var lien = e.target.closest ? e.target.closest("a, button") : null;
@@ -1736,7 +1951,7 @@
     requestAnimationFrame(boucle);
     var temps = ts / 1000;
     cadre++;
-    if (cadre % 10 === 0) balayageReveals();
+    if (cadre % 10 === 0){ balayageReveals(); verifieRetour(); }
     if (porteVu) majPorte(temps);
     /* the Art Direction lockup carries NO scroll-linked animation :
        "Art Direction", "Ideas that stir the water." and the line
@@ -1745,12 +1960,37 @@
        reader scrolls — there is plenty happening in the dissolve
        above and in the fish and water around them already */
     if (curseurActif){
-      rx += (mx - rx) * 0.16; ry += (my - ry) * 0.16;
-      ring.style.transform = "translate(" + rx.toFixed(1) + "px," + ry.toFixed(1) + "px)";
+      /* one position, eased once, written to BOTH cursor elements
+         in the same frame : the small centre dot and the ring
+         around it share the exact same transform, so they travel
+         as one piece and the dot can never beat the ring to a
+         point or sit off-centre inside it */
+      rx += (mx - rx) * 0.32; ry += (my - ry) * 0.32;
+      var cTr = "translate(" + rx.toFixed(1) + "px," + ry.toFixed(1) + "px)";
+      ring.style.transform = cTr;
+      ptEl.style.transform = cTr;
     }
   }
   requestAnimationFrame(boucle);
-  window.addEventListener("resize", function(){ mesurePorte(); tailleCanvas(); }, { passive:true });
+  /* resize guard : a phone browser's bottom search / URL bar
+     expanding and collapsing as you scroll changes ONLY the
+     viewport height, by a few dozen pixels, and fires a resize
+     every time it moves. Re-measuring the door and resizing the
+     pond canvas on those events rebuilt the page geometry
+     mid-scroll and shoved the screen up and down — a second
+     source of scroll jitter, on top of the layout units (the
+     full-screen panels now use svh, which never changes with
+     the bar). Height-only changes under 160px are ignored here,
+     so scrolling is fully independent of the bar ; genuine
+     resizes (rotation, window drags, on-screen keyboard) still
+     re-measure exactly as before. */
+  var dernieresDims = { w: window.innerWidth, h: window.innerHeight };
+  window.addEventListener("resize", function(){
+    var w = window.innerWidth, h = window.innerHeight;
+    if (w === dernieresDims.w && Math.abs(h - dernieresDims.h) < 160) return;
+    dernieresDims = { w: w, h: h };
+    mesurePorte(); tailleCanvas();
+  }, { passive:true });
 
   /* ---------- the pond, now page-wide : a red fish swims the dark
      water and moving the cursor disturbs the surface. The canvas is
@@ -2078,12 +2318,14 @@
     canvas.style.display = "none";
   } else { dessineFluide(); }
 
-  /* ---------- gallery : mouse drag with momentum; on touch screens a
-     finger swipe scrolls the strip natively (touch-action allows both
-     axes, so a horizontal swipe drives the carousel with the browser's
-     own momentum while a vertical swipe still scrolls the page) and a
-     custom pointer-drag fallback below covers webviews that do not
-     hand the gesture to the scroller ---------- */
+  /* ---------- gallery : mouse drag with momentum on desktop; on
+     touch screens a finger swipe scrolls the strip natively and
+     ONLY natively (touch-action allows both axes, so a horizontal
+     swipe drives the carousel with the browser's own momentum
+     while a vertical swipe still scrolls the page). No script
+     touches scrollLeft during a touch gesture any more — the
+     custom touch-drag that used to share the job fought the
+     native scroller and made the sideways scroll jitter. ------ */
   var glisseur = document.getElementById("glisseur");
   var compteur = document.getElementById("gv-compteur");
   var barre = document.getElementById("gv-barre");
@@ -2112,10 +2354,16 @@
   var drag = null, dragMoved = false, vitesse = 0, dernierX = 0, inertie = null;
   function stopInertie(){ if (inertie){ cancelAnimationFrame(inertie); inertie = null; } }
   glisseur.addEventListener("pointerdown", function(e){
-    if (e.pointerType !== "mouse" && e.pointerType !== "touch" && e.pointerType !== "pen") return;
+    /* mouse only : on touch screens the strip belongs entirely
+       to the browser's native scroller. The old custom touch
+       fallback ALSO drove scrollLeft from pointermove while the
+       native scroller was moving the same strip, and the two
+       fighting over scrollLeft frame by frame was the jitter in
+       the sideways scroll on phones. A finger swipe is now pure
+       native scrolling, with the browser's own momentum. */
+    if (e.pointerType !== "mouse") return;
     stopInertie();
-    drag = { x: e.clientX, y: e.clientY, sl: glisseur.scrollLeft,
-             engage: e.pointerType === "mouse" };
+    drag = { x: e.clientX, y: e.clientY, sl: glisseur.scrollLeft, engage: true };
     dernierX = e.clientX; vitesse = 0; dragMoved = false;
     glisseur.classList.add("glisse");
     /* no setPointerCapture : capturing to the container retargets the
@@ -2124,14 +2372,6 @@
   window.addEventListener("pointermove", function(e){
     if (!drag) return;
     var dx = e.clientX - drag.x;
-    if (!drag.engage){
-      /* touch fallback : wait for a clearly horizontal gesture before
-         driving the strip; a vertical-dominant move belongs to the page */
-      var dy = e.clientY - drag.y;
-      if (Math.max(Math.abs(dx), Math.abs(dy)) < 10) return;
-      if (Math.abs(dy) > Math.abs(dx)){ drag = null; glisseur.classList.remove("glisse"); return; }
-      drag.engage = true;
-    }
     if (Math.abs(dx) > 6) dragMoved = true;
     vitesse = 0.7 * vitesse + 0.3 * (e.clientX - dernierX);
     dernierX = e.clientX;
@@ -2442,6 +2682,11 @@
     var g = rosterCourant[idxRoster];
     if (!g) return;
     vCompteur.textContent = (idxRoster + 1) + " / " + rosterCourant.length;
+    /* every item change starts the zoom back at fit-to-screen,
+       and the zoom controls exist only for stills (never the
+       film) on desktop — see the fullscreen zoom block below */
+    reinitZoom();
+    vision.classList.toggle("zoomable", zoomActif && g.kind === "image");
     /* the film is an ordinary item in this roster on EVERY
        device, phones included : it plays inside this viewer,
        between the stills, with the viewer's own centre controls
@@ -2647,11 +2892,174 @@
     if (fvPlein) fvPlein.addEventListener("click", function(){ allerPleinEcran(); });
     fvMaj();
   }
-  vImg.addEventListener("click", fermerVision);
+  vImg.addEventListener("click", function(){
+    /* a click closes the viewer only from the plain fit view :
+       while zoomed in (desktop), a click is the tail of a pan
+       drag or a deliberate press on the detail, never a close */
+    if (vzDragMoved || vz.s > 1) return;
+    fermerVision();
+  });
   vision.addEventListener("click", function(e){ if (e.target === vision) fermerVision(); });
   document.getElementById("visionneuse-fermer").addEventListener("click", fermerVision);
   document.getElementById("visionneuse-prec").addEventListener("click", function(){ pasVision(-1); });
   document.getElementById("visionneuse-suiv").addEventListener("click", function(){ pasVision(1); });
+
+  /* ---------- fullscreen zoom : DESKTOP ONLY ----------
+     Stills in the fullscreen viewer can be zoomed up to 6x to
+     read the small detail in the mockups, on desktop only
+     (fine pointer : mouse / trackpad). Phones keep the viewer
+     exactly as it was — tap to close, arrows to browse — since
+     a phone browser already pinch-zooms the page itself.
+     Routes in : a trackpad pinch (which arrives as a wheel
+     event with ctrlKey, or as a Safari gesture event) zooming
+     toward the pointer ; at fit-to-screen a plain scroll wheel
+     also zooms in toward the pointer ; the + / − / Reset
+     buttons ; the + / − / 0 keys ; double-click toggles
+     between fit and 2.6x.
+     While zoomed, there are TWO ways to pan : dragging the
+     image, and a trackpad two-finger scroll — a plain wheel
+     event (no ctrlKey) with deltaX / deltaY — which moves the
+     zoomed image up / down and side to side, so the visitor
+     can travel around the mockup without dragging and without
+     pinching back out first. Pinch (ctrlKey wheel) still
+     zooms at any level, so zooming further in or back out
+     while panning is always one pinch away. Switching items
+     or closing resets to fit (see majVision / reinitZoom). */
+  var zoomActif = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  var vz = { s: 1, x: 0, y: 0 };
+  var vzDrag = null, vzDragMoved = false;
+  var vzNiveau = document.getElementById("vz-niveau");
+  function appliqueZoom(){
+    if (!vImg) return;
+    if (vz.s > 1){
+      /* the pan is clamped so the zoomed image can never be
+         dragged clear off the screen : at most half its scaled
+         size past centre in any direction */
+      var mx2 = vImg.offsetWidth * vz.s * 0.5, my2 = vImg.offsetHeight * vz.s * 0.5;
+      vz.x = clamp(vz.x, -mx2, mx2); vz.y = clamp(vz.y, -my2, my2);
+    }
+    vImg.style.transform = vz.s === 1 ? "" :
+      "translate(" + vz.x.toFixed(1) + "px," + vz.y.toFixed(1) + "px) scale(" + vz.s.toFixed(3) + ")";
+    vision.classList.toggle("zoomee", vz.s > 1);
+    if (vzNiveau) vzNiveau.textContent = Math.round(vz.s * 100) + "%";
+  }
+  function reinitZoom(){
+    vz.s = 1; vz.x = 0; vz.y = 0; vzDrag = null; vzDragMoved = false;
+    appliqueZoom();
+  }
+  function zoomVers(ns, cx, cy){
+    ns = clamp(ns, 1, 6);
+    if (ns === 1){ reinitZoom(); return; }
+    if (cx == null){ cx = window.innerWidth / 2; cy = window.innerHeight / 2; }
+    /* the image is centred in the viewer, so zoom around the
+       pointer by keeping the image point under it fixed :
+       work in offsets from the screen centre, where the
+       untransformed image centre sits */
+    var lcx = window.innerWidth / 2, lcy = window.innerHeight / 2;
+    var px = (cx - lcx - vz.x) / vz.s, py = (cy - lcy - vz.y) / vz.s;
+    vz.x = (cx - lcx) - ns * px;
+    vz.y = (cy - lcy) - ns * py;
+    vz.s = ns;
+    appliqueZoom();
+  }
+  if (zoomActif){
+    vision.addEventListener("wheel", function(e){
+      if (!visionOuverte) return;
+      var g = rosterCourant[idxRoster];
+      if (!g || g.kind !== "image") return;
+      e.preventDefault();
+      /* pinch : browsers report a trackpad pinch as a wheel
+         event with ctrlKey (Chrome / Firefox / Edge). It zooms
+         toward the pointer at any zoom level, exactly as
+         before — pinch in to go deeper, pinch out to come
+         back, including back to fit. */
+      if (e.ctrlKey || e.metaKey){
+        var facteurPinch = Math.exp(-e.deltaY * 0.008);
+        if (isFinite(facteurPinch) && facteurPinch > 0) zoomVers(vz.s * facteurPinch, e.clientX, e.clientY);
+        return;
+      }
+      /* normalise the deltas : trackpads report pixels
+         (deltaMode 0), mouse wheels often report lines (1)
+         or pages (2) */
+      var unite = e.deltaMode === 1 ? 16 : (e.deltaMode === 2 ? window.innerHeight : 1);
+      var dx = (e.deltaX || 0) * unite, dy = (e.deltaY || 0) * unite;
+      /* shift + wheel is how several browsers / mice send a
+         horizontal scroll : it arrives as a vertical delta
+         with shiftKey held */
+      if (e.shiftKey && dx === 0){ dx = dy; dy = 0; }
+      if (vz.s > 1){
+        /* zoomed in : a plain two-finger trackpad scroll PANS,
+           it does not zoom. Moving the fingers down / right
+           travels down / right across the mockup (the image
+           itself moves the opposite way, like scrolling a
+           page), and appliqueZoom clamps the pan so the image
+           can never be scrolled clear off the screen. */
+        vz.x -= dx; vz.y -= dy;
+        appliqueZoom();
+      } else {
+        /* at fit-to-screen there is nothing to pan yet, so a
+           plain scroll wheel still zooms in toward the
+           pointer, as before */
+        var dFit = dy !== 0 ? dy : dx;
+        var facteurFit = Math.exp(-dFit * 0.0032);
+        if (isFinite(facteurFit) && facteurFit > 0) zoomVers(vz.s * facteurFit, e.clientX, e.clientY);
+      }
+    }, { passive: false });
+    /* Safari reports a trackpad pinch as gesture events, not
+       as a ctrlKey wheel : mirror the same zoom there, scaled
+       from the level the gesture started at, so pinch zoom
+       keeps working in Safari too. Plain two-finger scroll in
+       Safari still arrives as wheel and pans via the handler
+       above. */
+    var vzGesteDepart = null;
+    vision.addEventListener("gesturestart", function(e){
+      if (!visionOuverte) return;
+      var g = rosterCourant[idxRoster];
+      if (!g || g.kind !== "image") return;
+      e.preventDefault();
+      vzGesteDepart = vz.s;
+    }, { passive: false });
+    vision.addEventListener("gesturechange", function(e){
+      if (vzGesteDepart === null || !visionOuverte) return;
+      e.preventDefault();
+      if (typeof e.scale === "number" && isFinite(e.scale) && e.scale > 0){
+        zoomVers(vzGesteDepart * e.scale, e.clientX, e.clientY);
+      }
+    }, { passive: false });
+    vision.addEventListener("gestureend", function(e){
+      if (vzGesteDepart === null) return;
+      e.preventDefault();
+      vzGesteDepart = null;
+    }, { passive: false });
+    vImg.addEventListener("pointerdown", function(e){
+      if (vz.s <= 1) return;
+      vzDrag = { x: e.clientX, y: e.clientY, tx: vz.x, ty: vz.y };
+      vzDragMoved = false;
+      try { vImg.setPointerCapture(e.pointerId); } catch (err) {}
+    });
+    vImg.addEventListener("pointermove", function(e){
+      if (!vzDrag) return;
+      var dx = e.clientX - vzDrag.x, dy = e.clientY - vzDrag.y;
+      if (Math.abs(dx) + Math.abs(dy) > 3) vzDragMoved = true;
+      vz.x = vzDrag.tx + dx; vz.y = vzDrag.ty + dy;
+      appliqueZoom();
+    });
+    function vzFinDrag(){
+      vzDrag = null;
+      /* keep the flag one tick so the click that ends the drag
+         is not read as a close tap */
+      setTimeout(function(){ vzDragMoved = false; }, 50);
+    }
+    vImg.addEventListener("pointerup", vzFinDrag);
+    vImg.addEventListener("pointercancel", vzFinDrag);
+    vImg.addEventListener("dblclick", function(e){
+      e.preventDefault();
+      if (vz.s > 1) reinitZoom(); else zoomVers(2.6, e.clientX, e.clientY);
+    });
+    document.getElementById("vz-plus").addEventListener("click", function(){ zoomVers(vz.s * 1.5); });
+    document.getElementById("vz-moins").addEventListener("click", function(){ zoomVers(vz.s / 1.5); });
+    document.getElementById("vz-reset").addEventListener("click", function(){ reinitZoom(); });
+  }
 
   /* the case film takes the stage : its poster is the Game Pass key
      visual, so the collage the reader recognises is the film's cover,
@@ -2835,6 +3243,9 @@
       if (e.key === "Escape") fermerVision();
       if (e.key === "ArrowRight") pasVision(1);
       if (e.key === "ArrowLeft") pasVision(-1);
+      if (zoomActif && (e.key === "+" || e.key === "=")) zoomVers(vz.s * 1.4);
+      if (zoomActif && e.key === "-") zoomVers(vz.s / 1.4);
+      if (zoomActif && e.key === "0") reinitZoom();
       return;
     }
     if (flight.hidden) return;
@@ -2843,6 +3254,19 @@
     if (e.key === "ArrowLeft") ouvrir(courant - 1);
   });
 
+  /* ---------- the background transition is the published fade ----------
+     There is no separate transition script : no dots background,
+     no water, no rain, no ink. The cream-to-dark change is the
+     published fade in / fade out — majPorte sets --p on the door
+     screen and the .monde sheet's opacity follows it, fading in
+     on the way down and back out on the way up, on desktop and
+     through the phone gate alike. The only extra piece is the
+     seam fade at the top of the Art Direction section
+     (CSS, .hero-sec::before) : the original soft gradient
+     fade band — straddling the seam on desktop, its lower
+     half only on phones — so the fish and puddles dim
+     gradually crossing the seam instead of being cut by a
+     harsh line. */
 })();
 </script>
 
@@ -2985,5 +3409,6 @@
   });
 })();
 </script>
+<script data-goatcounter="https://youssefsaid.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
